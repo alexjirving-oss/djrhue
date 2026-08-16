@@ -1,3 +1,5 @@
+import { SocialLinks } from './SocialLinks'
+
 export function Footer() {
   return (
     <footer className="footer">
@@ -10,19 +12,19 @@ export function Footer() {
           <p>Caribbean &amp; Urban DJ · Est. 2025 · Bristol · UK · Malta</p>
         </div>
 
-        <div className="footer-links">
-          <a href="#rates">Rates</a>
-          <a href="#terms">Terms</a>
-          <a href="/docs/DJ_RHUE_Rates_2026.pdf" target="_blank" rel="noreferrer">
-            Rates PDF
-          </a>
-          <a href="https://instagram.com/dj_rhue" target="_blank" rel="noreferrer">
-            Instagram
-          </a>
-          <a href="https://linktr.ee/Rhue_james7" target="_blank" rel="noreferrer">
-            Linktree
-          </a>
-          <a href="#book">Book</a>
+        <div className="footer-meta">
+          <SocialLinks className="footer-social" />
+          <div className="footer-links">
+            <a href="#rates">Rates</a>
+            <a href="#terms">Terms</a>
+            <a href="/docs/DJ_RHUE_Rates_2026.pdf" target="_blank" rel="noreferrer">
+              Rates PDF
+            </a>
+            <a href="https://linktr.ee/Rhue_james7" target="_blank" rel="noopener noreferrer">
+              Linktree
+            </a>
+            <a href="#book">Book</a>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { motion } from 'framer-motion'
+import { SocialLinks } from './SocialLinks'
 
 const eventTypes = [
   'Club night',
@@ -75,9 +76,7 @@ export function Booking() {
           <div className="booking-contact">
             <a href="tel:+447305940902">07305 940 902</a>
             <a href="mailto:booking.djrhue@gmail.com">booking.djrhue@gmail.com</a>
-            <a href="https://instagram.com/dj_rhue" target="_blank" rel="noreferrer">
-              @DJ_RHUE
-            </a>
+            <SocialLinks className="booking-social" />
             <span>Bristol, UK &amp; Malta</span>
           </div>
 

@@ -870,8 +870,8 @@
   margin-top: 1.6rem;
 }
 
-.booking-contact a,
-.booking-contact span {
+.booking-contact > a,
+.booking-contact > span {
   display: block;
   font-family: var(--font-display);
   font-size: clamp(1.15rem, 2.5vw, 1.45rem);
@@ -879,8 +879,12 @@
   letter-spacing: -0.01em;
 }
 
-.booking-contact a:hover {
+.booking-contact > a:hover {
   color: var(--gold);
+}
+
+.booking-social {
+  margin-top: 0.15rem;
 }
 
 .booking-qr {
@@ -1035,9 +1039,21 @@
   font-size: 0.9rem;
 }
 
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.95rem;
+}
+
+.footer-social {
+  justify-content: flex-end;
+}
+
 .footer-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 1.1rem;
 }
 
@@ -1051,6 +1067,38 @@
 
 .footer-links a:hover {
   color: var(--gold);
+}
+
+/* ========== SOCIAL LINKS ========== */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.social-link {
+  display: inline-grid;
+  place-items: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  border: 1px solid rgba(245, 245, 245, 0.18);
+  background: rgba(13, 13, 13, 0.55);
+  color: var(--white);
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.social-link svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--gold);
+  border-color: rgba(246, 198, 74, 0.55);
+  background: rgba(246, 198, 74, 0.08);
+  outline: none;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -1144,6 +1192,16 @@
   .rate-row {
     grid-template-columns: 1fr;
     gap: 0.45rem;
+  }
+
+  .footer-meta {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer-social,
+  .footer-links {
+    justify-content: flex-start;
   }
 
   .hero-scroll {
