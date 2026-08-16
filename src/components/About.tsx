@@ -63,7 +63,7 @@ export function About() {
 
       <div className="about-strip" aria-hidden="true">
         <img src="/photos/hero-black-gold.jpg" alt="" />
-        <img src="/photos/perf-manoel.jpg" alt="" />
+        <img src="/photos/setup-outdoor-dusk.jpg" alt="" />
         <img src="/photos/perf-enzo.jpg" alt="" />
       </div>
     </section>

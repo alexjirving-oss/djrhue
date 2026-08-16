@@ -11,13 +11,13 @@ const services = [
     n: '02',
     title: 'Festivals & Outdoor',
     copy: 'Carnival energy and festival stages built for large crowds.',
-    img: '/photos/perf-bunjy.jpg',
+    img: '/photos/setup-outdoor-day.jpg',
   },
   {
     n: '03',
     title: 'Private Events',
     copy: 'Birthdays, celebrations and parties with customised playlists.',
-    img: '/photos/perf-cdj.jpg',
+    img: '/photos/setup-outdoor-dusk.jpg',
   },
   {
     n: '04',
