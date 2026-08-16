@@ -13,19 +13,28 @@ export function About() {
       <div className="about-stage">
         <motion.div
           className="about-main"
-          initial={{ opacity: 0, scale: 1.02 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 1.05, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
         >
           <img src="/photos/press-full.jpg" alt="DJ RHUE full press portrait" />
+          <motion.figure
+            className="about-float"
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <img src="/photos/perf-trinidad.jpg" alt="DJ RHUE live with Trinidad flag" />
+          </motion.figure>
         </motion.div>
 
         <motion.div
           className="about-copy"
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="eyebrow">About DJ RHUE</p>
@@ -49,16 +58,6 @@ export function About() {
             ))}
           </ul>
         </motion.div>
-
-        <motion.figure
-          className="about-float"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.9, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <img src="/photos/perf-trinidad.jpg" alt="DJ RHUE live with Trinidad flag" />
-        </motion.figure>
       </div>
 
       <div className="about-strip" aria-hidden="true">
