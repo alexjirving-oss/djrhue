@@ -75,6 +75,42 @@ const links: SocialLink[] = [
       </svg>
     ),
   },
+  {
+    name: 'blyp',
+    href: 'https://blyp.world/u/DJ_RHUE',
+    label: 'DJ RHUE on BLYP',
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden
+        focusable={false}
+      >
+        {/* App-icon silhouette: rounded square + lowercase wordmark + cyan brand dot */}
+        <rect
+          x="1.25"
+          y="1.25"
+          width="21.5"
+          height="21.5"
+          rx="5.25"
+          stroke="currentColor"
+          strokeWidth="1.35"
+        />
+        <text
+          x="4"
+          y="15.35"
+          fill="currentColor"
+          fontFamily="Arial Black, Arial, Helvetica, sans-serif"
+          fontSize="7.4"
+          fontWeight="800"
+          letterSpacing="-0.4"
+        >
+          blyp
+        </text>
+        <circle cx="19.35" cy="13.85" r="1.45" fill="#00d4c8" />
+      </svg>
+    ),
+  },
 ]
 
 type SocialLinksProps = {

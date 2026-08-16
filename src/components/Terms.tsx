@@ -16,6 +16,21 @@ const docs = [
     copy: 'Full performance, setup package and standalone hire pricing.',
     href: '/docs/DJ_RHUE_Rates_2026.pdf',
   },
+  {
+    title: 'Promotional content rates',
+    copy: 'Flyer design packages and promotional artwork pricing for events and bookings.',
+    href: '/docs/DJ_RHUE_Promo_Rates.pdf',
+  },
+  {
+    title: 'Promotional content terms',
+    copy: 'Booking, payment, amendments, client content and delivery terms for promo work.',
+    href: '/docs/DJ_RHUE_Promo_Terms.pdf',
+  },
+  {
+    title: 'Promo rates + terms (combined)',
+    copy: 'Single PDF with promotional content rates and terms & conditions together.',
+    href: '/docs/DJ_RHUE_Promo_Rates_and_Terms.pdf',
+  },
 ]
 
 const highlights = [

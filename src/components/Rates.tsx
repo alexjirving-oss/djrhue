@@ -258,6 +258,14 @@ export function Rates() {
           <a className="btn btn-ghost" href="/docs/DJ_RHUE_Rates_2026.pdf" target="_blank" rel="noreferrer">
             Download full rates PDF
           </a>
+          <a
+            className="btn btn-ghost"
+            href="/docs/DJ_RHUE_Promo_Rates.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Promo / flyer rates PDF
+          </a>
         </div>
       </div>
     </section>
