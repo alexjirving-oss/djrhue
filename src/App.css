@@ -78,6 +78,10 @@
 }
 
 @media (max-width: 860px) {
+  .nav-logo {
+    width: clamp(5.1rem, 12vw, 6.6rem);
+  }
+
   .nav-toggle {
     display: grid;
   }
