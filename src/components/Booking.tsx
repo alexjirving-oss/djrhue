@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { motionTransition, viewportOnce } from '../lib/motion'
 import { SocialLinks } from './SocialLinks'
 
-const FORM_ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT?.trim() || ''
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/booking.djrhue@gmail.com'
 const WHATSAPP = '447305940902'
 
 const eventTypes = [
@@ -16,33 +16,6 @@ const eventTypes = [
   'Equipment hire',
   'Other',
 ]
-
-function buildMailto(data: FormData) {
-  const name = String(data.get('name') || '').trim()
-  const email = String(data.get('email') || '').trim()
-  const phone = String(data.get('phone') || '').trim()
-  const eventType = String(data.get('eventType') || '').trim()
-  const date = String(data.get('date') || '').trim()
-  const location = String(data.get('location') || '').trim()
-  const message = String(data.get('message') || '').trim()
-
-  const subject = encodeURIComponent(`DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`)
-  const body = encodeURIComponent(
-    [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone}`,
-      `Event type: ${eventType}`,
-      `Date: ${date}`,
-      `Location: ${location}`,
-      '',
-      'Message:',
-      message,
-    ].join('\n'),
-  )
-
-  return `mailto:booking.djrhue@gmail.com?subject=${subject}&body=${body}`
-}
 
 export function Booking() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'error'>('idle')
@@ -56,32 +29,36 @@ export function Booking() {
     setStatus('sending')
     setErrorMsg('')
 
-    if (FORM_ENDPOINT) {
-      try {
-        const res = await fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          body: data,
-          headers: { Accept: 'application/json' },
-        })
-        if (res.ok) {
-          setStatus('ok')
-          form.reset()
-          setEventType('')
-          return
-        }
-        const json = (await res.json().catch(() => null)) as { error?: string } | null
-        throw new Error(json?.error || `Submission failed (${res.status})`)
-      } catch (err) {
-        setStatus('error')
-        setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Try WhatsApp or email.')
+    const name = String(data.get('name') || '').trim()
+    const event = String(data.get('eventType') || '').trim()
+    data.append('_subject', `DJ RHUE Booking — ${event || 'Enquiry'} — ${name}`)
+    data.append('_template', 'table')
+    data.append('_captcha', 'false')
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+      const json = (await res.json().catch(() => null)) as {
+        success?: boolean | string
+        message?: string
+      } | null
+      if (
+        res.ok &&
+        (json?.success === true || json?.success === 'true')
+      ) {
+        setStatus('ok')
+        form.reset()
+        setEventType('')
         return
       }
+      throw new Error(json?.message || `Submission failed (${res.status})`)
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Try WhatsApp or email.')
     }
-
-    window.location.href = buildMailto(data)
-    setStatus('ok')
-    form.reset()
-    setEventType('')
   }
 
   return (
@@ -246,9 +223,7 @@ export function Booking() {
             </button>
             {status === 'ok' && (
               <p className="form-status ok" role="status">
-                {FORM_ENDPOINT
-                  ? 'Enquiry sent — DJ RHUE will reply shortly.'
-                  : 'Opening your email app…'}
+                Enquiry sent — DJ RHUE will reply shortly.
               </p>
             )}
             {status === 'error' && (
@@ -257,13 +232,6 @@ export function Booking() {
               </p>
             )}
           </div>
-
-          {!FORM_ENDPOINT && (
-            <p className="form-hint">
-              Form opens your email client. For direct submit, set{' '}
-              <code>VITE_FORM_ENDPOINT</code> to your Formspree URL.
-            </p>
-          )}
         </motion.form>
       </div>
     </section>

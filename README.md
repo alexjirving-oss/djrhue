@@ -16,13 +16,9 @@ npm run build
 npm run preview
 ```
 
-## Booking form (Formspree)
+## Booking form
 
-The booking form submits via [Formspree](https://formspree.io) when configured. Without it, submissions fall back to `mailto:`.
-
-1. Create a form at [formspree.io](https://formspree.io) for `booking.djrhue@gmail.com` and copy its endpoint URL (e.g. `https://formspree.io/f/xxxxxxxx`).
-2. **GitHub Pages (this repo):** In the GitHub repository, go to **Settings → Secrets and variables → Actions**, add a repository secret named `VITE_FORM_ENDPOINT` with that URL. The deploy workflow passes it into `npm run build` on every push to `main`.
-3. **Local dev:** Copy `.env.example` to `.env.local` and set the same variable, then `npm run dev`.
+The booking form submits via [FormSubmit](https://formsubmit.co) to `booking.djrhue@gmail.com`. No env vars or GitHub secrets are required.
 
 ## Brand
 
