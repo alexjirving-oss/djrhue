@@ -1069,6 +1069,28 @@
   color: rgba(245, 245, 245, 0.88);
 }
 
+.listen-genres a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.listen-genres a:hover,
+.listen-genres a:focus-visible {
+  color: var(--gold);
+}
+
+.listen-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.listen-title-link:hover,
+.listen-title-link:focus-visible {
+  color: var(--gold);
+}
+
 .listen-embed {
   margin-top: 2.2rem;
   border: 1px solid var(--line);
