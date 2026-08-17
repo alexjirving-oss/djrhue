@@ -32,3 +32,6 @@ preview-*.png
 # Screenshots / local previews
 mobile-*.png
 preview-*.png
+
+# EPK build temp
+scripts/epk/.build.html

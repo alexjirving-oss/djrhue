@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DJ RHUE — Electronic Press Kit 2026</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        color: #f5f5f5;
+        background: #0d0d0d;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        position: relative;
+        page-break-after: always;
+        background: #0d0d0d;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .gold {
+        color: #f6c64a;
+      }
+
+      .eyebrow {
+        font-size: 9pt;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #f6c64a;
+        font-weight: 600;
+      }
+
+      .rule {
+        width: 48px;
+        height: 3px;
+        background: #f6c64a;
+        margin: 10px 0 16px;
+      }
+
+      /* —— Cover —— */
+      .cover {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: 18mm 16mm 14mm;
+      }
+
+      .cover-top img.logo {
+        height: 52px;
+        width: auto;
+        display: block;
+      }
+
+      .cover-tag {
+        margin-top: 14mm;
+      }
+
+      .cover-tag h1 {
+        font-size: 34pt;
+        line-height: 1.05;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .cover-tag p.sub {
+        margin-top: 8px;
+        font-size: 11pt;
+        color: #c8c8c8;
+        letter-spacing: 0.06em;
+      }
+
+      .cover-genres {
+        margin-top: 14px;
+        font-size: 10.5pt;
+        line-height: 1.7;
+        color: #e0e0e0;
+      }
+
+      .cover-photo {
+        margin-top: 10mm;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid rgba(246, 198, 74, 0.25);
+        max-height: 118mm;
+      }
+
+      .cover-photo img {
+        width: 100%;
+        height: 118mm;
+        object-fit: cover;
+        object-position: center 20%;
+        display: block;
+      }
+
+      .cover-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 8mm;
+        font-size: 9pt;
+        color: #999;
+      }
+
+      /* —— Inner pages —— */
+      .inner {
+        padding: 16mm 16mm 14mm;
+        display: flex;
+        flex-direction: column;
+        min-height: 297mm;
+      }
+
+      .inner h2 {
+        font-size: 22pt;
+        line-height: 1.15;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .inner .lead {
+        font-size: 10.5pt;
+        line-height: 1.65;
+        color: #d4d4d4;
+        max-width: 95%;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 10mm;
+        margin-top: 8mm;
+        flex: 1;
+      }
+
+      .bio-photo {
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid rgba(246, 198, 74, 0.2);
+      }
+
+      .bio-photo img {
+        width: 100%;
+        height: 100%;
+        min-height: 155mm;
+        object-fit: cover;
+        display: block;
+      }
+
+      .highlights {
+        margin-top: 6mm;
+      }
+
+      .highlights h3 {
+        font-size: 11pt;
+        margin-bottom: 8px;
+        color: #f6c64a;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .highlight-card {
+        background: #161616;
+        border: 1px solid rgba(246, 198, 74, 0.18);
+        border-radius: 5px;
+        padding: 10px 11px;
+      }
+
+      .highlight-card strong {
+        display: block;
+        font-size: 9.5pt;
+        margin-bottom: 3px;
+        color: #f5f5f5;
+      }
+
+      .highlight-card span {
+        font-size: 8.5pt;
+        line-height: 1.45;
+        color: #aaa;
+      }
+
+      /* —— Services —— */
+      .service-list {
+        margin-top: 8mm;
+        display: grid;
+        gap: 7px;
+      }
+
+      .service-row {
+        display: grid;
+        grid-template-columns: 28mm 1fr;
+        gap: 10px;
+        align-items: start;
+        background: #141414;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 5px;
+        padding: 10px 12px;
+      }
+
+      .service-row .num {
+        font-size: 18pt;
+        font-weight: 700;
+        color: #f6c64a;
+        line-height: 1;
+      }
+
+      .service-row h4 {
+        font-size: 10.5pt;
+        margin-bottom: 3px;
+      }
+
+      .service-row p {
+        font-size: 9pt;
+        line-height: 1.5;
+        color: #b8b8b8;
+      }
+
+      .service-gallery {
+        margin-top: 8mm;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6px;
+      }
+
+      .service-gallery img {
+        width: 100%;
+        height: 38mm;
+        object-fit: cover;
+        border-radius: 4px;
+        display: block;
+      }
+
+      .note-box {
+        margin-top: auto;
+        padding-top: 8mm;
+        font-size: 9pt;
+        line-height: 1.55;
+        color: #999;
+        border-top: 1px solid rgba(246, 198, 74, 0.2);
+      }
+
+      /* —— Why + rates —— */
+      .why-grid {
+        margin-top: 7mm;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .why-card {
+        background: #141414;
+        border-left: 3px solid #f6c64a;
+        padding: 10px 12px;
+        border-radius: 0 5px 5px 0;
+      }
+
+      .why-card h4 {
+        font-size: 10pt;
+        margin-bottom: 4px;
+      }
+
+      .why-card p {
+        font-size: 8.8pt;
+        line-height: 1.5;
+        color: #b0b0b0;
+      }
+
+      .rates-block {
+        margin-top: 9mm;
+      }
+
+      .rates-block h3 {
+        font-size: 11pt;
+        color: #f6c64a;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+      }
+
+      .rate-row {
+        display: grid;
+        grid-template-columns: 32mm 1fr;
+        gap: 10px;
+        padding: 9px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .rate-row:last-child {
+        border-bottom: none;
+      }
+
+      .rate-row strong {
+        font-size: 11pt;
+        color: #f6c64a;
+      }
+
+      .rate-row .unit {
+        display: block;
+        font-size: 8pt;
+        color: #888;
+        font-weight: 400;
+      }
+
+      .rate-row h4 {
+        font-size: 9.8pt;
+        margin-bottom: 2px;
+      }
+
+      .rate-row p {
+        font-size: 8.8pt;
+        line-height: 1.45;
+        color: #aaa;
+      }
+
+      .fee-strip {
+        margin-top: 8mm;
+        background: rgba(246, 198, 74, 0.1);
+        border: 1px solid rgba(246, 198, 74, 0.35);
+        border-radius: 5px;
+        padding: 10px 12px;
+        font-size: 9pt;
+        line-height: 1.55;
+      }
+
+      .fee-strip strong {
+        color: #f6c64a;
+      }
+
+      /* —— Contact —— */
+      .contact-layout {
+        margin-top: 10mm;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12mm;
+        align-items: start;
+        flex: 1;
+      }
+
+      .contact-list {
+        list-style: none;
+        margin-top: 8mm;
+      }
+
+      .contact-list li {
+        margin-bottom: 10px;
+        font-size: 10pt;
+      }
+
+      .contact-list strong {
+        display: block;
+        font-size: 8pt;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #f6c64a;
+        margin-bottom: 2px;
+      }
+
+      .contact-list a {
+        color: #f5f5f5;
+        text-decoration: none;
+      }
+
+      .qr-block {
+        text-align: center;
+        background: #141414;
+        border: 1px solid rgba(246, 198, 74, 0.25);
+        border-radius: 6px;
+        padding: 12px;
+      }
+
+      .qr-block img {
+        width: 38mm;
+        height: 38mm;
+        display: block;
+        margin: 0 auto 8px;
+      }
+
+      .qr-block p {
+        font-size: 8.5pt;
+        line-height: 1.45;
+        color: #aaa;
+      }
+
+      .qr-block .url {
+        display: block;
+        margin-top: 4px;
+        font-size: 9pt;
+        color: #f6c64a;
+      }
+
+      .contact-photo {
+        margin-top: 8mm;
+        border-radius: 6px;
+        overflow: hidden;
+        max-height: 52mm;
+      }
+
+      .contact-photo img {
+        width: 100%;
+        height: 52mm;
+        object-fit: cover;
+        display: block;
+      }
+
+      .page-num {
+        position: absolute;
+        bottom: 10mm;
+        right: 16mm;
+        font-size: 8pt;
+        color: #555;
+      }
+
+      .page-brand {
+        position: absolute;
+        bottom: 10mm;
+        left: 16mm;
+        font-size: 8pt;
+        color: #555;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page 1: Cover -->
+    <section class="page cover">
+      <div class="cover-top">
+        <img class="logo" src="{{LOGO}}" alt="DJ RHUE" />
+      </div>
+      <div class="cover-tag">
+        <p class="eyebrow">Electronic Press Kit · 2026</p>
+        <h1>Caribbean heat.<br />Urban nights.</h1>
+        <p class="sub">Caribbean &amp; Urban DJ · Bristol · UK · Malta</p>
+        <p class="cover-genres">
+          <span class="gold">Genres —</span>
+          Afrobeats · Dancehall · Amapiano · Reggae · Hip Hop &amp; R&amp;B
+        </p>
+      </div>
+      <div class="cover-photo">
+        <img src="{{HERO}}" alt="DJ RHUE performing" />
+      </div>
+      <div class="cover-footer">
+        <span>djrhue.com</span>
+        <span>Est. 2025</span>
+      </div>
+    </section>
+
+    <!-- Page 2: Bio & highlights -->
+    <section class="page inner">
+      <p class="eyebrow">About</p>
+      <h2>Built for crowds that came to move</h2>
+      <div class="rule"></div>
+      <div class="two-col">
+        <div>
+          <p class="lead">
+            DJ RHUE is a Bristol-based selector with roots in Caribbean and urban
+            nightlife. Sets are tailored in real time — warm-up grooves through to
+            peak-time pressure — for clubs, festivals, private events and Malta
+            stages.
+          </p>
+          <p class="lead" style="margin-top: 10px">
+            Known for reading the room and delivering seamless, high-energy sets,
+            he performs across the UK with international experience on festival
+            stages in Malta. Technical mixing meets authentic Caribbean and
+            African sounds to keep dancefloors moving all night.
+          </p>
+          <div class="highlights">
+            <h3>Stages &amp; airtime</h3>
+            <div class="highlight-grid">
+              <div class="highlight-card">
+                <strong>St Paul's Carnival</strong>
+                <span>Performer — Bristol</span>
+              </div>
+              <div class="highlight-card">
+                <strong>SWU.FM</strong>
+                <span>Guest DJ &amp; radio sessions</span>
+              </div>
+              <div class="highlight-card">
+                <strong>Rinse FM</strong>
+                <span>Guest mix features</span>
+              </div>
+              <div class="highlight-card">
+                <strong>Laid Blak Radio</strong>
+                <span>Featured artist</span>
+              </div>
+              <div class="highlight-card">
+                <strong>Manoel Island · Malta</strong>
+                <span>International festival stages</span>
+              </div>
+              <div class="highlight-card">
+                <strong>UK clubs &amp; festivals</strong>
+                <span>Bristol, London &amp; nationwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bio-photo">
+          <img src="{{PRESS}}" alt="DJ RHUE press portrait" />
+        </div>
+      </div>
+      <span class="page-brand">DJ RHUE EPK 2026</span>
+      <span class="page-num">2</span>
+    </section>
+
+    <!-- Page 3: Services -->
+    <section class="page inner">
+      <p class="eyebrow">Services</p>
+      <h2>Book for any room</h2>
+      <div class="rule"></div>
+      <p class="lead">
+        Intimate venues, packed clubs, outdoor stages — professional sets that keep
+        the floor moving.
+      </p>
+      <div class="service-list">
+        <div class="service-row">
+          <span class="num">01</span>
+          <div>
+            <h4>Club Nights</h4>
+            <p>High-energy urban sets for bars, clubs and nightlife venues.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="num">02</span>
+          <div>
+            <h4>Festivals &amp; Outdoor</h4>
+            <p>Carnival energy and festival stages built for large crowds.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="num">03</span>
+          <div>
+            <h4>Private Events</h4>
+            <p>Birthdays, celebrations and parties with customised playlists.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="num">04</span>
+          <div>
+            <h4>Corporate &amp; Brand</h4>
+            <p>Reliable sets for brand activations, staff events and functions.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="num">05</span>
+          <div>
+            <h4>International</h4>
+            <p>UK bookings plus Malta stages — Manoel Island to Valletta views.</p>
+          </div>
+        </div>
+      </div>
+      <div class="service-gallery">
+        <img src="{{GALLERY1}}" alt="" />
+        <img src="{{GALLERY2}}" alt="" />
+        <img src="{{GALLERY3}}" alt="" />
+      </div>
+      <p class="note-box">
+        Professional DJ equipment and sound system available on request — from
+        controller-only to full PA and CDJ rigs. Setup packages available exclusively
+        with DJ RHUE bookings. Full rates at djrhue.com/#rates.
+      </p>
+      <span class="page-brand">DJ RHUE EPK 2026</span>
+      <span class="page-num">3</span>
+    </section>
+
+    <!-- Page 4: Why book + rates -->
+    <section class="page inner">
+      <p class="eyebrow">Why Book DJ RHUE</p>
+      <h2>What you get on the night</h2>
+      <div class="rule"></div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h4>Reads the room</h4>
+          <p>Set direction shifts with the crowd — no rigid playlist, no dead moments.</p>
+        </div>
+        <div class="why-card">
+          <h4>Turnkey when needed</h4>
+          <p>From controller-only to full PA and CDJ rigs — one contact, one setup.</p>
+        </div>
+        <div class="why-card">
+          <h4>Promoter-ready</h4>
+          <p>On time, clear comms, EPK and terms sorted before you ask.</p>
+        </div>
+        <div class="why-card">
+          <h4>UK &amp; Malta</h4>
+          <p>Regular Bristol bookings plus international dates and growing radio credits.</p>
+        </div>
+      </div>
+
+      <div class="rates-block">
+        <h3>2026 rate guidance</h3>
+        <div class="rate-row">
+          <div>
+            <strong>From £70</strong>
+            <span class="unit">up to 1 hour</span>
+          </div>
+          <div>
+            <h4>Warm-Up or Guest Set</h4>
+            <p>Opening sets, supporting artists and shorter club slots.</p>
+          </div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <strong>From £100</strong>
+            <span class="unit">quoted from</span>
+          </div>
+          <div>
+            <h4>Headline Set or Peak Dates</h4>
+            <p>Peak-time sets. NYE, Halloween, Christmas and special dates quoted individually.</p>
+          </div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <strong>£50</strong>
+            <span class="unit">per hour</span>
+          </div>
+          <div>
+            <h4>Extended / Multi-Hour</h4>
+            <p>Multi-hour private events, bars and longer residencies. Minimum booking may apply.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fee-strip">
+        <strong>Booking fee secures your date:</strong>
+        Standard DJ booking £50 · Warm-up or guest set £70 · Headline set or peak dates £100.
+        Fee forms part of the total price. Balance due 48 hours before the event unless agreed otherwise.
+        Full terms and equipment packages at djrhue.com/#terms.
+      </div>
+      <span class="page-brand">DJ RHUE EPK 2026</span>
+      <span class="page-num">4</span>
+    </section>
+
+    <!-- Page 5: Contact -->
+    <section class="page inner">
+      <p class="eyebrow">Bookings</p>
+      <h2>Book DJ RHUE</h2>
+      <div class="rule"></div>
+      <div class="contact-layout">
+        <div>
+          <ul class="contact-list">
+            <li>
+              <strong>Phone / WhatsApp</strong>
+              07305 940 902
+            </li>
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:booking.djrhue@gmail.com">booking.djrhue@gmail.com</a>
+            </li>
+            <li>
+              <strong>Instagram</strong>
+              <a href="https://instagram.com/dj_rhue">@DJ_RHUE</a>
+            </li>
+            <li>
+              <strong>YouTube</strong>
+              <a href="https://youtube.com/@rhue_james7">youtube.com/@rhue_james7</a>
+            </li>
+            <li>
+              <strong>Mixcloud</strong>
+              <a href="https://www.mixcloud.com/DJRHUE/">mixcloud.com/DJRHUE</a>
+            </li>
+            <li>
+              <strong>Based</strong>
+              Bristol, UK &amp; Malta
+            </li>
+          </ul>
+          <div class="contact-photo">
+            <img src="{{CONTACT}}" alt="DJ RHUE live" />
+          </div>
+        </div>
+        <div class="qr-block">
+          <img src="{{QR}}" alt="QR code — scan to book at djrhue.com" />
+          <p><strong class="gold">Scan to book online</strong></p>
+          <span class="url">djrhue.com/#book</span>
+        </div>
+      </div>
+      <span class="page-brand">DJ RHUE EPK 2026</span>
+      <span class="page-num">5</span>
+    </section>
+  </body>
+</html>
