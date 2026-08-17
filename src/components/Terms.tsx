@@ -31,12 +31,17 @@ const docs = [
     copy: 'Single PDF with promotional content rates and terms & conditions together.',
     href: '/docs/DJ_RHUE_Promo_Rates_and_Terms.pdf',
   },
+  {
+    title: 'Electronic press kit',
+    copy: 'Bio, services, career highlights and why-book notes for promoters and press.',
+    href: '/docs/DJ_RHUE_EPK_2026.pdf',
+  },
 ]
 
 const highlights = [
   {
     title: 'Booking fee secures the date',
-    copy: 'Standard £50 · Warm-up / guest £70 · Specialist / headline £100. Fee forms part of the total price.',
+    copy: 'Standard DJ Booking £50 · Warm-Up or Guest Set £70 · Headline Set or Peak Dates £100. Fee forms part of the total price.',
   },
   {
     title: 'Balance before the event',

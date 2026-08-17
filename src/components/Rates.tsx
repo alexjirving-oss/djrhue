@@ -4,20 +4,20 @@ const performance = [
   {
     price: '£50',
     unit: 'per hour',
-    title: 'Standard DJ booking',
+    title: 'Standard DJ Booking',
     copy: 'Multi-hour bookings, private events, bars, pubs and extended DJ sets. Minimum booking may apply.',
   },
   {
     price: 'From £70',
     unit: 'up to 1 hour',
-    title: 'Warm-up / guest set',
+    title: 'Warm-Up or Guest Set',
     copy: 'Ideal for opening sets, supporting artists, club nights and shorter performances.',
   },
   {
     price: 'From £100',
-    unit: 'specialist set',
-    title: 'Specialist / headline set',
-    copy: 'High-energy Afrobeats, Dancehall, Amapiano, Reggae, Soca & Caribbean / Urban specialist sets.',
+    unit: 'quoted from',
+    title: 'Headline Set or Peak Dates',
+    copy: 'High-energy specialist sets focused on Afrobeats, Dancehall, Amapiano, Reggae, Soca & Caribbean/Urban music. Peak dates and special events (NYE, Halloween, Christmas, etc.) are quoted individually.',
   },
 ]
 

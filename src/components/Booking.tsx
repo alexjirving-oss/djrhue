@@ -94,8 +94,9 @@ export function Booking() {
           </div>
 
           <p className="booking-note">
-            Booking fee secures your date (from £50). Balance due 48 hours before
-            the event. See <a href="#rates">rates</a> and <a href="#terms">terms</a>.
+            Booking fee secures your date (from £50). Remaining balance is due no
+            later than 48 hours before the event. See <a href="#rates">rates</a> and{' '}
+            <a href="#terms">terms</a>.
           </p>
         </motion.div>
 
