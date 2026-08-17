@@ -5,9 +5,9 @@ import { motionTransition, viewportOnce } from '../lib/motion'
 import { SocialLinks } from './SocialLinks'
 
 const BOOKING_EMAIL = 'booking.djrhue@gmail.com'
-const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim() || ''
-const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
-const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${BOOKING_EMAIL}`
+const FORMSPREE_ENDPOINT =
+  import.meta.env.VITE_FORM_ENDPOINT?.trim() ||
+  'https://formspree.io/f/mzepjnra'
 const WHATSAPP = '447305940902'
 
 const eventTypes = [
@@ -56,14 +56,11 @@ function buildMailto(data: FormData) {
   return `mailto:${BOOKING_EMAIL}?subject=${subject}&body=${body}`
 }
 
-async function submitViaWeb3Forms(data: FormData) {
+async function submitViaFormspree(data: FormData) {
   const name = String(data.get('name') || '').trim()
   const eventType = String(data.get('eventType') || '').trim()
 
   const payload = {
-    access_key: WEB3FORMS_ACCESS_KEY,
-    subject: `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`,
-    from_name: 'DJ RHUE Website',
     name,
     email: String(data.get('email') || '').trim(),
     phone: String(data.get('phone') || '').trim(),
@@ -71,10 +68,10 @@ async function submitViaWeb3Forms(data: FormData) {
     date: String(data.get('date') || '').trim(),
     location: String(data.get('location') || '').trim(),
     message: String(data.get('message') || '').trim(),
-    botcheck: false,
+    _subject: `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`,
   }
 
-  const res = await fetch(WEB3FORMS_ENDPOINT, {
+  const res = await fetch(FORMSPREE_ENDPOINT, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -84,38 +81,19 @@ async function submitViaWeb3Forms(data: FormData) {
   })
 
   const json = (await res.json().catch(() => null)) as {
-    success?: boolean
-    message?: string
+    ok?: boolean
+    error?: string
+    errors?: Array<{ message?: string }>
   } | null
 
-  if (res.ok && json?.success) return
+  if (res.ok && json?.ok !== false) return
 
-  throw new Error(json?.message || `Submission failed (${res.status})`)
-}
-
-async function submitViaFormSubmit(data: FormData) {
-  const name = String(data.get('name') || '').trim()
-  const eventType = String(data.get('eventType') || '').trim()
-  data.set('_subject', `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`)
-  data.set('_template', 'table')
-  data.set('_captcha', 'false')
-
-  const res = await fetch(FORMSUBMIT_ENDPOINT, {
-    method: 'POST',
-    body: data,
-    headers: { Accept: 'application/json' },
-  })
-
-  const json = (await res.json().catch(() => null)) as {
-    success?: boolean | string
-    message?: string
-  } | null
-
-  if (res.ok && (json?.success === true || json?.success === 'true')) return
-
-  const message = json?.message || `Submission failed (${res.status})`
+  const message =
+    json?.error ||
+    json?.errors?.map((e) => e.message).filter(Boolean).join('; ') ||
+    `Submission failed (${res.status})`
   if (isActivationError(message)) {
-    throw new Error('FORMSUBMIT_ACTIVATION')
+    throw new Error('FORMSPREE_ACTIVATION')
   }
   throw new Error(message)
 }
@@ -133,18 +111,14 @@ export function Booking() {
     setErrorMsg('')
 
     try {
-      if (WEB3FORMS_ACCESS_KEY) {
-        await submitViaWeb3Forms(data)
-      } else {
-        await submitViaFormSubmit(data)
-      }
+      await submitViaFormspree(data)
       setStatus('ok')
       form.reset()
       setEventType('')
     } catch (err) {
       const message = err instanceof Error ? err.message : ''
 
-      if (message === 'FORMSUBMIT_ACTIVATION' || isActivationError(message)) {
+      if (message === 'FORMSPREE_ACTIVATION' || isActivationError(message)) {
         window.location.href = buildMailto(data)
         setStatus('mailto')
         form.reset()
@@ -152,10 +126,10 @@ export function Booking() {
         return
       }
 
-      setStatus('error')
-      setErrorMsg(
-        message || 'Something went wrong. Try WhatsApp or email instead.',
-      )
+      window.location.href = buildMailto(data)
+      setStatus('mailto')
+      form.reset()
+      setEventType('')
     }
   }
 

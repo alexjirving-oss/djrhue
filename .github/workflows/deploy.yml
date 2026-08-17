@@ -28,7 +28,7 @@ jobs:
       - run: npm run build:epk
       - run: npm run build
         env:
-          VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
+          VITE_FORM_ENDPOINT: ${{ secrets.VITE_FORM_ENDPOINT }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
