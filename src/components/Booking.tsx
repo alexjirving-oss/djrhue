@@ -4,7 +4,10 @@ import { motion } from 'framer-motion'
 import { motionTransition, viewportOnce } from '../lib/motion'
 import { SocialLinks } from './SocialLinks'
 
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/booking.djrhue@gmail.com'
+const BOOKING_EMAIL = 'booking.djrhue@gmail.com'
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim() || ''
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
+const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${BOOKING_EMAIL}`
 const WHATSAPP = '447305940902'
 
 const eventTypes = [
@@ -17,8 +20,108 @@ const eventTypes = [
   'Other',
 ]
 
+type SubmitStatus = 'idle' | 'sending' | 'ok' | 'error' | 'mailto'
+
+function isActivationError(message: string) {
+  return /activation|activate form|actived/i.test(message)
+}
+
+function buildMailto(data: FormData) {
+  const name = String(data.get('name') || '').trim()
+  const email = String(data.get('email') || '').trim()
+  const phone = String(data.get('phone') || '').trim()
+  const eventType = String(data.get('eventType') || '').trim()
+  const date = String(data.get('date') || '').trim()
+  const location = String(data.get('location') || '').trim()
+  const message = String(data.get('message') || '').trim()
+
+  const subject = encodeURIComponent(
+    `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`,
+  )
+  const body = encodeURIComponent(
+    [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      `Event type: ${eventType}`,
+      `Date: ${date}`,
+      location ? `Location: ${location}` : '',
+      '',
+      message,
+    ]
+      .filter(Boolean)
+      .join('\n'),
+  )
+
+  return `mailto:${BOOKING_EMAIL}?subject=${subject}&body=${body}`
+}
+
+async function submitViaWeb3Forms(data: FormData) {
+  const name = String(data.get('name') || '').trim()
+  const eventType = String(data.get('eventType') || '').trim()
+
+  const payload = {
+    access_key: WEB3FORMS_ACCESS_KEY,
+    subject: `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`,
+    from_name: 'DJ RHUE Website',
+    name,
+    email: String(data.get('email') || '').trim(),
+    phone: String(data.get('phone') || '').trim(),
+    eventType,
+    date: String(data.get('date') || '').trim(),
+    location: String(data.get('location') || '').trim(),
+    message: String(data.get('message') || '').trim(),
+    botcheck: false,
+  }
+
+  const res = await fetch(WEB3FORMS_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+
+  const json = (await res.json().catch(() => null)) as {
+    success?: boolean
+    message?: string
+  } | null
+
+  if (res.ok && json?.success) return
+
+  throw new Error(json?.message || `Submission failed (${res.status})`)
+}
+
+async function submitViaFormSubmit(data: FormData) {
+  const name = String(data.get('name') || '').trim()
+  const eventType = String(data.get('eventType') || '').trim()
+  data.set('_subject', `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`)
+  data.set('_template', 'table')
+  data.set('_captcha', 'false')
+
+  const res = await fetch(FORMSUBMIT_ENDPOINT, {
+    method: 'POST',
+    body: data,
+    headers: { Accept: 'application/json' },
+  })
+
+  const json = (await res.json().catch(() => null)) as {
+    success?: boolean | string
+    message?: string
+  } | null
+
+  if (res.ok && (json?.success === true || json?.success === 'true')) return
+
+  const message = json?.message || `Submission failed (${res.status})`
+  if (isActivationError(message)) {
+    throw new Error('FORMSUBMIT_ACTIVATION')
+  }
+  throw new Error(message)
+}
+
 export function Booking() {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'error'>('idle')
+  const [status, setStatus] = useState<SubmitStatus>('idle')
   const [errorMsg, setErrorMsg] = useState('')
   const [eventType, setEventType] = useState('')
 
@@ -29,35 +132,30 @@ export function Booking() {
     setStatus('sending')
     setErrorMsg('')
 
-    const name = String(data.get('name') || '').trim()
-    const event = String(data.get('eventType') || '').trim()
-    data.append('_subject', `DJ RHUE Booking — ${event || 'Enquiry'} — ${name}`)
-    data.append('_template', 'table')
-    data.append('_captcha', 'false')
-
     try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
-      })
-      const json = (await res.json().catch(() => null)) as {
-        success?: boolean | string
-        message?: string
-      } | null
-      if (
-        res.ok &&
-        (json?.success === true || json?.success === 'true')
-      ) {
-        setStatus('ok')
+      if (WEB3FORMS_ACCESS_KEY) {
+        await submitViaWeb3Forms(data)
+      } else {
+        await submitViaFormSubmit(data)
+      }
+      setStatus('ok')
+      form.reset()
+      setEventType('')
+    } catch (err) {
+      const message = err instanceof Error ? err.message : ''
+
+      if (message === 'FORMSUBMIT_ACTIVATION' || isActivationError(message)) {
+        window.location.href = buildMailto(data)
+        setStatus('mailto')
         form.reset()
         setEventType('')
         return
       }
-      throw new Error(json?.message || `Submission failed (${res.status})`)
-    } catch (err) {
+
       setStatus('error')
-      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Try WhatsApp or email.')
+      setErrorMsg(
+        message || 'Something went wrong. Try WhatsApp or email instead.',
+      )
     }
   }
 
@@ -95,7 +193,7 @@ export function Booking() {
               WhatsApp 07305 940 902
             </a>
             <a href="tel:+447305940902">07305 940 902</a>
-            <a href="mailto:booking.djrhue@gmail.com">booking.djrhue@gmail.com</a>
+            <a href={`mailto:${BOOKING_EMAIL}`}>{BOOKING_EMAIL}</a>
             <SocialLinks className="booking-social" />
             <span>Bristol, UK &amp; Malta</span>
           </div>
@@ -224,6 +322,11 @@ export function Booking() {
             {status === 'ok' && (
               <p className="form-status ok" role="status">
                 Enquiry sent — DJ RHUE will reply shortly.
+              </p>
+            )}
+            {status === 'mailto' && (
+              <p className="form-status ok" role="status">
+                Opening your email app with your enquiry — tap Send to reach DJ RHUE.
               </p>
             )}
             {status === 'error' && (

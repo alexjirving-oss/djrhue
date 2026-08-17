@@ -18,7 +18,10 @@ npm run preview
 
 ## Booking form
 
-The booking form submits via [FormSubmit](https://formsubmit.co) to `booking.djrhue@gmail.com`. No env vars or GitHub secrets are required.
+The booking form sends enquiries to `booking.djrhue@gmail.com`.
+
+- **Preferred:** [Web3Forms](https://web3forms.com) — sign in at [app.web3forms.com](https://app.web3forms.com) with Google (booking inbox), copy your access key, then set GitHub secret `VITE_WEB3FORMS_ACCESS_KEY` and redeploy.
+- **Fallback:** [FormSubmit](https://formsubmit.co) until Web3Forms is configured. If FormSubmit is not activated yet, the form opens the visitor’s email app with the enquiry pre-filled (still delivers to the booking inbox).
 
 ## Brand
 
