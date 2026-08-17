@@ -15,13 +15,14 @@ export function Footer() {
         <div className="footer-meta">
           <SocialLinks className="footer-social" />
           <div className="footer-links">
+            <a href="#listen">Listen</a>
             <a href="#rates">Rates</a>
             <a href="#terms">Terms</a>
+            <a href="/docs/DJ_RHUE_EPK_2026.pdf" target="_blank" rel="noreferrer">
+              EPK
+            </a>
             <a href="/docs/DJ_RHUE_Rates_2026.pdf" target="_blank" rel="noreferrer">
               Rates PDF
-            </a>
-            <a href="https://linktr.ee/Rhue_james7" target="_blank" rel="noopener noreferrer">
-              Linktree
             </a>
             <a href="#book">Book</a>
           </div>

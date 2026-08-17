@@ -1,11 +1,12 @@
 import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
+import { Listen } from './components/Listen'
+import { Proof } from './components/Proof'
 import { About } from './components/About'
-import { Sounds } from './components/Sounds'
-import { Services } from './components/Services'
-import { Rates } from './components/Rates'
-import { Why } from './components/Why'
 import { Gallery } from './components/Gallery'
+import { Services } from './components/Services'
+import { Why } from './components/Why'
+import { Rates } from './components/Rates'
 import { Booking } from './components/Booking'
 import { Terms } from './components/Terms'
 import { Footer } from './components/Footer'
@@ -17,12 +18,13 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Listen />
+        <Proof />
         <About />
-        <Sounds />
-        <Services />
-        <Rates />
-        <Why />
         <Gallery />
+        <Services />
+        <Why />
+        <Rates />
         <Booking />
         <Terms />
       </main>

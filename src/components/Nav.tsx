@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 
 const links = [
+  { href: '#listen', label: 'Listen' },
+  { href: '#proof', label: 'Proof' },
   { href: '#about', label: 'About' },
-  { href: '#sounds', label: 'Sounds' },
+  { href: '#gallery', label: 'Gallery' },
   { href: '#services', label: 'Services' },
   { href: '#rates', label: 'Rates' },
-  { href: '#gallery', label: 'Gallery' },
   { href: '#terms', label: 'Terms' },
 ]
 
@@ -46,6 +47,17 @@ export function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              className="btn btn-ghost nav-epk"
+              href="/docs/DJ_RHUE_EPK_2026.pdf"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+            >
+              EPK
+            </a>
+          </li>
           <li>
             <a className="btn btn-primary nav-cta" href="#book" onClick={() => setOpen(false)}>
               Book

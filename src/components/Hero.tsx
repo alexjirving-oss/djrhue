@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { motionTransition } from '../lib/motion'
 
 export function Hero() {
   return (
@@ -15,13 +16,13 @@ export function Hero() {
           alt="DJ RHUE"
           initial={{ opacity: 0, y: 28, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={motionTransition({ duration: 1, ease: [0.22, 1, 0.36, 1] })}
         />
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={motionTransition({ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] })}
         >
           Caribbean heat.
           <br />
@@ -32,7 +33,7 @@ export function Hero() {
           className="hero-lead"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+          transition={motionTransition({ duration: 0.9, delay: 0.22, ease: [0.22, 1, 0.36, 1] })}
         >
           Afrobeats · Dancehall · Amapiano · Reggae — Bristol, UK &amp; Malta.
         </motion.p>
@@ -41,7 +42,7 @@ export function Hero() {
           className="hero-actions"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
+          transition={motionTransition({ duration: 0.85, delay: 0.34, ease: [0.22, 1, 0.36, 1] })}
         >
           <a className="btn btn-primary" href="#book">
             Book DJ RHUE
@@ -49,8 +50,16 @@ export function Hero() {
               <i /><i /><i /><i /><i />
             </span>
           </a>
-          <a className="btn btn-ghost" href="#gallery">
-            See the booth
+          <a className="btn btn-ghost" href="#listen">
+            Listen to mixes
+          </a>
+          <a
+            className="btn btn-ghost hero-epk"
+            href="/docs/DJ_RHUE_EPK_2026.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download EPK
           </a>
         </motion.div>
       </div>

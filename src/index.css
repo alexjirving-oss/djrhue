@@ -126,6 +126,32 @@ p {
   transform: translateY(-2px);
 }
 
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible,
+.footer-links a:focus-visible,
+.social-link:focus-visible,
+.gallery-trigger:focus-visible,
+.rate-packages-toggle:focus-visible,
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--gold) 0%, #ffe08a 45%, var(--gold-deep) 100%);
   color: #14110a;
