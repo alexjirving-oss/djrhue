@@ -1025,6 +1025,33 @@
   color: #f87171;
 }
 
+.field-checkbox {
+  margin-top: 0.2rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.15rem;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.checkbox-label a {
+  color: var(--gold);
+}
+
 .form-hint {
   margin: 0;
   color: var(--muted);

@@ -47,6 +47,7 @@ function buildMailto(data: FormData) {
 export function Booking() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
+  const [eventType, setEventType] = useState('')
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -65,6 +66,7 @@ export function Booking() {
         if (res.ok) {
           setStatus('ok')
           form.reset()
+          setEventType('')
           return
         }
         const json = (await res.json().catch(() => null)) as { error?: string } | null
@@ -79,6 +81,7 @@ export function Booking() {
     window.location.href = buildMailto(data)
     setStatus('ok')
     form.reset()
+    setEventType('')
   }
 
   return (
@@ -132,8 +135,8 @@ export function Booking() {
           </div>
 
           <p className="booking-note">
-            Booking fee secures your date (from £70 guest / £100 headline). Remaining
-            balance due no later than 48 hours before the event. See{' '}
+            Booking fee secures your date (£50 standard / £70 guest / £100 headline).
+            Remaining balance due no later than 48 hours before the event. See{' '}
             <a href="#rates">rates</a> and <a href="#terms">terms</a>.
           </p>
         </motion.div>
@@ -164,7 +167,13 @@ export function Booking() {
             </div>
             <div className="field">
               <label htmlFor="eventType">Event type</label>
-              <select id="eventType" name="eventType" required defaultValue="">
+              <select
+                id="eventType"
+                name="eventType"
+                required
+                value={eventType}
+                onChange={(e) => setEventType(e.target.value)}
+              >
                 <option value="" disabled>
                   Select…
                 </option>
@@ -174,6 +183,19 @@ export function Booking() {
                   </option>
                 ))}
               </select>
+              {eventType === 'Equipment hire' && (
+                <p className="form-hint">
+                  Equipment hire is subject to separate terms — see{' '}
+                  <a
+                    href="/docs/DJ_RHUE_Equipment_Hire_Terms.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Equipment Hire Terms
+                  </a>
+                  .
+                </p>
+              )}
             </div>
           </div>
 
@@ -196,6 +218,22 @@ export function Booking() {
               placeholder="Crowd size, set length, vibe, tech needs…"
               required
             />
+          </div>
+
+          <div className="field field-checkbox">
+            <label className="checkbox-label">
+              <input type="checkbox" name="termsAccepted" required />
+              <span>
+                I agree to the{' '}
+                <a
+                  href="/docs/DJ_RHUE_Terms_2026.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Terms &amp; Conditions
+                </a>
+              </span>
+            </label>
           </div>
 
           <div className="form-actions">

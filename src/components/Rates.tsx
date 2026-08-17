@@ -28,7 +28,8 @@ const performance = [
 
 const packageSummary = [
   'Essential DJ setup from +£50',
-  'Branded booth & PA packages from +£80',
+  'Branded booth from +£80',
+  'PA package from +£150',
   'Pro CDJ setups from +£120',
   'Large event & industry packages available',
   'Standalone equipment hire from £100/day',
