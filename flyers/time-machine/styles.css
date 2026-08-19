@@ -16,7 +16,8 @@
   --neon-gold: #ffd54a;
   --neon-violet: #9d4eff;
   --text-primary: #eef2ff;
-  --text-muted: #9aa3c7;
+  /* Higher-contrast muted text for readability on dark gradients */
+  --text-muted: #c7d0ff;
   --era-60s: #ff9a3c;
   --era-70s: #c77dff;
   --era-80s: #ff4d8a;
@@ -129,13 +130,13 @@ body {
     rgba(0, 0, 0, 0.03) 4px
   );
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .bg-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.45) 100%);
   pointer-events: none;
 }
 
@@ -174,9 +175,9 @@ body {
   align-items: center;
   gap: 16px;
   font-family: var(--font-display);
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
@@ -264,7 +265,7 @@ body {
   font-family: var(--font-display);
   font-size: 44px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--neon-magenta);
   text-shadow: 0 0 30px rgba(255, 45, 168, 0.4);
@@ -283,7 +284,7 @@ body {
   font-family: var(--font-display);
   font-size: 32px;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 28px;
@@ -332,15 +333,15 @@ body {
   font-size: 28px;
   font-weight: 600;
   color: var(--era-color);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .timeline-act {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 400;
   color: var(--text-muted);
-  line-height: 1.35;
+  line-height: 1.42;
 }
 
 .timeline-act strong {
@@ -368,9 +369,9 @@ body {
 
 .dj-highlight-label {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--neon-gold);
   margin-bottom: 12px;
@@ -389,10 +390,10 @@ body {
 }
 
 .dj-highlight-desc {
-  font-size: 30px;
+  font-size: 28px;
   color: var(--text-muted);
   margin-top: 12px;
-  line-height: 1.4;
+  line-height: 1.38;
 }
 
 .dj-highlight-desc em {
@@ -440,9 +441,9 @@ body {
 
 .page-header .subtitle {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 500;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--neon-cyan);
   margin-top: 16px;
@@ -456,7 +457,7 @@ body {
 }
 
 .info-card {
-  padding: 40px 44px;
+  padding: 44px 50px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
   border: 1px solid rgba(168, 180, 208, 0.12);
   border-radius: 6px;
@@ -482,9 +483,9 @@ body {
 
 .info-card-icon {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--card-accent, var(--neon-cyan));
   margin-bottom: 16px;
@@ -492,15 +493,15 @@ body {
 
 .info-card-title {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: var(--text-primary);
 }
 
 .info-card-body {
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1.45;
   color: var(--text-muted);
 }
