@@ -5,6 +5,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { buildMegaPosts } from './room-content-mega.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const outPath = join(__dirname, '..', 'src', 'data', 'room', 'posts.generated.ts')
@@ -1046,6 +1047,8 @@ for (let n = 1; n <= 24; n++) {
     ],
   })
 }
+
+buildMegaPosts({ add, roomAnswer, communityAnswer })
 
 // Deduplicate slugs
 const seen = new Set()

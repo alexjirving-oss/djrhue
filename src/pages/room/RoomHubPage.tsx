@@ -1,3 +1,4 @@
+import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { RoomBrowse } from '../../components/room/RoomBrowse'
@@ -13,9 +14,35 @@ import { RoomPostCard } from '../../components/room/RoomPostCard'
 
 const stats = roomStats()
 
+const suggestions = [
+  'cables',
+  'XLR',
+  'USB failed',
+  'Afrobeats',
+  'wedding timeline',
+  'gain structure',
+  'Dancehall',
+  'speakON',
+  'rekordbox',
+  'how to',
+]
+
 export function RoomHubPage() {
+  const [query, setQuery] = useState('')
   const featured = featuredPosts(6)
   const recentQa = postsByKind('qa').slice(0, 4)
+
+  function applySuggestion(term: string) {
+    setQuery(term)
+    requestAnimationFrame(() => {
+      document.getElementById('library')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+  }
+
+  function onHeroSearch(e: FormEvent) {
+    e.preventDefault()
+    document.getElementById('library')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   return (
     <div className="room-page">
@@ -28,11 +55,37 @@ export function RoomHubPage() {
             transition={motionTransition({ duration: 0.7 })}
           >
             <p className="eyebrow">The Room</p>
-            <h1 className="room-hero-title">DJ knowledge for the floor</h1>
+            <h1 className="room-hero-title">How can we help?</h1>
             <p className="room-hero-copy">
-              FAQs, helpful tips from DJ RHUE, technical guides and community Q&amp;A — booking,
-              gear, mixing, sound, genres and everything between the USB and the dancefloor.
+              Search {stats.total}+ FAQs, tips, technical guides and Q&amp;A — cables, mixing, genres,
+              bookings, sound and everything between the USB and the dancefloor.
             </p>
+
+            <form className="room-hero-search" onSubmit={onHeroSearch} role="search">
+              <label className="sr-only" htmlFor="room-help-search">
+                Search The Room
+              </label>
+              <input
+                id="room-help-search"
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Ask anything — e.g. understanding XLR cables, wedding DJ timeline…"
+                autoComplete="off"
+              />
+              <button className="btn btn-primary" type="submit">
+                Search
+              </button>
+            </form>
+
+            <div className="room-suggest" aria-label="Popular searches">
+              {suggestions.map((term) => (
+                <button key={term} type="button" onClick={() => applySuggestion(term)}>
+                  {term}
+                </button>
+              ))}
+            </div>
+
             <div className="room-stat-row" aria-label="Library size">
               <div>
                 <strong>{stats.total}</strong>
@@ -59,14 +112,24 @@ export function RoomHubPage() {
         </div>
       </section>
 
+      <section className="section room-section room-section-alt" id="library">
+        <div className="container">
+          <div className="room-section-head">
+            <p className="eyebrow">Library</p>
+            <h2 className="section-title">Everything</h2>
+            <p className="section-copy">
+              Filter by type or keep typing — the search covers titles, tags and full answers.
+            </p>
+          </div>
+          <RoomBrowse posts={roomPosts} query={query} onQueryChange={setQuery} />
+        </div>
+      </section>
+
       <section className="section room-section">
         <div className="container">
           <div className="room-section-head">
             <p className="eyebrow">Browse</p>
             <h2 className="section-title">Categories</h2>
-            <p className="section-copy">
-              Pick a lane — or search the full library below.
-            </p>
           </div>
           <div className="room-cat-grid">
             {roomCategories.map((cat) => {
@@ -103,28 +166,12 @@ export function RoomHubPage() {
           <div className="room-section-head">
             <p className="eyebrow">Community</p>
             <h2 className="section-title">Recent Q&amp;A</h2>
-            <p className="section-copy">
-              Questions from the scene — answered with Room tips and practical booth sense.
-            </p>
           </div>
           <div className="room-card-grid">
             {recentQa.map((post) => (
               <RoomPostCard key={`${post.category}/${post.slug}`} post={post} />
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section room-section room-section-alt" id="library">
-        <div className="container">
-          <div className="room-section-head">
-            <p className="eyebrow">Library</p>
-            <h2 className="section-title">Everything</h2>
-            <p className="section-copy">
-              Filter by FAQ, tip, guide or Q&amp;A — or search any DJ / music / sound topic.
-            </p>
-          </div>
-          <RoomBrowse posts={roomPosts} />
         </div>
       </section>
 

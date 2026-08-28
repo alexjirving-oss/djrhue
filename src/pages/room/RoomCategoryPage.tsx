@@ -27,7 +27,7 @@ export function RoomCategoryPage() {
 
       <section className="section room-section">
         <div className="container">
-          <RoomBrowse posts={posts} />
+          <RoomBrowse posts={posts} compactSearch />
         </div>
       </section>
     </div>

@@ -19,7 +19,7 @@ const STATIC_ROUTES = [
   { path: '/book', out: 'book/index.html', wait: '#book', terms: ['Book'] },
   { path: '/faq', out: 'faq/index.html', wait: '#faq', terms: ['FAQ'] },
   { path: '/terms', out: 'terms/index.html', wait: '#terms', terms: ['Terms'] },
-  { path: '/room', out: 'room/index.html', wait: '.room-hero-title', terms: ['The Room', 'DJ knowledge'] },
+  { path: '/room', out: 'room/index.html', wait: '.room-hero-title', terms: ['The Room', 'How can we help'] },
 ]
 
 const MIME = {

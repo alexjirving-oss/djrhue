@@ -1753,6 +1753,72 @@
   font-size: 1.05rem;
 }
 
+.room-hero-search {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+  max-width: 40rem;
+}
+
+.room-hero-search input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.15rem;
+  border: 1px solid rgba(246, 198, 74, 0.35);
+  border-radius: 2px;
+  background: rgba(10, 10, 10, 0.72);
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.room-hero-search input::placeholder {
+  color: rgba(168, 162, 154, 0.7);
+}
+
+.room-hero-search input:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.room-suggest {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-width: 44rem;
+}
+
+.room-suggest button {
+  min-height: 2rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: rgba(18, 18, 18, 0.65);
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.room-suggest button:hover {
+  border-color: rgba(246, 198, 74, 0.45);
+  color: var(--gold);
+}
+
+.room-search-hero input {
+  min-height: 3.2rem;
+  font-size: 1rem;
+  border-color: rgba(246, 198, 74, 0.28);
+}
+
+@media (max-width: 720px) {
+  .room-hero-search {
+    grid-template-columns: 1fr;
+  }
+}
+
 .room-stat-row {
   margin-top: 2rem;
   display: flex;

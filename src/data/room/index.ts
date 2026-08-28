@@ -15,7 +15,7 @@ export const roomCategories: RoomCategory[] = [
     id: 'gear',
     label: 'Gear & Booth',
     eyebrow: 'Tech',
-    blurb: 'CDJs, mixers, cables, USBs and the kit habits that survive load-in.',
+    blurb: 'CDJs, mixers, cables (XLR, RCA, speakON…), USBs and kit habits that survive load-in.',
   },
   {
     id: 'mixing',

@@ -5069,5 +5069,9641 @@ export const roomPosts: RoomPost[] = [
       "Room standard: small weekly drills beat rare heroic practice weekends."
     ],
     "slug": "room-drill-24-review-a-live-recording-at-0-75x-and-mark-timing-errors"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Understanding your cables: the DJ & PA map",
+    "summary": "A plain-English map of every connector you will meet between USB, mixer, amps and speakers — and what not to force.",
+    "tags": [
+      "cables",
+      "xlr",
+      "rca",
+      "pa",
+      "basics"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Cables are how signal and power move. Mixing them up is the fastest way to a silent booth or a damaged socket.",
+      "Audio signal cables (XLR, TRS, TS, RCA) are not power cables (IEC, powerCON). Never treat a signal lead like a mains lead.",
+      "Balanced lines (XLR, TRS) reject noise better over distance. Unbalanced (TS, RCA) are fine for short runs and many DJ outputs — but adapt carefully.",
+      "Carry a labelled adapter pouch: RCA–RCA, RCA–XLR, XLR M–F, TRS–XLR, spare IEC, and gaffer. That kit ends most “we can’t hear the DJ” panics.",
+      "Gold rule: if it does not seat cleanly, stop. Wrong gender, wrong format, or a damaged socket — forcing it becomes your repair bill."
+    ],
+    "slug": "understanding-your-cables-the-dj-pa-map"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "XLR cables explained for DJs",
+    "summary": "What the three pins do, mic vs line, and when your mixer expects XLR instead of RCA.",
+    "tags": [
+      "xlr",
+      "cables",
+      "balanced"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "XLR is a locking, usually balanced connector common on mics, DI boxes, mixers and PA inputs. Male and female ends matter — learn which way signal flows on your chain.",
+      "Typical pinout (AES standard): Pin 1 ground/shield, Pin 2 hot (+), Pin 3 cold (−). You do not need to rewire XLRs mid-gig, but knowing this helps when a cable is wired wrong.",
+      "Mic level and line level are different voltages. Plugging a line output into a mic input can distort or damage; mic into line can be tiny. Use the right input or a DI/pad.",
+      "For FOH: leave spare XLR runs coiled and labelled. A dead channel is often a cable, not a mixer."
+    ],
+    "slug": "xlr-cables-explained-for-djs"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "RCA / phono cables in the booth",
+    "summary": "Why DJ gear loves RCA, how phono vs line differs, and the ground-wire trap on turntables.",
+    "tags": [
+      "rca",
+      "phono",
+      "cables",
+      "turntables"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "RCA (phono plugs) are unbalanced stereo pairs used on many DJ controllers, CDJs and mixer channel inputs.",
+      "Phono inputs expect turntable-level signal plus RIAA EQ. Line inputs expect CDJ/controller level. Wrong switch = thin/noisy or massively loud distortion.",
+      "Turntables need a ground wire to the mixer ground post. Skip it and you often get hum.",
+      "Keep RCA runs short when you can. Long unbalanced runs pick up noise — especially near power bricks and lighting dimmers."
+    ],
+    "slug": "rca-phono-cables-in-the-booth"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "TRS vs TS: headphones, inserts and balanced line",
+    "summary": "The tip-ring-sleeve story in language that survives peak time.",
+    "tags": [
+      "trs",
+      "ts",
+      "headphones",
+      "cables"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "TS (tip-sleeve) is unbalanced mono — guitar leads, some DJ inserts, unbalanced sends.",
+      "TRS (tip-ring-sleeve) can be balanced mono line, stereo unbalanced (headphones), or insert cables depending on wiring. Context matters.",
+      "Booth headphones are usually TRS stereo. A mono TS jammed into a headphone jack is a bad idea.",
+      "Balanced TRS line outs exist on some interfaces and mixers. Match them to balanced inputs when cable runs get long."
+    ],
+    "slug": "trs-vs-ts-headphones-inserts-and-balanced-line"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "speakON and speaker cables — do not use mic leads for speakers",
+    "summary": "Why speaker cable is different, what speakON locks do, and the amp-to-cab mistakes that blow drivers.",
+    "tags": [
+      "speakon",
+      "speaker-cable",
+      "pa",
+      "safety"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Speaker cables carry amplified power, not mic-level signal. Using skinny mic XLR as a speaker lead is unsafe and can melt or fail.",
+      "speakON (NL2/NL4 etc.) locks into modern speakers and amps so the cable cannot fall out mid-drop.",
+      "Match amp power and impedance to the cabinet. Bridging, wrong ohm loads, and clipped amps kill cones.",
+      "Coil speaker cable properly and inspect jackets. A crushed cable under a stage riser is a future short."
+    ],
+    "slug": "speakon-and-speaker-cables-do-not-use-mic-leads-for-speakers"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Power cables: IEC, powerCON and distribution hygiene",
+    "summary": "How to feed the booth without daisy-chain roulette.",
+    "tags": [
+      "power",
+      "iec",
+      "powercon",
+      "cables"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "IEC (kettle leads) power many CDJs, mixers and laptop PSUs. Carry at least one spare.",
+      "powerCON (and TRUE1 variants) lock into many PA racks. Learn the in/out direction on your specific connectors — they are not all identical.",
+      "One clean distribution path beats random multi-plugs chained across the stage. Ask about generator stability outdoors.",
+      "Label power runs separately from audio. Crossing power over audio inputs invites hum."
+    ],
+    "slug": "power-cables-iec-powercon-and-distribution-hygiene"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "USB cables and sticks that survive club players",
+    "summary": "Data vs charge cables, USB format traps, and why the cheap stick dies at doors.",
+    "tags": [
+      "usb",
+      "cables",
+      "rekordbox"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "A charge-only USB cable will not talk to a controller or hard drive. Keep known-good data cables in the booth pouch.",
+      "USB sticks for Pioneer players: quality brand, correct format, tested on the player family before the gig.",
+      "USB hubs add failure points. Prefer direct ports for primary library sticks.",
+      "Never yank a stick during write/export. Eject cleanly. Corruption loves panic."
+    ],
+    "slug": "usb-cables-and-sticks-that-survive-club-players"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Adapter matrix: what connects to what (and what should not)",
+    "summary": "A practical cheat sheet for RCA–XLR, TRS–XLR, gender changers and the adapters that lie.",
+    "tags": [
+      "adapters",
+      "cables",
+      "booth"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "RCA to XLR adapters move connectors — they do not magically balance an unbalanced signal. Useful, not miraculous.",
+      "Gender changers fix a wrong sex cable; they do not fix a wrong signal type.",
+      "Stereo to mono summing adapters can cause phase weirdness if misused. Prefer proper mono summing in the mixer when possible.",
+      "Build a tested adapter kit once. Do not invent new Franken-cables at 23:40."
+    ],
+    "slug": "adapter-matrix-what-connects-to-what-and-what-should-not"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Balanced vs unbalanced audio — why your long cable hums",
+    "summary": "Noise rejection in one page, without an engineering degree.",
+    "tags": [
+      "balanced",
+      "unbalanced",
+      "noise",
+      "cables"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Balanced connections send the signal two ways (hot/cold) so interference can be cancelled at the input.",
+      "Unbalanced sends one signal + ground. Fine for short DJ RCA runs; risky across a warehouse.",
+      "If the booth is quiet but FOH hums, suspect long unbalanced runs, ground loops, or lighting dimmers on shared power.",
+      "DI boxes convert and isolate. Ask FOH before inventing a new path through the building."
+    ],
+    "slug": "balanced-vs-unbalanced-audio-why-your-long-cable-hums"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Cable care, coiling and gig-bag discipline",
+    "summary": "How pros keep leads alive longer than one carnival season.",
+    "tags": [
+      "cables",
+      "maintenance",
+      "tips"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Over-under coiling reduces twists. Yank-coiling destroys internals over months.",
+      "Colour-sleeve or label both ends. Primary / backup / FOH / monitors — future-you in the rain will thank you.",
+      "Retire cables with cracked jackets, loose strain relief, or intermittent crackle. Intermittent is worse than dead.",
+      "Keep drinks off the cable pile. Sticky beer inside an XLR is a slow betrayal."
+    ],
+    "slug": "cable-care-coiling-and-gig-bag-discipline"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Can I use a microphone XLR as a speaker cable?",
+    "summary": "No. Speaker runs need proper speaker cable / speakON. Mic XLR is for low-level signal, not amp power.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "No. Speaker runs need proper speaker cable / speakON. Mic XLR is for low-level signal, not amp power.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "No. Speaker runs need proper speaker cable / speakON. Mic XLR is for low-level signal, not amp power.",
+        "helpful": 19
+      }
+    ],
+    "slug": "can-i-use-a-microphone-xlr-as-a-speaker-cable"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why is there only sound in one side of my RCA?",
+    "summary": "Dead cable channel, half-seated RCA, or a mono/stereo mismatch. Swap the cable first before blaming the mixer.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Dead cable channel, half-seated RCA, or a mono/stereo mismatch. Swap the cable first before blaming the mixer.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Dead cable channel, half-seated RCA, or a mono/stereo mismatch. Swap the cable first before blaming the mixer.",
+        "helpful": 19
+      }
+    ],
+    "slug": "why-is-there-only-sound-in-one-side-of-my-rca"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Do gold-plated connectors matter?",
+    "summary": "Contact quality and cable construction matter more than gold marketing. A solid mid cable beats a fancy intermittent one.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Contact quality and cable construction matter more than gold marketing. A solid mid cable beats a fancy intermittent one.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Contact quality and cable construction matter more than gold marketing. A solid mid cable beats a fancy intermittent one.",
+        "helpful": 19
+      }
+    ],
+    "slug": "do-gold-plated-connectors-matter"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "How long can an unbalanced RCA run be?",
+    "summary": "Keep them short when possible. If you must go long, expect more noise risk — prefer balanced where the system allows.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Keep them short when possible. If you must go long, expect more noise risk — prefer balanced where the system allows.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Keep them short when possible. If you must go long, expect more noise risk — prefer balanced where the system allows.",
+        "helpful": 19
+      }
+    ],
+    "slug": "how-long-can-an-unbalanced-rca-run-be"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "What is a ground loop hum?",
+    "summary": "Multiple ground paths creating a loop that buzzes. Solutions involve power hygiene, DI isolation, and not random adapter piles — ask FOH.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Multiple ground paths creating a loop that buzzes. Solutions involve power hygiene, DI isolation, and not random adapter piles — ask FOH.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Multiple ground paths creating a loop that buzzes. Solutions involve power hygiene, DI isolation, and not random adapter piles — ask FOH.",
+        "helpful": 19
+      }
+    ],
+    "slug": "what-is-a-ground-loop-hum"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "TRS headphone extension — any gotchas?",
+    "summary": "Use a proper headphone extension. Ultra-cheap ones fail and add hiss. Keep the primary pair short and reliable.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Use a proper headphone extension. Ultra-cheap ones fail and add hiss. Keep the primary pair short and reliable.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Use a proper headphone extension. Ultra-cheap ones fail and add hiss. Keep the primary pair short and reliable.",
+        "helpful": 19
+      }
+    ],
+    "slug": "trs-headphone-extension-any-gotchas"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Can lighting DMX share my audio multicore casually?",
+    "summary": "Best practice: keep lighting and audio loom discipline clear. Cross-talk and confusion at changeover are real.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Best practice: keep lighting and audio loom discipline clear. Cross-talk and confusion at changeover are real.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Best practice: keep lighting and audio loom discipline clear. Cross-talk and confusion at changeover are real.",
+        "helpful": 19
+      }
+    ],
+    "slug": "can-lighting-dmx-share-my-audio-multicore-casually"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "IEC lead feels loose in the CDJ — safe?",
+    "summary": "Replace it. A loose IEC can drop power mid-set. Carry spares rated for the load.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Replace it. A loose IEC can drop power mid-set. Carry spares rated for the load.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Replace it. A loose IEC can drop power mid-set. Carry spares rated for the load.",
+        "helpful": 19
+      }
+    ],
+    "slug": "iec-lead-feels-loose-in-the-cdj-safe"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "RCA colour red/white — which is left?",
+    "summary": "Convention: red right, white/black left. Confirm if a cable is mis-moulded — ears over stickers when unsure.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Convention: red right, white/black left. Confirm if a cable is mis-moulded — ears over stickers when unsure.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Convention: red right, white/black left. Confirm if a cable is mis-moulded — ears over stickers when unsure.",
+        "helpful": 19
+      }
+    ],
+    "slug": "rca-colour-red-white-which-is-left"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Should speaker cable be thicker for long runs?",
+    "summary": "Long speaker runs prefer appropriate gauge. Undersized cable wastes power as heat and can limit headroom.",
+    "tags": [
+      "cables",
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-22",
+    "body": [
+      "Long speaker runs prefer appropriate gauge. Undersized cable wastes power as heat and can limit headroom.",
+      "Room note: cable problems look like “mixer problems” until you swap one lead and the night comes back."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Long speaker runs prefer appropriate gauge. Undersized cable wastes power as heat and can limit headroom.",
+        "helpful": 19
+      }
+    ],
+    "slug": "should-speaker-cable-be-thicker-for-long-runs"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "CDJ USB hierarchy: stick vs playlist vs search",
+    "summary": "Learn the player’s browse model before doors. Searching a chaotic stick mid-peak is how sets stall.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Learn the player’s browse model before doors. Searching a chaotic stick mid-peak is how sets stall.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "cdj-usb-hierarchy-stick-vs-playlist-vs-search"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Hot Cue banks vs Memory Cues on Pioneer",
+    "summary": "Memory cues are navigate-and-jump landmarks; hot cues are performance pads. Use both with a consistent personal system.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Memory cues are navigate-and-jump landmarks; hot cues are performance pads. Use both with a consistent personal system.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "hot-cue-banks-vs-memory-cues-on-pioneer"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Jog wheel modes you should actually know",
+    "summary": "Vinyl vs CDJ jog behaviour changes nudge feel. Practice both so a venue preference does not wreck your first blend.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Vinyl vs CDJ jog behaviour changes nudge feel. Practice both so a venue preference does not wreck your first blend.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "jog-wheel-modes-you-should-actually-know"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "DJM filter resonance — spice vs mud",
+    "summary": "A little resonance announces a transition; too much turns the master into a whistle. Ride it with intention.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "A little resonance announces a transition; too much turns the master into a whistle. Ride it with intention.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "djm-filter-resonance-spice-vs-mud"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Booth cue vs master cue discipline",
+    "summary": "Cue is preview; master is the room. Mixing only on cue without checking master is a classic new-DJ leak.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Cue is preview; master is the room. Mixing only on cue without checking master is a classic new-DJ leak.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "booth-cue-vs-master-cue-discipline"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Limiter lights on the DJM — what they mean",
+    "summary": "They are warnings, not creative FX. If you live in limiter, pull gains and talk to FOH.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "They are warnings, not creative FX. If you live in limiter, pull gains and talk to FOH.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "limiter-lights-on-the-djm-what-they-mean"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Active speakers vs passive cabs for mobile DJs",
+    "summary": "Active = amp built in; passive needs an external amp. Match the whole chain including stands and covers.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Active = amp built in; passive needs an external amp. Match the whole chain including stands and covers.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "active-speakers-vs-passive-cabs-for-mobile-djs"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Subwoofer crossover basics for DJs hiring PA",
+    "summary": "Subs need a correct crossover point. Too high and kick gets muddy; too low and the floor feels hollow.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Subs need a correct crossover point. Too high and kick gets muddy; too low and the floor feels hollow.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "subwoofer-crossover-basics-for-djs-hiring-pa"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Wireless mics for weddings — when they fail",
+    "summary": "Batteries, frequency clashes, and bodypack placement. Always have a wired backup for speeches.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Batteries, frequency clashes, and bodypack placement. Always have a wired backup for speeches.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "wireless-mics-for-weddings-when-they-fail"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Laptop stand height and wrist survival",
+    "summary": "Ergonomics is career length. A low laptop forces bad shoulders for a four-hour set.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Ergonomics is career length. A low laptop forces bad shoulders for a four-hour set.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "laptop-stand-height-and-wrist-survival"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Controller screen brightness outdoors",
+    "summary": "Daylight kills OLEDs. Shade the booth and increase contrast; do not rely on a washed waveform.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Daylight kills OLEDs. Shade the booth and increase contrast; do not rely on a washed waveform.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "controller-screen-brightness-outdoors"
+  },
+  {
+    "category": "gear",
+    "kind": "guide",
+    "title": "Spare fader and crossfader reality",
+    "summary": "Club desks get abused. If the night is scratch-heavy, test the curve early and adapt.",
+    "tags": [
+      "gear",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Club desks get abused. If the night is scratch-heavy, test the curve early and adapt.",
+      "Practice the idea at home, then confirm it on club kit. Gear literacy is half selection, half survival.",
+      "If something feels wrong in soundcheck, fix it before doors — not during the first guest photo dump on the dancefloor."
+    ],
+    "slug": "spare-fader-and-crossfader-reality"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "What is clipping, really?",
+    "summary": "Clipping is the waveform smashing flat because the signal is too hot for the stage. It sounds harsh and can damage speakers.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Clipping is the waveform smashing flat because the signal is too hot for the stage. It sounds harsh and can damage speakers.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "what-is-clipping-really"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Headroom explained without maths panic",
+    "summary": "Headroom is spare space before clipping. Leave some. Loudness is not the same as “all meters solid red”.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Headroom is spare space before clipping. Leave some. Loudness is not the same as “all meters solid red”.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "headroom-explained-without-maths-panic"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Room modes and why bass is uneven in venues",
+    "summary": "Bass builds and cancels depending on room shape. Walk the floor; do not EQ only from the booth sweet spot.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Bass builds and cancels depending on room shape. Walk the floor; do not EQ only from the booth sweet spot.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "room-modes-and-why-bass-is-uneven-in-venues"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Feedback frequencies — find and notch",
+    "summary": "Howl is often a narrow band. Lower gain, move mic, notch if you have tools — do not randomly gut the whole EQ.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Howl is often a narrow band. Lower gain, move mic, notch if you have tools — do not randomly gut the whole EQ.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "feedback-frequencies-find-and-notch"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Pink noise what FOH sometimes uses",
+    "summary": "Engineers use measurement signals to tune systems. If you hear it pre-doors, stay out of the way and wait for your soundcheck window.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Engineers use measurement signals to tune systems. If you hear it pre-doors, stay out of the way and wait for your soundcheck window.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "pink-noise-what-foh-sometimes-uses"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Delay towers at festivals — why your USB feels late",
+    "summary": "Large sites time-align delay speakers. Your ears in the booth are not the whole site — trust the system tech.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Large sites time-align delay speakers. Your ears in the booth are not the whole site — trust the system tech.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "delay-towers-at-festivals-why-your-usb-feels-late"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Cardioid vs omni mics for speeches",
+    "summary": "Cardioid rejects more rear noise and helps feedback control. Omni hears everything — including monitors.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Cardioid rejects more rear noise and helps feedback control. Omni hears everything — including monitors.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "cardioid-vs-omni-mics-for-speeches"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "In-ear monitors for DJs — worth it?",
+    "summary": "Useful in loud environments and for hearing protection strategy, but learn the mix. Sudden IEM failure needs a backup plan.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Useful in loud environments and for hearing protection strategy, but learn the mix. Sudden IEM failure needs a backup plan.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "in-ear-monitors-for-djs-worth-it"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Compressor on the master bus — DJ myths",
+    "summary": "Heavy master compression can glue or squash dynamics. Many club systems already limit; do not double-murder the transient.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Heavy master compression can glue or squash dynamics. Many club systems already limit; do not double-murder the transient.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "compressor-on-the-master-bus-dj-myths"
+  },
+  {
+    "category": "sound",
+    "kind": "guide",
+    "title": "Why the floor loves kick and the bar hates it",
+    "summary": "Coverage and volume priorities differ across a venue. Negotiate with FOH rather than secretly riding the sub forever.",
+    "tags": [
+      "sound",
+      "pa",
+      "guide"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Coverage and volume priorities differ across a venue. Negotiate with FOH rather than secretly riding the sub forever.",
+      "Sound problems are often gain, placement, or expectations — not “bad tracks”. Diagnose in that order.",
+      "Protect your ears while you learn. A long career beats one heroic clipped night."
+    ],
+    "slug": "why-the-floor-loves-kick-and-the-bar-hates-it"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Intro length literacy on modern edits",
+    "summary": "Know whether the intro gives you 8, 16 or 32 bars before the vocal. That number is your blend budget.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Know whether the intro gives you 8, 16 or 32 bars before the vocal. That number is your blend budget.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "intro-length-literacy-on-modern-edits"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Outro litter — when tracks never end clean",
+    "summary": "Many streaming-era edits collapse. Build your own loopable outro points with cues.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Many streaming-era edits collapse. Build your own loopable outro points with cues.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "outro-litter-when-tracks-never-end-clean"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Energy mapping on paper before a guest set",
+    "summary": "Sketch warm → groove → peak → reload → close. Arrive with a plan you are willing to abandon.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Sketch warm → groove → peak → reload → close. Arrive with a plan you are willing to abandon.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "energy-mapping-on-paper-before-a-guest-set"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Key clash triage mid-blend",
+    "summary": "If it hurts, exit early with a cut or drop to drums. Do not “EQ your way” through a minor-second car crash for 32 bars.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "If it hurts, exit early with a cut or drop to drums. Do not “EQ your way” through a minor-second car crash for 32 bars.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "key-clash-triage-mid-blend"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Quick cut as a skill, not a panic",
+    "summary": "A clean cut on a downbeat is musical. A flustered cut mid-phrase is a confession.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "A clean cut on a downbeat is musical. A flustered cut mid-phrase is a confession.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "quick-cut-as-a-skill-not-a-panic"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Loop + bass swap transition",
+    "summary": "Loop a stable bar, trade lows, then release into the new phrase. Simple, powerful, overused only when every track gets it.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Loop a stable bar, trade lows, then release into the new phrase. Simple, powerful, overused only when every track gets it.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "loop-bass-swap-transition"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Echo out timing to the snare",
+    "summary": "Time the feedback so repeats land on groove, then kill it before the next intro’s first kick.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Time the feedback so repeats land on groove, then kill it before the next intro’s first kick.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "echo-out-timing-to-the-snare"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Backspin ethics in club culture",
+    "summary": "A backspin can hype or annoy. Know the room’s language — Caribbean selectors and house dens do not always share punctuation.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "A backspin can hype or annoy. Know the room’s language — Caribbean selectors and house dens do not always share punctuation.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "backspin-ethics-in-club-culture"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "Programming for a talking crowd vs a dancing crowd",
+    "summary": "Conversation rooms need midrange courtesy. Dance rooms need physical low end. Same USB, different rides.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Conversation rooms need midrange courtesy. Dance rooms need physical low end. Same USB, different rides.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "programming-for-a-talking-crowd-vs-a-dancing-crowd"
+  },
+  {
+    "category": "mixing",
+    "kind": "guide",
+    "title": "The 3-track test for a new genre lane",
+    "summary": "Can you warm, peak, and reload inside one lane without escaping to comfort bangers? That is literacy.",
+    "tags": [
+      "mixing",
+      "craft"
+    ],
+    "published": "2026-03-23",
+    "body": [
+      "Can you warm, peak, and reload inside one lane without escaping to comfort bangers? That is literacy.",
+      "Record yourself weekly. The mix you remember and the mix that happened are different files.",
+      "Steal structure from residents you admire — not their exact tracklists."
+    ],
+    "slug": "the-3-track-test-for-a-new-genre-lane"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Afrobeats vocal respect on big systems",
+    "summary": "Keep space around the vocal. Over-layering percussion mid-chorus is a bedroom habit that fails on club volume.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Keep space around the vocal. Over-layering percussion mid-chorus is a bedroom habit that fails on club volume.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "afrobeats-vocal-respect-on-big-systems"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Dancehall pull-up culture — when and why",
+    "summary": "A pull-up rewards recognition and energy. Random pull-ups on tracks nobody knows just stop the night.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "A pull-up rewards recognition and energy. Random pull-ups on tracks nobody knows just stop the night.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "dancehall-pull-up-culture-when-and-why"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Amapiano log drum translation on small PAs",
+    "summary": "Log drums need clean low-mids. On tiny battery speakers they can vanish or distort — choose edits accordingly.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Log drums need clean low-mids. On tiny battery speakers they can vanish or distort — choose edits accordingly.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "amapiano-log-drum-translation-on-small-pas"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Reggae dynasties vs dancefloor tools",
+    "summary": "Know whether the booking wants roots reverence or party reggae. Wrong lane feels disrespectful even if BPMs match.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Know whether the booking wants roots reverence or party reggae. Wrong lane feels disrespectful even if BPMs match.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "reggae-dynasties-vs-dancefloor-tools"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Soca and road march energy indoors",
+    "summary": "Carnival jump translated into a low ceiling can overwhelm. Telegraph the moment and read density on the floor.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Carnival jump translated into a low ceiling can overwhelm. Telegraph the moment and read density on the floor.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "soca-and-road-march-energy-indoors"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "UK funky / broken elements as bridges",
+    "summary": "Percussive UK styles can handshake Afro and house energies when you listen for drums, not only genre labels.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Percussive UK styles can handshake Afro and house energies when you listen for drums, not only genre labels.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "uk-funky-broken-elements-as-bridges"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Hip Hop radio edits vs album cuts",
+    "summary": "Corporate and daytime need clean. Keep both labelled. Grabbing the dirty version at a family wedding is avoidable.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Corporate and daytime need clean. Keep both labelled. Grabbing the dirty version at a family wedding is avoidable.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "hip-hop-radio-edits-vs-album-cuts"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "R&B blends into Dancehall",
+    "summary": "Shared dancers, different pockets. Use vocals and groove beds; avoid stubborn harmonic mash attempts.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Shared dancers, different pockets. Use vocals and groove beds; avoid stubborn harmonic mash attempts.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "r-b-blends-into-dancehall"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Afro house adjacent to Afrobeats — not identical",
+    "summary": "Different crowds and pacing. Bridge with intention; do not assume the names are interchangeable in a brief.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Different crowds and pacing. Bridge with intention; do not assume the names are interchangeable in a brief.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "afro-house-adjacent-to-afrobeats-not-identical"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Baile funk caution and context",
+    "summary": "Powerful and specific. Play with cultural awareness and crowd fit — not as random “internet heat”.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Powerful and specific. Play with cultural awareness and crowd fit — not as random “internet heat”.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "baile-funk-caution-and-context"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Gospel / lovers crossovers at Caribbean weddings",
+    "summary": "Multi-gen floors often need warmth and familiarity before bashment weight.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Multi-gen floors often need warmth and familiarity before bashment weight.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "gospel-lovers-crossovers-at-caribbean-weddings"
+  },
+  {
+    "category": "genres",
+    "kind": "guide",
+    "title": "Reading diaspora rooms in Bristol",
+    "summary": "Flags, crews, age mix and request language tell you which Caribbean/African lanes will land tonight.",
+    "tags": [
+      "genres",
+      "culture",
+      "selection"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Flags, crews, age mix and request language tell you which Caribbean/African lanes will land tonight.",
+      "Charts help discovery; dancing bodies confirm truth. Keep a gig diary of what actually filled the floor.",
+      "Play as a guest in the culture — knowledge and respect beat tourist crate energy."
+    ],
+    "slug": "reading-diaspora-rooms-in-bristol"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Lossless vs high-bitrate MP3 on club systems",
+    "summary": "Better files help on big PAs. Avoid low-bitrate rips for paid work — artefacts get expensive-sounding.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Better files help on big PAs. Avoid low-bitrate rips for paid work — artefacts get expensive-sounding.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "lossless-vs-high-bitrate-mp3-on-club-systems"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Duplicate tracks across crates — how to manage",
+    "summary": "Duplicates confuse search. One master file, many playlists pointing to it, beats five copies with five cue maps.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Duplicates confuse search. One master file, many playlists pointing to it, beats five copies with five cue maps.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "duplicate-tracks-across-crates-how-to-manage"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "rekordbox export checklist the night before",
+    "summary": "Stick format, playlist sync, hot cues present, backup stick cloned, player family tested.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Stick format, playlist sync, hot cues present, backup stick cloned, player family tested.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "rekordbox-export-checklist-the-night-before"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Serato stems CPU spikes on older laptops",
+    "summary": "Stems cost CPU. Close browsers, disable notifications, and test your worst case before doors.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Stems cost CPU. Close browsers, disable notifications, and test your worst case before doors.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "serato-stems-cpu-spikes-on-older-laptops"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Cloud sync mid-tour — why it bites",
+    "summary": "Internet dies. Offline local collection only for paid booths.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Internet dies. Offline local collection only for paid booths.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "cloud-sync-mid-tour-why-it-bites"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Colour coding played tracks live",
+    "summary": "Mark played so requests do not loop you into repeats when adrenaline scrambles memory.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Mark played so requests do not loop you into repeats when adrenaline scrambles memory.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "colour-coding-played-tracks-live"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Beatgrid war on live percussion edits",
+    "summary": "Some Caribbean/live edits will not grid cleanly. Manual cues + ears beat fighting the red lines.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Some Caribbean/live edits will not grid cleanly. Manual cues + ears beat fighting the red lines.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "beatgrid-war-on-live-percussion-edits"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Firmware updates — when not to update",
+    "summary": "Do not update club players an hour before doors unless FOH requires it and you can test.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Do not update club players an hour before doors unless FOH requires it and you can test.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "firmware-updates-when-not-to-update"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Backup laptop image for touring DJs",
+    "summary": "Assume the machine dies. A clone drive and a USB-only plan are adult behaviour.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Assume the machine dies. A clone drive and a USB-only plan are adult behaviour.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "backup-laptop-image-for-touring-djs"
+  },
+  {
+    "category": "software",
+    "kind": "guide",
+    "title": "Recording boards vs soundcard loopback",
+    "summary": "Know your record path. A cable to a recorder still beats “I thought the software was capturing”.",
+    "tags": [
+      "software",
+      "library"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Know your record path. A cable to a recorder still beats “I thought the software was capturing”.",
+      "Prep is silent professionalism. The crowd never applauds your folder structure — they only notice when it fails."
+    ],
+    "slug": "recording-boards-vs-soundcard-loopback"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "UK DJ public liability — why venues ask",
+    "summary": "Many rooms require proof of insurance. Get cover that matches kit hire and public performance realities.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Many rooms require proof of insurance. Get cover that matches kit hire and public performance realities.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "uk-dj-public-liability-why-venues-ask"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "PRSforMusic / venue licensing basics for DJs",
+    "summary": "Venues usually handle music licences for the premises. Your job is still legal acquisition of the files you play.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Venues usually handle music licences for the premises. Your job is still legal acquisition of the files you play.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "prsformusic-venue-licensing-basics-for-djs"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "Invoicing as a sole trader DJ in the UK",
+    "summary": "Clear invoices, late fees policy, and records. Treat the booth like a business even when the night feels like a party.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Clear invoices, late fees policy, and records. Treat the booth like a business even when the night feels like a party.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "invoicing-as-a-sole-trader-dj-in-the-uk"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "Deposit disputes — how to stay calm and documented",
+    "summary": "Written quotes and dated messages win. Verbal-only bookings create fog.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Written quotes and dated messages win. Verbal-only bookings create fog.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "deposit-disputes-how-to-stay-calm-and-documented"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "Tax envelopes: keep gig receipts",
+    "summary": "Travel, kit, software subscriptions — organised records reduce stress later.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Travel, kit, software subscriptions — organised records reduce stress later.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "tax-envelopes-keep-gig-receipts"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "Hearing tests as career maintenance",
+    "summary": "Baseline your hearing. Tinnitus after runs of gigs is data, not a personality trait.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Baseline your hearing. Tinnitus after runs of gigs is data, not a personality trait.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "hearing-tests-as-career-maintenance"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "Sleep after late load-outs",
+    "summary": "Heroic drives home destroy next-week performance. Budget hotels when the finish is savage.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Heroic drives home destroy next-week performance. Budget hotels when the finish is savage.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "sleep-after-late-load-outs"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "Social media clips without killing the mix",
+    "summary": "Film peaks briefly; do not stare at your phone through the blend. Hire a friend when you can.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Film peaks briefly; do not stare at your phone through the blend. Hire a friend when you can.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "social-media-clips-without-killing-the-mix"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "When to say no to a booking",
+    "summary": "Unsafe power, unpaid history, impossible travel, or values clash. No is a professional tool.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Unsafe power, unpaid history, impossible travel, or values clash. No is a professional tool.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "when-to-say-no-to-a-booking"
+  },
+  {
+    "category": "career",
+    "kind": "guide",
+    "title": "Agent vs self-booked — what changes",
+    "summary": "Agents take commission for reach and filtering. Self-booked means you own chase-up and negotiation.",
+    "tags": [
+      "career",
+      "business",
+      "uk"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Agents take commission for reach and filtering. Self-booked means you own chase-up and negotiation.",
+      "This is general practical guidance, not personal legal or tax advice — confirm details for your situation.",
+      "Professionals document. Casual scenes still respect people who invoice cleanly and show up prepared."
+    ],
+    "slug": "agent-vs-self-booked-what-changes"
+  },
+  {
+    "category": "production",
+    "kind": "guide",
+    "title": "Extended intro recipe that DJs actually use",
+    "summary": "Add 16–32 bars of mixable drums/bass without wrecking the song identity.",
+    "tags": [
+      "production",
+      "edits"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Add 16–32 bars of mixable drums/bass without wrecking the song identity.",
+      "Booth edits solve booth problems. If the edit only shows off your DAW, it is not finished."
+    ],
+    "slug": "extended-intro-recipe-that-djs-actually-use"
+  },
+  {
+    "category": "production",
+    "kind": "guide",
+    "title": "Radio edit ethics for daytime community events",
+    "summary": "Mute/replace explicit lines carefully and listen on multiple systems before the gig.",
+    "tags": [
+      "production",
+      "edits"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Mute/replace explicit lines carefully and listen on multiple systems before the gig.",
+      "Booth edits solve booth problems. If the edit only shows off your DAW, it is not finished."
+    ],
+    "slug": "radio-edit-ethics-for-daytime-community-events"
+  },
+  {
+    "category": "production",
+    "kind": "guide",
+    "title": "Tempo-mapped edits for festival formats",
+    "summary": "Some stages want earlier drops. Edit for the format, label clearly, keep the original archived.",
+    "tags": [
+      "production",
+      "edits"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Some stages want earlier drops. Edit for the format, label clearly, keep the original archived.",
+      "Booth edits solve booth problems. If the edit only shows off your DAW, it is not finished."
+    ],
+    "slug": "tempo-mapped-edits-for-festival-formats"
+  },
+  {
+    "category": "production",
+    "kind": "guide",
+    "title": "Stem cleanup for acapella moments",
+    "summary": "Imperfect stems rattle on big systems. Choose clean sources; do not solo mud.",
+    "tags": [
+      "production",
+      "edits"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Imperfect stems rattle on big systems. Choose clean sources; do not solo mud.",
+      "Booth edits solve booth problems. If the edit only shows off your DAW, it is not finished."
+    ],
+    "slug": "stem-cleanup-for-acapella-moments"
+  },
+  {
+    "category": "production",
+    "kind": "guide",
+    "title": "Normalisation vs loudness for DJ files",
+    "summary": "Do not brickwall every track identical. Ride gain live; leave dynamics.",
+    "tags": [
+      "production",
+      "edits"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Do not brickwall every track identical. Ride gain live; leave dynamics.",
+      "Booth edits solve booth problems. If the edit only shows off your DAW, it is not finished."
+    ],
+    "slug": "normalisation-vs-loudness-for-dj-files"
+  },
+  {
+    "category": "production",
+    "kind": "guide",
+    "title": "File naming that saves marriages",
+    "summary": "Include BPM, version (clean/dirty), and edit type in the filename.",
+    "tags": [
+      "production",
+      "edits"
+    ],
+    "published": "2026-03-24",
+    "body": [
+      "Include BPM, version (clean/dirty), and edit type in the filename.",
+      "Booth edits solve booth problems. If the edit only shows off your DAW, it is not finished."
+    ],
+    "slug": "file-naming-that-saves-marriages"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "What does a DI box do for a DJ?",
+    "summary": "It converts and often isolates signals so FOH can take your output cleanly — useful with awkward venue inputs and ground issues.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "It converts and often isolates signals so FOH can take your output cleanly — useful with awkward venue inputs and ground issues.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "It converts and often isolates signals so FOH can take your output cleanly — useful with awkward venue inputs and ground issues.",
+        "helpful": 14
+      }
+    ],
+    "slug": "what-does-a-di-box-do-for-a-dj"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Can I split my master to FOH and a recorder?",
+    "summary": "Yes with the right splitter/recorder feed. Ask before y-splitting in ways that load the output wrongly.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Yes with the right splitter/recorder feed. Ask before y-splitting in ways that load the output wrongly.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Yes with the right splitter/recorder feed. Ask before y-splitting in ways that load the output wrongly.",
+        "helpful": 14
+      }
+    ],
+    "slug": "can-i-split-my-master-to-foh-and-a-recorder"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why do my XLRs crackle when touched?",
+    "summary": "Failing solder or strain relief. Retire the cable. Intermittent crackle becomes a drop-out at peak.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Failing solder or strain relief. Retire the cable. Intermittent crackle becomes a drop-out at peak.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Failing solder or strain relief. Retire the cable. Intermittent crackle becomes a drop-out at peak.",
+        "helpful": 14
+      }
+    ],
+    "slug": "why-do-my-xlrs-crackle-when-touched"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Is optical TOSLINK useful in DJ booths?",
+    "summary": "Rare in standard club changeovers. Analog/USB workflows dominate. Do not rely on optical unless the residency is built for it.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Rare in standard club changeovers. Analog/USB workflows dominate. Do not rely on optical unless the residency is built for it.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Rare in standard club changeovers. Analog/USB workflows dominate. Do not rely on optical unless the residency is built for it.",
+        "helpful": 14
+      }
+    ],
+    "slug": "is-optical-toslink-useful-in-dj-booths"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "MIDI cables — still relevant?",
+    "summary": "For syncing hardware/controllers yes. For a USB-CDJ club guest set, usually no.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "For syncing hardware/controllers yes. For a USB-CDJ club guest set, usually no.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "For syncing hardware/controllers yes. For a USB-CDJ club guest set, usually no.",
+        "helpful": 14
+      }
+    ],
+    "slug": "midi-cables-still-relevant"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "What is powerCON TRUE1 vs older powerCON?",
+    "summary": "Different connector families with different lock/load behaviours. Do not force incompatibles; learn your rack.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Different connector families with different lock/load behaviours. Do not force incompatibles; learn your rack.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Different connector families with different lock/load behaviours. Do not force incompatibles; learn your rack.",
+        "helpful": 14
+      }
+    ],
+    "slug": "what-is-powercon-true1-vs-older-powercon"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Should I tape RCA connections?",
+    "summary": "In mobile/festival chaos, a little security tape can prevent kicks. Do not glue things permanently to venue kit.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "In mobile/festival chaos, a little security tape can prevent kicks. Do not glue things permanently to venue kit.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "In mobile/festival chaos, a little security tape can prevent kicks. Do not glue things permanently to venue kit.",
+        "helpful": 14
+      }
+    ],
+    "slug": "should-i-tape-rca-connections"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "How do I test a cable quickly?",
+    "summary": "Cable tester, or swap with a known-good lead. Continuity guessing wastes soundcheck.",
+    "tags": [
+      "faq",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Cable tester, or swap with a known-good lead. Continuity guessing wastes soundcheck.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Cable tester, or swap with a known-good lead. Continuity guessing wastes soundcheck.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-do-i-test-a-cable-quickly"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "What is a pass-through on speakers?",
+    "summary": "Daisy-chaining speakers/amp outs. Follow manufacturer limits — random daisy chains overheat and fail.",
+    "tags": [
+      "faq",
+      "sound"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Daisy-chaining speakers/amp outs. Follow manufacturer limits — random daisy chains overheat and fail.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Daisy-chaining speakers/amp outs. Follow manufacturer limits — random daisy chains overheat and fail.",
+        "helpful": 14
+      }
+    ],
+    "slug": "what-is-a-pass-through-on-speakers"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Why does bass disappear when I walk five steps?",
+    "summary": "Room modes and coverage. Not always your EQ. Walk the room and collaborate with FOH.",
+    "tags": [
+      "faq",
+      "sound"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Room modes and coverage. Not always your EQ. Walk the room and collaborate with FOH.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Room modes and coverage. Not always your EQ. Walk the room and collaborate with FOH.",
+        "helpful": 14
+      }
+    ],
+    "slug": "why-does-bass-disappear-when-i-walk-five-steps"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "How do I stop mixing every transition the same?",
+    "summary": "Ban your favourite FX for a week of practice. Rebuild vocabulary: cuts, EQ trades, loops, short blends, silence.",
+    "tags": [
+      "faq",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Ban your favourite FX for a week of practice. Rebuild vocabulary: cuts, EQ trades, loops, short blends, silence.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Ban your favourite FX for a week of practice. Rebuild vocabulary: cuts, EQ trades, loops, short blends, silence.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-do-i-stop-mixing-every-transition-the-same"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Is beatmatching dead because sync exists?",
+    "summary": "No. Sync fails, grids fail, and ears keep you employable on unfamiliar desks.",
+    "tags": [
+      "faq",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "No. Sync fails, grids fail, and ears keep you employable on unfamiliar desks.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "No. Sync fails, grids fail, and ears keep you employable on unfamiliar desks.",
+        "helpful": 14
+      }
+    ],
+    "slug": "is-beatmatching-dead-because-sync-exists"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "What BPM range is Afrobeats usually in?",
+    "summary": "Often roughly mid-90s to around 120 depending on era/edit — verify each track; do not worship a single number.",
+    "tags": [
+      "faq",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Often roughly mid-90s to around 120 depending on era/edit — verify each track; do not worship a single number.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Often roughly mid-90s to around 120 depending on era/edit — verify each track; do not worship a single number.",
+        "helpful": 14
+      }
+    ],
+    "slug": "what-bpm-range-is-afrobeats-usually-in"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "What BPM is Dancehall often around?",
+    "summary": "Many sit roughly mid-80s to low-100s depending on riddim/feel — always check the actual track and half-time perception.",
+    "tags": [
+      "faq",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Many sit roughly mid-80s to low-100s depending on riddim/feel — always check the actual track and half-time perception.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Many sit roughly mid-80s to low-100s depending on riddim/feel — always check the actual track and half-time perception.",
+        "helpful": 14
+      }
+    ],
+    "slug": "what-bpm-is-dancehall-often-around"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Should I mix in key on every blend?",
+    "summary": "Energy and vocal space first. Key is a helper, not a religion.",
+    "tags": [
+      "faq",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Energy and vocal space first. Key is a helper, not a religion.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Energy and vocal space first. Key is a helper, not a religion.",
+        "helpful": 14
+      }
+    ],
+    "slug": "should-i-mix-in-key-on-every-blend"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "How long should I practice weekly?",
+    "summary": "Consistent short sessions beat rare marathon weekends. Add one live-floor session whenever you can.",
+    "tags": [
+      "faq",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Consistent short sessions beat rare marathon weekends. Add one live-floor session whenever you can.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Consistent short sessions beat rare marathon weekends. Add one live-floor session whenever you can.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-long-should-i-practice-weekly"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Do you price travel separately from the DJ fee?",
+    "summary": "Yes — travel and overnight needs are itemised so the performance fee stays clear.",
+    "tags": [
+      "faq",
+      "booking"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Yes — travel and overnight needs are itemised so the performance fee stays clear.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Yes — travel and overnight needs are itemised so the performance fee stays clear.",
+        "helpful": 14
+      }
+    ],
+    "slug": "do-you-price-travel-separately-from-the-dj-fee"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Can I book DJ RHUE for a daytime community festival?",
+    "summary": "Yes when the diary allows — share times, PA reality, and clean-edit requirements.",
+    "tags": [
+      "faq",
+      "booking"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Yes when the diary allows — share times, PA reality, and clean-edit requirements.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Yes when the diary allows — share times, PA reality, and clean-edit requirements.",
+        "helpful": 14
+      }
+    ],
+    "slug": "can-i-book-dj-rhue-for-a-daytime-community-festival"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Do you take playlist requests from guests on the night?",
+    "summary": "Anchored must-plays from the client come first; live requests are filtered through room reading.",
+    "tags": [
+      "faq",
+      "booking"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Anchored must-plays from the client come first; live requests are filtered through room reading.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Anchored must-plays from the client come first; live requests are filtered through room reading.",
+        "helpful": 14
+      }
+    ],
+    "slug": "do-you-take-playlist-requests-from-guests-on-the-night"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "How do I run speeches without killing dancefloor momentum?",
+    "summary": "Schedule them, duck music politely, keep transitions short, and restart with a familiar groove — not a random peak edit.",
+    "tags": [
+      "faq",
+      "events"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Schedule them, duck music politely, keep transitions short, and restart with a familiar groove — not a random peak edit.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Schedule them, duck music politely, keep transitions short, and restart with a familiar groove — not a random peak edit.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-do-i-run-speeches-without-killing-dancefloor-momentum"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "What is a rider for a DJ guest set?",
+    "summary": "Your technical/hospitality needs: USB/CDJ preference, monitoring, timing, contacts. Keep it realistic.",
+    "tags": [
+      "faq",
+      "events"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Your technical/hospitality needs: USB/CDJ preference, monitoring, timing, contacts. Keep it realistic.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Your technical/hospitality needs: USB/CDJ preference, monitoring, timing, contacts. Keep it realistic.",
+        "helpful": 14
+      }
+    ],
+    "slug": "what-is-a-rider-for-a-dj-guest-set"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "Who provides tables and booth décor?",
+    "summary": "Confirm in the advance. Assume nothing — especially outdoors.",
+    "tags": [
+      "faq",
+      "events"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Confirm in the advance. Assume nothing — especially outdoors.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Confirm in the advance. Assume nothing — especially outdoors.",
+        "helpful": 14
+      }
+    ],
+    "slug": "who-provides-tables-and-booth-d-cor"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Can I play from my phone professionally?",
+    "summary": "Not as primary for paid club work. Phones are backup desperation, not a plan.",
+    "tags": [
+      "faq",
+      "software"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Not as primary for paid club work. Phones are backup desperation, not a plan.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Not as primary for paid club work. Phones are backup desperation, not a plan.",
+        "helpful": 14
+      }
+    ],
+    "slug": "can-i-play-from-my-phone-professionally"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Why does rekordbox analysis differ from Serato?",
+    "summary": "Different algorithms and cue ecosystems. Re-check grids when moving ecosystems.",
+    "tags": [
+      "faq",
+      "software"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Different algorithms and cue ecosystems. Re-check grids when moving ecosystems.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Different algorithms and cue ecosystems. Re-check grids when moving ecosystems.",
+        "helpful": 14
+      }
+    ],
+    "slug": "why-does-rekordbox-analysis-differ-from-serato"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "How many tracks is too many on one USB?",
+    "summary": "Enough to serve the night, not your entire life. Bloated sticks browse slowly and fail more often.",
+    "tags": [
+      "faq",
+      "software"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Enough to serve the night, not your entire life. Bloated sticks browse slowly and fail more often.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Enough to serve the night, not your entire life. Bloated sticks browse slowly and fail more often.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-many-tracks-is-too-many-on-one-usb"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "How do I price myself as a new DJ?",
+    "summary": "Research local rates, be honest about experience, and avoid racing to zero. Undercharging trains the market.",
+    "tags": [
+      "faq",
+      "career"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Research local rates, be honest about experience, and avoid racing to zero. Undercharging trains the market.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Research local rates, be honest about experience, and avoid racing to zero. Undercharging trains the market.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-do-i-price-myself-as-a-new-dj"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "Should I watermark my mixes?",
+    "summary": "Optional. Prioritise clear tags and contact links. Do not ruin listening with aggressive audio watermarks.",
+    "tags": [
+      "faq",
+      "career"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Optional. Prioritise clear tags and contact links. Do not ruin listening with aggressive audio watermarks.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Optional. Prioritise clear tags and contact links. Do not ruin listening with aggressive audio watermarks.",
+        "helpful": 14
+      }
+    ],
+    "slug": "should-i-watermark-my-mixes"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "How do I handle a promoter who ghosts after the gig?",
+    "summary": "Paper trail, polite firm reminders, then escalate per your agreement. Prevention: deposits and written terms.",
+    "tags": [
+      "faq",
+      "career"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Paper trail, polite firm reminders, then escalate per your agreement. Prevention: deposits and written terms.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Paper trail, polite firm reminders, then escalate per your agreement. Prevention: deposits and written terms.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-do-i-handle-a-promoter-who-ghosts-after-the-gig"
+  },
+  {
+    "category": "room-tips",
+    "kind": "faq",
+    "title": "What should I search The Room for first?",
+    "summary": "Search the problem in your words: cable, wedding timeline, Afrobeats blend, USB failed — then filter by Guide or FAQ.",
+    "tags": [
+      "faq",
+      "room-tips"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Search the problem in your words: cable, wedding timeline, Afrobeats blend, USB failed — then filter by Guide or FAQ.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Search the problem in your words: cable, wedding timeline, Afrobeats blend, USB failed — then filter by Guide or FAQ.",
+        "helpful": 14
+      }
+    ],
+    "slug": "what-should-i-search-the-room-for-first"
+  },
+  {
+    "category": "room-tips",
+    "kind": "faq",
+    "title": "How do I use The Room before a booking type I have not played?",
+    "summary": "Open that event category, read two guides, and steal one prep checklist — not a whole new personality.",
+    "tags": [
+      "faq",
+      "room-tips"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Open that event category, read two guides, and steal one prep checklist — not a whole new personality.",
+      "Answered in The Room for working DJs, promoters and curious fans who want practical truth over forum myth."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Open that event category, read two guides, and steal one prep checklist — not a whole new personality.",
+        "helpful": 14
+      }
+    ],
+    "slug": "how-do-i-use-the-room-before-a-booking-type-i-have-not-played"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "My speakON fit wrong and now I am scared",
+    "summary": "Stop forcing it. Confirm NL2 vs NL4 and the chassis type. Wrong speakON violence breaks expensive things.",
+    "tags": [
+      "qa",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Stop forcing it. Confirm NL2 vs NL4 and the chassis type. Wrong speakON violence breaks expensive things.",
+        "helpful": 21
+      }
+    ],
+    "slug": "my-speakon-fit-wrong-and-now-i-am-scared"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Venue only has TS guitar leads for CDJs",
+    "summary": "Ask for proper RCA/line leads. Guitar leads are a last-resort compromise and can be noisy/wrong.",
+    "tags": [
+      "qa",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Ask for proper RCA/line leads. Guitar leads are a last-resort compromise and can be noisy/wrong.",
+        "helpful": 21
+      }
+    ],
+    "slug": "venue-only-has-ts-guitar-leads-for-cdjs"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Is a €5 USB stick fine for CDJ-3000s?",
+    "summary": "Often no. Buy known-good media and test. Cheap sticks are a leading cause of booth failure.",
+    "tags": [
+      "qa",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Often no. Buy known-good media and test. Cheap sticks are a leading cause of booth failure.",
+        "helpful": 21
+      }
+    ],
+    "slug": "is-a-5-usb-stick-fine-for-cdj-3000s"
+  },
+  {
+    "category": "sound",
+    "kind": "qa",
+    "title": "Engineer said my USB is “too hot”",
+    "summary": "Lower channel gains / output. Matching perceived loudness is your job; clipping the desk is not “more energy”.",
+    "tags": [
+      "qa",
+      "sound"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Lower channel gains / output. Matching perceived loudness is your job; clipping the desk is not “more energy”.",
+        "helpful": 21
+      }
+    ],
+    "slug": "engineer-said-my-usb-is-too-hot"
+  },
+  {
+    "category": "sound",
+    "kind": "qa",
+    "title": "Outdoor wind made treble vanish",
+    "summary": "Expected. Cover, reposition, and accept physics — do not just crank highs into distortion.",
+    "tags": [
+      "qa",
+      "sound"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Expected. Cover, reposition, and accept physics — do not just crank highs into distortion.",
+        "helpful": 21
+      }
+    ],
+    "slug": "outdoor-wind-made-treble-vanish"
+  },
+  {
+    "category": "mixing",
+    "kind": "qa",
+    "title": "Crowd wants chart pop mid Afrobeats peak",
+    "summary": "Land one recognition moment if it serves unity, then steer back — unless the promoter brief says otherwise.",
+    "tags": [
+      "qa",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Land one recognition moment if it serves unity, then steer back — unless the promoter brief says otherwise.",
+        "helpful": 21
+      }
+    ],
+    "slug": "crowd-wants-chart-pop-mid-afrobeats-peak"
+  },
+  {
+    "category": "mixing",
+    "kind": "qa",
+    "title": "I always trainwreck when nervous",
+    "summary": "Pre-plan first three transitions. Nervousness fades after a clean opener. Record rehearsals of those three weekly.",
+    "tags": [
+      "qa",
+      "mixing"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Pre-plan first three transitions. Nervousness fades after a clean opener. Record rehearsals of those three weekly.",
+        "helpful": 21
+      }
+    ],
+    "slug": "i-always-trainwreck-when-nervous"
+  },
+  {
+    "category": "genres",
+    "kind": "qa",
+    "title": "Is it OK to learn Dancehall only from TikTok?",
+    "summary": "Use it for discovery, then study full tracks, riddims and live rooms. TikTok alone makes thin selectors.",
+    "tags": [
+      "qa",
+      "genres"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Use it for discovery, then study full tracks, riddims and live rooms. TikTok alone makes thin selectors.",
+        "helpful": 21
+      }
+    ],
+    "slug": "is-it-ok-to-learn-dancehall-only-from-tiktok"
+  },
+  {
+    "category": "genres",
+    "kind": "qa",
+    "title": "Someone said I played “wrong” Afrobeats",
+    "summary": "Listen, learn, and stay humble. Diaspora rooms have deep knowledge — treat correction as free education.",
+    "tags": [
+      "qa",
+      "genres"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Listen, learn, and stay humble. Diaspora rooms have deep knowledge — treat correction as free education.",
+        "helpful": 21
+      }
+    ],
+    "slug": "someone-said-i-played-wrong-afrobeats"
+  },
+  {
+    "category": "events",
+    "kind": "qa",
+    "title": "Photographer asked me to replay first dance",
+    "summary": "If timeline allows and couple agrees. Do not derail speeches. Confirm once, cleanly.",
+    "tags": [
+      "qa",
+      "events"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "If timeline allows and couple agrees. Do not derail speeches. Confirm once, cleanly.",
+        "helpful": 21
+      }
+    ],
+    "slug": "photographer-asked-me-to-replay-first-dance"
+  },
+  {
+    "category": "events",
+    "kind": "qa",
+    "title": "Corporate wants “no explicit” but guests keep requesting dirty versions",
+    "summary": "Policy wins. Keep clean crates ready. You are hired for the brief, not the loudest guest.",
+    "tags": [
+      "qa",
+      "events"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Policy wins. Keep clean crates ready. You are hired for the brief, not the loudest guest.",
+        "helpful": 21
+      }
+    ],
+    "slug": "corporate-wants-no-explicit-but-guests-keep-requesting-dirty-versions"
+  },
+  {
+    "category": "software",
+    "kind": "qa",
+    "title": "rekordbox library corrupt before Malta flight",
+    "summary": "This is why backup sticks and offline clones exist. Rebuild from backup; never travel on one copy.",
+    "tags": [
+      "qa",
+      "software"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "This is why backup sticks and offline clones exist. Rebuild from backup; never travel on one copy.",
+        "helpful": 21
+      }
+    ],
+    "slug": "rekordbox-library-corrupt-before-malta-flight"
+  },
+  {
+    "category": "software",
+    "kind": "qa",
+    "title": "Stems vocal isolation sounds robotic live",
+    "summary": "Use sparingly and on clean sources. Robotic stems on a big system expose themselves instantly.",
+    "tags": [
+      "qa",
+      "software"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Use sparingly and on clean sources. Robotic stems on a big system expose themselves instantly.",
+        "helpful": 21
+      }
+    ],
+    "slug": "stems-vocal-isolation-sounds-robotic-live"
+  },
+  {
+    "category": "production",
+    "kind": "qa",
+    "title": "Can I DJ only my own unreleased edits?",
+    "summary": "Risky for most public floors. Blend craft with recognition unless the night is explicitly experimental.",
+    "tags": [
+      "qa",
+      "production"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Risky for most public floors. Blend craft with recognition unless the night is explicitly experimental.",
+        "helpful": 21
+      }
+    ],
+    "slug": "can-i-dj-only-my-own-unreleased-edits"
+  },
+  {
+    "category": "career",
+    "kind": "qa",
+    "title": "How do I ask for photos from a promoter?",
+    "summary": "Ask politely within 48 hours, offer a clip exchange, and do not harass. Relationships > one Instagram frame.",
+    "tags": [
+      "qa",
+      "career"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Ask politely within 48 hours, offer a clip exchange, and do not harass. Relationships > one Instagram frame.",
+        "helpful": 21
+      }
+    ],
+    "slug": "how-do-i-ask-for-photos-from-a-promoter"
+  },
+  {
+    "category": "career",
+    "kind": "qa",
+    "title": "Should I play for “exposure” at a big brand party?",
+    "summary": "Only if the strategic value is real and written. Exposure does not automatically equal career fuel.",
+    "tags": [
+      "qa",
+      "career"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Only if the strategic value is real and written. Exposure does not automatically equal career fuel.",
+        "helpful": 21
+      }
+    ],
+    "slug": "should-i-play-for-exposure-at-a-big-brand-party"
+  },
+  {
+    "category": "booking",
+    "kind": "qa",
+    "title": "Client wants to pay after the event only",
+    "summary": "Deposits exist because calendar slots are finite. Be cautious with zero-deposit peak dates.",
+    "tags": [
+      "qa",
+      "booking"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Deposits exist because calendar slots are finite. Be cautious with zero-deposit peak dates.",
+        "helpful": 21
+      }
+    ],
+    "slug": "client-wants-to-pay-after-the-event-only"
+  },
+  {
+    "category": "booking",
+    "kind": "qa",
+    "title": "Can we renegotiate fee on the day?",
+    "summary": "Bad practice. Agree before. Day-of renegotiation under pressure burns trust.",
+    "tags": [
+      "qa",
+      "booking"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Bad practice. Agree before. Day-of renegotiation under pressure burns trust.",
+        "helpful": 21
+      }
+    ],
+    "slug": "can-we-renegotiate-fee-on-the-day"
+  },
+  {
+    "category": "room-tips",
+    "kind": "qa",
+    "title": "How do I know The Room answer is solid?",
+    "summary": "Prefer answers that include a prep step and a live-floor check. Theory without a booth test is incomplete.",
+    "tags": [
+      "qa",
+      "room-tips"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Prefer answers that include a prep step and a live-floor check. Theory without a booth test is incomplete.",
+        "helpful": 21
+      }
+    ],
+    "slug": "how-do-i-know-the-room-answer-is-solid"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "I mixed up TS and TRS in my bag",
+    "summary": "Label sleeves permanently. A one-time labelling session prevents a season of silent mono mysteries.",
+    "tags": [
+      "qa",
+      "gear"
+    ],
+    "published": "2026-03-25",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Need a straight answer before the next gig.",
+        "helpful": 3
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Label sleeves permanently. A one-time labelling session prevents a season of silent mono mysteries.",
+        "helpful": 21
+      }
+    ],
+    "slug": "i-mixed-up-ts-and-trs-in-my-bag"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Pre-gig cable pouch checklist",
+    "summary": "RCA pair, XLR M–F, IEC spare, adapter trio, tape, USB backup, headphone spare — photographed in your notes app.",
+    "tags": [
+      "checklist",
+      "tip",
+      "gear"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "RCA pair, XLR M–F, IEC spare, adapter trio, tape, USB backup, headphone spare — photographed in your notes app.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "pre-gig-cable-pouch-checklist"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "CDJ guest arrival checklist",
+    "summary": "USB primary + backup, headphone, USB light, adapter pouch, polite hello to engineer, channel tidy promise.",
+    "tags": [
+      "checklist",
+      "tip",
+      "gear"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "USB primary + backup, headphone, USB light, adapter pouch, polite hello to engineer, channel tidy promise.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "cdj-guest-arrival-checklist"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "Wedding morning checklist",
+    "summary": "Timeline PDF, clean crate, first-dance edit, speech order, power notes, emergency instrumental bed.",
+    "tags": [
+      "checklist",
+      "tip",
+      "events"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Timeline PDF, clean crate, first-dance edit, speech order, power notes, emergency instrumental bed.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "wedding-morning-checklist"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "Outdoor carnival checklist",
+    "summary": "Weather cover, weights, cable ramps, power plan, sunscreen for the human, towel for the desks.",
+    "tags": [
+      "checklist",
+      "tip",
+      "events"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Weather cover, weights, cable ramps, power plan, sunscreen for the human, towel for the desks.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "outdoor-carnival-checklist"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "Two-minute feedback survival checklist",
+    "summary": "Mic gain down, mic off-axis from speakers, call FOH, do not sweep every EQ blindly forever.",
+    "tags": [
+      "checklist",
+      "tip",
+      "sound"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Mic gain down, mic off-axis from speakers, call FOH, do not sweep every EQ blindly forever.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "two-minute-feedback-survival-checklist"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "Night-before USB checklist",
+    "summary": "Export complete, backup cloned, test stick mount, top 20 peak cues verified, clean versions labelled.",
+    "tags": [
+      "checklist",
+      "tip",
+      "software"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Export complete, backup cloned, test stick mount, top 20 peak cues verified, clean versions labelled.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "night-before-usb-checklist"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "First-three-tracks plan",
+    "summary": "Write them. Rehearse them. Let nerves burn on a plan, not on improvisation at minute one.",
+    "tags": [
+      "checklist",
+      "tip",
+      "mixing"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Write them. Rehearse them. Let nerves burn on a plan, not on improvisation at minute one.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "first-three-tracks-plan"
+  },
+  {
+    "category": "career",
+    "kind": "tip",
+    "title": "Post-gig follow-up checklist",
+    "summary": "Thank promoter, save contacts, invoice if needed, note what filled the floor, request one photo/clip.",
+    "tags": [
+      "checklist",
+      "tip",
+      "career"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Thank promoter, save contacts, invoice if needed, note what filled the floor, request one photo/clip.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "post-gig-follow-up-checklist"
+  },
+  {
+    "category": "booking",
+    "kind": "tip",
+    "title": "Enquiry reply checklist",
+    "summary": "Date, times, city, fee range, kit needs, deposit terms, next question — keep it human and clear.",
+    "tags": [
+      "checklist",
+      "tip",
+      "booking"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Date, times, city, fee range, kit needs, deposit terms, next question — keep it human and clear.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "enquiry-reply-checklist"
+  },
+  {
+    "category": "room-tips",
+    "kind": "tip",
+    "title": "Weekly Room study checklist",
+    "summary": "One cable/article, one genre guide, one mixing drill, one career note. Compound knowledge.",
+    "tags": [
+      "checklist",
+      "tip",
+      "room-tips"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "One cable/article, one genre guide, one mixing drill, one career note. Compound knowledge.",
+      "Print it or save it offline. Checklists feel boring until they save a night.",
+      "Room standard: professionals borrow memory from paper so their ears can stay on the floor."
+    ],
+    "slug": "weekly-room-study-checklist"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is XLR?",
+    "summary": "A circular locking connector used for mics and balanced line — common in PA and booths.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "xlr"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "A circular locking connector used for mics and balanced line — common in PA and booths.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "A circular locking connector used for mics and balanced line — common in PA and booths.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-xlr"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is RCA?",
+    "summary": "Unbalanced phono connectors common on DJ gear channel inputs/outputs.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "rca"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Unbalanced phono connectors common on DJ gear channel inputs/outputs.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Unbalanced phono connectors common on DJ gear channel inputs/outputs.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-rca"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is TRS?",
+    "summary": "Tip-ring-sleeve jack — headphones, balanced line, or inserts depending on wiring.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "trs"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Tip-ring-sleeve jack — headphones, balanced line, or inserts depending on wiring.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Tip-ring-sleeve jack — headphones, balanced line, or inserts depending on wiring.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-trs"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is TS?",
+    "summary": "Tip-sleeve unbalanced mono jack — often instrument leads.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "ts"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Tip-sleeve unbalanced mono jack — often instrument leads.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Tip-sleeve unbalanced mono jack — often instrument leads.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-ts"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is speakON?",
+    "summary": "Locking speaker power connector between amps and cabinets.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "speakon"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Locking speaker power connector between amps and cabinets.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Locking speaker power connector between amps and cabinets.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-speakon"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is IEC?",
+    "summary": "Standard mains inlet lead used on much DJ and IT gear (“kettle lead”).",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "iec"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Standard mains inlet lead used on much DJ and IT gear (“kettle lead”).",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Standard mains inlet lead used on much DJ and IT gear (“kettle lead”).",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-iec"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is powerCON?",
+    "summary": "Locking mains connector family used on many PA racks (check TRUE1 vs older types).",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "powercon"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Locking mains connector family used on many PA racks (check TRUE1 vs older types).",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Locking mains connector family used on many PA racks (check TRUE1 vs older types).",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-powercon"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is DI box?",
+    "summary": "Direct input box — converts/isolates signals for FOH friendliness.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "di box"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Direct input box — converts/isolates signals for FOH friendliness.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Direct input box — converts/isolates signals for FOH friendliness.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-di-box"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Gain?",
+    "summary": "Input level calibration on a channel before EQ/fader — set this before slamming the master.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "gain"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Input level calibration on a channel before EQ/fader — set this before slamming the master.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Input level calibration on a channel before EQ/fader — set this before slamming the master.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-gain"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Headroom?",
+    "summary": "Available space before clipping; leave some on purpose.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "headroom"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Available space before clipping; leave some on purpose.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Available space before clipping; leave some on purpose.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-headroom"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is FOH?",
+    "summary": "Front of house — the engineer and system facing the audience.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "foh"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Front of house — the engineer and system facing the audience.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Front of house — the engineer and system facing the audience.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-foh"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Monitor / booth?",
+    "summary": "Local speakers for the DJ; not the same mix perspective as the dancefloor.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "monitor / booth"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Local speakers for the DJ; not the same mix perspective as the dancefloor.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Local speakers for the DJ; not the same mix perspective as the dancefloor.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-monitor-booth"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Phono vs line?",
+    "summary": "Turntable-level input with RIAA vs consumer/line-level from CDJs/controllers.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "phono vs line"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Turntable-level input with RIAA vs consumer/line-level from CDJs/controllers.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Turntable-level input with RIAA vs consumer/line-level from CDJs/controllers.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-phono-vs-line"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Impedance?",
+    "summary": "Electrical load characteristic important when matching amps and speakers.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "impedance"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Electrical load characteristic important when matching amps and speakers.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Electrical load characteristic important when matching amps and speakers.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-impedance"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Balanced line?",
+    "summary": "Noise-rejecting signal method using hot/cold conductors plus ground.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "balanced line"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Noise-rejecting signal method using hot/cold conductors plus ground.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Noise-rejecting signal method using hot/cold conductors plus ground.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-balanced-line"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Ground lift?",
+    "summary": "A switch on some DIs/devices to help break hum loops — use thoughtfully, not as superstition.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "ground lift"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "A switch on some DIs/devices to help break hum loops — use thoughtfully, not as superstition.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "A switch on some DIs/devices to help break hum loops — use thoughtfully, not as superstition.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-ground-lift"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Insert cable?",
+    "summary": "Special TRS wiring for processor inserts — not a generic headphone lead.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "insert cable"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Special TRS wiring for processor inserts — not a generic headphone lead.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Special TRS wiring for processor inserts — not a generic headphone lead.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-insert-cable"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Multicore?",
+    "summary": "A thick loom carrying many channels between stage and FOH.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "multicore"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "A thick loom carrying many channels between stage and FOH.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "A thick loom carrying many channels between stage and FOH.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-multicore"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Stage box?",
+    "summary": "Breakout for multicore connections on stage.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "stage box"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Breakout for multicore connections on stage.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Breakout for multicore connections on stage.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-stage-box"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Glossary: what is Pad?",
+    "summary": "Attenuates a too-hot signal into an input.",
+    "tags": [
+      "glossary",
+      "cables",
+      "gear",
+      "pad"
+    ],
+    "published": "2026-03-26",
+    "body": [
+      "Attenuates a too-hot signal into an input.",
+      "Search The Room for the longer guide if you need the how-to, not only the definition."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Attenuates a too-hot signal into an input.",
+        "helpful": 8
+      }
+    ],
+    "slug": "glossary-what-is-pad"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to fix no sound from CDJs",
+    "summary": "Check power, input select (line), cables seated, channel faders, crossfader assign, master level, and booth vs FOH path — in that calm order.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Check power, input select (line), cables seated, channel faders, crossfader assign, master level, and booth vs FOH path — in that calm order.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-fix-no-sound-from-cdjs"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to stop USB not reading on Pioneer",
+    "summary": "Try backup stick, different USB port, re-export, confirm format, reduce clutter, avoid hubs, test before doors next time.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Try backup stick, different USB port, re-export, confirm format, reduce clutter, avoid hubs, test before doors next time.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-stop-usb-not-reading-on-pioneer"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to blend Afrobeats into Dancehall",
+    "summary": "Listen for percussion conversation and vocal space; use a bridge groove; do not force a house-length blend if the vocal needs air.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Listen for percussion conversation and vocal space; use a bridge groove; do not force a house-length blend if the vocal needs air.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-blend-afrobeats-into-dancehall"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to prep a wedding DJ timeline",
+    "summary": "Get minute-by-minute from planner: ceremony, dinner, speeches, first dance, open floor, hard curfew.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Get minute-by-minute from planner: ceremony, dinner, speeches, first dance, open floor, hard curfew.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-prep-a-wedding-dj-timeline"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to choose speaker stands safely",
+    "summary": "Weight rated stands, spiked/secure bases, cable managed, no top-heavy accidents in wind.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Weight rated stands, spiked/secure bases, cable managed, no top-heavy accidents in wind.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-choose-speaker-stands-safely"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to talk to FOH without drama",
+    "summary": "Arrive early, ask preferred levels, take feedback politely, never secretly fight the limiter all night.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Arrive early, ask preferred levels, take feedback politely, never secretly fight the limiter all night.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-talk-to-foh-without-drama"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to build a clean-edit crate fast",
+    "summary": "Filter explicit tags, verify by ear, rename files, separate playlist, test search on the stick.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Filter explicit tags, verify by ear, rename files, separate playlist, test search on the stick.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-build-a-clean-edit-crate-fast"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to recover from a trainwreck",
+    "summary": "Cut to the stronger track on a downbeat, smile, move on. Do not narrate the mistake on mic.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Cut to the stronger track on a downbeat, smile, move on. Do not narrate the mistake on mic.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-recover-from-a-trainwreck"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to pack a mobile DJ rack",
+    "summary": "Heavy gear low, cables labelled, lids closed, loose items secured, load-in path scouted.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Heavy gear low, cables labelled, lids closed, loose items secured, load-in path scouted.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-pack-a-mobile-dj-rack"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to read a quiet room",
+    "summary": "Do not panic-bang. Tighten groove, watch for the first movers, build from real signals.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Do not panic-bang. Tighten groove, watch for the first movers, build from real signals.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-read-a-quiet-room"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to EQ muddy low end",
+    "summary": "One kick owns the sub — carve bass between channels; cut mud mid-low; stop boosting “more bass” into sludge.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "One kick owns the sub — carve bass between channels; cut mud mid-low; stop boosting “more bass” into sludge.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-eq-muddy-low-end"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to use a graphic EQ on a PA",
+    "summary": "If you are not the engineer, ask before sweeping. Feedback notches are surgical, not creative smile curves.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "If you are not the engineer, ask before sweeping. Feedback notches are surgical, not creative smile curves.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-use-a-graphic-eq-on-a-pa"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to label hot cues consistently",
+    "summary": "Same roles on every track: intro, vocal, drop/hook, outro/break. Consistency beats cleverness.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Same roles on every track: intro, vocal, drop/hook, outro/break. Consistency beats cleverness.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-label-hot-cues-consistently"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to ask for a guest slot",
+    "summary": "Short message, one mix, why their night fits, one follow-up max. Support the night as a punter too.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Short message, one mix, why their night fits, one follow-up max. Support the night as a punter too.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-ask-for-a-guest-slot"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to set booth monitor volume",
+    "summary": "Loud enough to hear kick/transients over crowd bleed — not a war with FOH.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Loud enough to hear kick/transients over crowd bleed — not a war with FOH.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-set-booth-monitor-volume"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to avoid ground hum",
+    "summary": "Clean power, short unbalanced runs, DI isolation when needed, stop stacking mystery adapters.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Clean power, short unbalanced runs, DI isolation when needed, stop stacking mystery adapters.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-avoid-ground-hum"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to prepare for Malta club kit differences",
+    "summary": "Confirm backline, bring flexible USB, arrive early, adapt jog/mixer curves without ego.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Confirm backline, bring flexible USB, arrive early, adapt jog/mixer curves without ego.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-prepare-for-malta-club-kit-differences"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to keep neighbours happy at loft parties",
+    "summary": "Agree curfew, mind the sub, prefer clarity over volume, protect floors and shared walls.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Agree curfew, mind the sub, prefer clarity over volume, protect floors and shared walls.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-keep-neighbours-happy-at-loft-parties"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to record a set for Mixcloud",
+    "summary": "Clean record path, honest levels, accurate tags, represent the lane you want to book.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Clean record path, honest levels, accurate tags, represent the lane you want to book.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-record-a-set-for-mixcloud"
+  },
+  {
+    "category": "room-tips",
+    "kind": "guide",
+    "title": "How to learn cables as a beginner",
+    "summary": "Start with RCA + XLR + IEC + headphones. Add speakON/power when you touch PA. Search The Room cable guides next.",
+    "tags": [
+      "how-to",
+      "search",
+      "guide"
+    ],
+    "published": "2026-03-27",
+    "body": [
+      "Start with RCA + XLR + IEC + headphones. Add speakON/power when you touch PA. Search The Room cable guides next.",
+      "This is the “how can we help” layer of The Room — practical steps first, theory second.",
+      "If you still fail after the checklist, change one variable at a time: cable, channel, stick, gain."
+    ],
+    "slug": "how-to-learn-cables-as-a-beginner"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with CDJ platters",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for CDJ platters: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "cdj"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for CDJ platters: keep it simple, labelled, and tested.",
+      "Focus topic: CDJ platters. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-cdj-platters"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for CDJ platters",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for CDJ platters: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "cdj"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for CDJ platters: keep it simple, labelled, and tested.",
+      "Focus topic: CDJ platters. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-cdj-platters"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does CDJ platters fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "cdj"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: CDJ platters. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-cdj-platters-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with CDJ platters?",
+    "summary": "Common issue. For CDJ platters, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "cdj"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on CDJ platters.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For CDJ platters, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-cdj-platters"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with mixer channel EQ",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for mixer channel EQ: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "mixer"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for mixer channel EQ: keep it simple, labelled, and tested.",
+      "Focus topic: mixer channel EQ. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-mixer-channel-eq"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for mixer channel EQ",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for mixer channel EQ: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "mixer"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for mixer channel EQ: keep it simple, labelled, and tested.",
+      "Focus topic: mixer channel EQ. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-mixer-channel-eq"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does mixer channel EQ fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "mixer"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: mixer channel EQ. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-mixer-channel-eq-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with mixer channel EQ?",
+    "summary": "Common issue. For mixer channel EQ, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "mixer"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on mixer channel EQ.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For mixer channel EQ, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-mixer-channel-eq"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with booth headphones",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for booth headphones: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "booth"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for booth headphones: keep it simple, labelled, and tested.",
+      "Focus topic: booth headphones. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-booth-headphones"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for booth headphones",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for booth headphones: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "booth"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for booth headphones: keep it simple, labelled, and tested.",
+      "Focus topic: booth headphones. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-booth-headphones"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does booth headphones fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "booth"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: booth headphones. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-booth-headphones-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with booth headphones?",
+    "summary": "Common issue. For booth headphones, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "booth"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on booth headphones.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For booth headphones, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-booth-headphones"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with USB sticks",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for USB sticks: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "usb"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for USB sticks: keep it simple, labelled, and tested.",
+      "Focus topic: USB sticks. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-usb-sticks"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for USB sticks",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for USB sticks: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "usb"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for USB sticks: keep it simple, labelled, and tested.",
+      "Focus topic: USB sticks. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-usb-sticks"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does USB sticks fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "usb"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: USB sticks. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-usb-sticks-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with USB sticks?",
+    "summary": "Common issue. For USB sticks, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "usb"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on USB sticks.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For USB sticks, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-usb-sticks"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with XLR runs",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for XLR runs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "xlr"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for XLR runs: keep it simple, labelled, and tested.",
+      "Focus topic: XLR runs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-xlr-runs"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for XLR runs",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for XLR runs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "xlr"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for XLR runs: keep it simple, labelled, and tested.",
+      "Focus topic: XLR runs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-xlr-runs"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does XLR runs fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "xlr"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: XLR runs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-xlr-runs-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with XLR runs?",
+    "summary": "Common issue. For XLR runs, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "xlr"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on XLR runs.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For XLR runs, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-xlr-runs"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with RCA runs",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for RCA runs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "rca"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for RCA runs: keep it simple, labelled, and tested.",
+      "Focus topic: RCA runs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-rca-runs"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for RCA runs",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for RCA runs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "rca"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for RCA runs: keep it simple, labelled, and tested.",
+      "Focus topic: RCA runs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-rca-runs"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does RCA runs fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "rca"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: RCA runs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-rca-runs-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with RCA runs?",
+    "summary": "Common issue. For RCA runs, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "rca"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on RCA runs.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For RCA runs, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-rca-runs"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with speakON leads",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for speakON leads: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "speakon"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for speakON leads: keep it simple, labelled, and tested.",
+      "Focus topic: speakON leads. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-speakon-leads"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for speakON leads",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for speakON leads: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "speakon"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for speakON leads: keep it simple, labelled, and tested.",
+      "Focus topic: speakON leads. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-speakon-leads"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does speakON leads fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "speakon"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: speakON leads. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-speakon-leads-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with speakON leads?",
+    "summary": "Common issue. For speakON leads, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "speakon"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on speakON leads.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For speakON leads, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-speakon-leads"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with IEC power",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for IEC power: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "iec"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for IEC power: keep it simple, labelled, and tested.",
+      "Focus topic: IEC power. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-iec-power"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for IEC power",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for IEC power: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "iec"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for IEC power: keep it simple, labelled, and tested.",
+      "Focus topic: IEC power. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-iec-power"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does IEC power fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "iec"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: IEC power. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-iec-power-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with IEC power?",
+    "summary": "Common issue. For IEC power, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "iec"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on IEC power.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For IEC power, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-iec-power"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with laptop standby",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for laptop standby: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "laptop"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for laptop standby: keep it simple, labelled, and tested.",
+      "Focus topic: laptop standby. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-laptop-standby"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for laptop standby",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for laptop standby: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "laptop"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for laptop standby: keep it simple, labelled, and tested.",
+      "Focus topic: laptop standby. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-laptop-standby"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does laptop standby fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "laptop"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: laptop standby. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-laptop-standby-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with laptop standby?",
+    "summary": "Common issue. For laptop standby, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "laptop"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on laptop standby.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For laptop standby, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-laptop-standby"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "One mistake to avoid with controller mapping",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for controller mapping: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "controller"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for controller mapping: keep it simple, labelled, and tested.",
+      "Focus topic: controller mapping. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-controller-mapping"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "A pro habit for controller mapping",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for controller mapping: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "gear",
+      "mega",
+      "controller"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for controller mapping: keep it simple, labelled, and tested.",
+      "Focus topic: controller mapping. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-controller-mapping"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does controller mapping fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "gear",
+      "mega",
+      "controller"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: controller mapping. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-controller-mapping-fail-on-the-night"
+  },
+  {
+    "category": "gear",
+    "kind": "qa",
+    "title": "Anyone else struggle with controller mapping?",
+    "summary": "Common issue. For controller mapping, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "gear",
+      "mega",
+      "controller"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on controller mapping.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For controller mapping, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-controller-mapping"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "One mistake to avoid with gain staging",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for gain staging: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "gain"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for gain staging: keep it simple, labelled, and tested.",
+      "Focus topic: gain staging. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-gain-staging"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "A pro habit for gain staging",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for gain staging: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "gain"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for gain staging: keep it simple, labelled, and tested.",
+      "Focus topic: gain staging. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-gain-staging"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Why does gain staging fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "sound",
+      "mega",
+      "gain"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: gain staging. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-gain-staging-fail-on-the-night"
+  },
+  {
+    "category": "sound",
+    "kind": "qa",
+    "title": "Anyone else struggle with gain staging?",
+    "summary": "Common issue. For gain staging, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "sound",
+      "mega",
+      "gain"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on gain staging.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For gain staging, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-gain-staging"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "One mistake to avoid with feedback control",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for feedback control: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "feedback"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for feedback control: keep it simple, labelled, and tested.",
+      "Focus topic: feedback control. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-feedback-control"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "A pro habit for feedback control",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for feedback control: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "feedback"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for feedback control: keep it simple, labelled, and tested.",
+      "Focus topic: feedback control. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-feedback-control"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Why does feedback control fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "sound",
+      "mega",
+      "feedback"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: feedback control. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-feedback-control-fail-on-the-night"
+  },
+  {
+    "category": "sound",
+    "kind": "qa",
+    "title": "Anyone else struggle with feedback control?",
+    "summary": "Common issue. For feedback control, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "sound",
+      "mega",
+      "feedback"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on feedback control.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For feedback control, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-feedback-control"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "One mistake to avoid with sub alignment",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for sub alignment: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "sub"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for sub alignment: keep it simple, labelled, and tested.",
+      "Focus topic: sub alignment. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-sub-alignment"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "A pro habit for sub alignment",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for sub alignment: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "sub"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for sub alignment: keep it simple, labelled, and tested.",
+      "Focus topic: sub alignment. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-sub-alignment"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Why does sub alignment fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "sound",
+      "mega",
+      "sub"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: sub alignment. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-sub-alignment-fail-on-the-night"
+  },
+  {
+    "category": "sound",
+    "kind": "qa",
+    "title": "Anyone else struggle with sub alignment?",
+    "summary": "Common issue. For sub alignment, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "sound",
+      "mega",
+      "sub"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on sub alignment.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For sub alignment, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-sub-alignment"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "One mistake to avoid with outdoor wind",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for outdoor wind: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "outdoor"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for outdoor wind: keep it simple, labelled, and tested.",
+      "Focus topic: outdoor wind. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-outdoor-wind"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "A pro habit for outdoor wind",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for outdoor wind: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "outdoor"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for outdoor wind: keep it simple, labelled, and tested.",
+      "Focus topic: outdoor wind. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-outdoor-wind"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Why does outdoor wind fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "sound",
+      "mega",
+      "outdoor"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: outdoor wind. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-outdoor-wind-fail-on-the-night"
+  },
+  {
+    "category": "sound",
+    "kind": "qa",
+    "title": "Anyone else struggle with outdoor wind?",
+    "summary": "Common issue. For outdoor wind, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "sound",
+      "mega",
+      "outdoor"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on outdoor wind.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For outdoor wind, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-outdoor-wind"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "One mistake to avoid with hearing protection",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for hearing protection: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "hearing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for hearing protection: keep it simple, labelled, and tested.",
+      "Focus topic: hearing protection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-hearing-protection"
+  },
+  {
+    "category": "sound",
+    "kind": "tip",
+    "title": "A pro habit for hearing protection",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for hearing protection: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "sound",
+      "mega",
+      "hearing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for hearing protection: keep it simple, labelled, and tested.",
+      "Focus topic: hearing protection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-hearing-protection"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Why does hearing protection fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "sound",
+      "mega",
+      "hearing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: hearing protection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-hearing-protection-fail-on-the-night"
+  },
+  {
+    "category": "sound",
+    "kind": "qa",
+    "title": "Anyone else struggle with hearing protection?",
+    "summary": "Common issue. For hearing protection, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "sound",
+      "mega",
+      "hearing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on hearing protection.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For hearing protection, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-hearing-protection"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "One mistake to avoid with phrase counting",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for phrase counting: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "phrase"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for phrase counting: keep it simple, labelled, and tested.",
+      "Focus topic: phrase counting. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-phrase-counting"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "A pro habit for phrase counting",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for phrase counting: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "phrase"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for phrase counting: keep it simple, labelled, and tested.",
+      "Focus topic: phrase counting. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-phrase-counting"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Why does phrase counting fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "mixing",
+      "mega",
+      "phrase"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: phrase counting. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-phrase-counting-fail-on-the-night"
+  },
+  {
+    "category": "mixing",
+    "kind": "qa",
+    "title": "Anyone else struggle with phrase counting?",
+    "summary": "Common issue. For phrase counting, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "mixing",
+      "mega",
+      "phrase"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on phrase counting.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For phrase counting, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-phrase-counting"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "One mistake to avoid with bass swaps",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for bass swaps: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "bass"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for bass swaps: keep it simple, labelled, and tested.",
+      "Focus topic: bass swaps. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-bass-swaps"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "A pro habit for bass swaps",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for bass swaps: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "bass"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for bass swaps: keep it simple, labelled, and tested.",
+      "Focus topic: bass swaps. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-bass-swaps"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Why does bass swaps fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "mixing",
+      "mega",
+      "bass"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: bass swaps. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-bass-swaps-fail-on-the-night"
+  },
+  {
+    "category": "mixing",
+    "kind": "qa",
+    "title": "Anyone else struggle with bass swaps?",
+    "summary": "Common issue. For bass swaps, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "mixing",
+      "mega",
+      "bass"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on bass swaps.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For bass swaps, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-bass-swaps"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "One mistake to avoid with echo outs",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for echo outs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "echo"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for echo outs: keep it simple, labelled, and tested.",
+      "Focus topic: echo outs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-echo-outs"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "A pro habit for echo outs",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for echo outs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "echo"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for echo outs: keep it simple, labelled, and tested.",
+      "Focus topic: echo outs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-echo-outs"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Why does echo outs fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "mixing",
+      "mega",
+      "echo"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: echo outs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-echo-outs-fail-on-the-night"
+  },
+  {
+    "category": "mixing",
+    "kind": "qa",
+    "title": "Anyone else struggle with echo outs?",
+    "summary": "Common issue. For echo outs, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "mixing",
+      "mega",
+      "echo"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on echo outs.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For echo outs, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-echo-outs"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "One mistake to avoid with quick cuts",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for quick cuts: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "quick"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for quick cuts: keep it simple, labelled, and tested.",
+      "Focus topic: quick cuts. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-quick-cuts"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "A pro habit for quick cuts",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for quick cuts: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "quick"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for quick cuts: keep it simple, labelled, and tested.",
+      "Focus topic: quick cuts. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-quick-cuts"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Why does quick cuts fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "mixing",
+      "mega",
+      "quick"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: quick cuts. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-quick-cuts-fail-on-the-night"
+  },
+  {
+    "category": "mixing",
+    "kind": "qa",
+    "title": "Anyone else struggle with quick cuts?",
+    "summary": "Common issue. For quick cuts, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "mixing",
+      "mega",
+      "quick"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on quick cuts.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For quick cuts, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-quick-cuts"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "One mistake to avoid with energy programming",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for energy programming: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "energy"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for energy programming: keep it simple, labelled, and tested.",
+      "Focus topic: energy programming. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-energy-programming"
+  },
+  {
+    "category": "mixing",
+    "kind": "tip",
+    "title": "A pro habit for energy programming",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for energy programming: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "mixing",
+      "mega",
+      "energy"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for energy programming: keep it simple, labelled, and tested.",
+      "Focus topic: energy programming. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-energy-programming"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Why does energy programming fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "mixing",
+      "mega",
+      "energy"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: energy programming. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-energy-programming-fail-on-the-night"
+  },
+  {
+    "category": "mixing",
+    "kind": "qa",
+    "title": "Anyone else struggle with energy programming?",
+    "summary": "Common issue. For energy programming, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "mixing",
+      "mega",
+      "energy"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on energy programming.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For energy programming, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-energy-programming"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "One mistake to avoid with Afrobeats selection",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Afrobeats selection: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "afrobeats"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Afrobeats selection: keep it simple, labelled, and tested.",
+      "Focus topic: Afrobeats selection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-afrobeats-selection"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "A pro habit for Afrobeats selection",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for Afrobeats selection: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "afrobeats"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for Afrobeats selection: keep it simple, labelled, and tested.",
+      "Focus topic: Afrobeats selection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-afrobeats-selection"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "Why does Afrobeats selection fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "genres",
+      "mega",
+      "afrobeats"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: Afrobeats selection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-afrobeats-selection-fail-on-the-night"
+  },
+  {
+    "category": "genres",
+    "kind": "qa",
+    "title": "Anyone else struggle with Afrobeats selection?",
+    "summary": "Common issue. For Afrobeats selection, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "genres",
+      "mega",
+      "afrobeats"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on Afrobeats selection.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For Afrobeats selection, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-afrobeats-selection"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "One mistake to avoid with Dancehall selection",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Dancehall selection: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "dancehall"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Dancehall selection: keep it simple, labelled, and tested.",
+      "Focus topic: Dancehall selection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-dancehall-selection"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "A pro habit for Dancehall selection",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for Dancehall selection: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "dancehall"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for Dancehall selection: keep it simple, labelled, and tested.",
+      "Focus topic: Dancehall selection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-dancehall-selection"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "Why does Dancehall selection fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "genres",
+      "mega",
+      "dancehall"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: Dancehall selection. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-dancehall-selection-fail-on-the-night"
+  },
+  {
+    "category": "genres",
+    "kind": "qa",
+    "title": "Anyone else struggle with Dancehall selection?",
+    "summary": "Common issue. For Dancehall selection, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "genres",
+      "mega",
+      "dancehall"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on Dancehall selection.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For Dancehall selection, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-dancehall-selection"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "One mistake to avoid with Amapiano patience",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Amapiano patience: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "amapiano"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Amapiano patience: keep it simple, labelled, and tested.",
+      "Focus topic: Amapiano patience. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-amapiano-patience"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "A pro habit for Amapiano patience",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for Amapiano patience: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "amapiano"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for Amapiano patience: keep it simple, labelled, and tested.",
+      "Focus topic: Amapiano patience. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-amapiano-patience"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "Why does Amapiano patience fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "genres",
+      "mega",
+      "amapiano"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: Amapiano patience. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-amapiano-patience-fail-on-the-night"
+  },
+  {
+    "category": "genres",
+    "kind": "qa",
+    "title": "Anyone else struggle with Amapiano patience?",
+    "summary": "Common issue. For Amapiano patience, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "genres",
+      "mega",
+      "amapiano"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on Amapiano patience.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For Amapiano patience, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-amapiano-patience"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "One mistake to avoid with Reggae weddings",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Reggae weddings: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "reggae"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Reggae weddings: keep it simple, labelled, and tested.",
+      "Focus topic: Reggae weddings. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-reggae-weddings"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "A pro habit for Reggae weddings",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for Reggae weddings: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "reggae"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for Reggae weddings: keep it simple, labelled, and tested.",
+      "Focus topic: Reggae weddings. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-reggae-weddings"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "Why does Reggae weddings fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "genres",
+      "mega",
+      "reggae"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: Reggae weddings. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-reggae-weddings-fail-on-the-night"
+  },
+  {
+    "category": "genres",
+    "kind": "qa",
+    "title": "Anyone else struggle with Reggae weddings?",
+    "summary": "Common issue. For Reggae weddings, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "genres",
+      "mega",
+      "reggae"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on Reggae weddings.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For Reggae weddings, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-reggae-weddings"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "One mistake to avoid with Hip Hop glue",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Hip Hop glue: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "hip"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Hip Hop glue: keep it simple, labelled, and tested.",
+      "Focus topic: Hip Hop glue. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-hip-hop-glue"
+  },
+  {
+    "category": "genres",
+    "kind": "tip",
+    "title": "A pro habit for Hip Hop glue",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for Hip Hop glue: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "genres",
+      "mega",
+      "hip"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for Hip Hop glue: keep it simple, labelled, and tested.",
+      "Focus topic: Hip Hop glue. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-hip-hop-glue"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "Why does Hip Hop glue fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "genres",
+      "mega",
+      "hip"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: Hip Hop glue. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-hip-hop-glue-fail-on-the-night"
+  },
+  {
+    "category": "genres",
+    "kind": "qa",
+    "title": "Anyone else struggle with Hip Hop glue?",
+    "summary": "Common issue. For Hip Hop glue, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "genres",
+      "mega",
+      "hip"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on Hip Hop glue.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For Hip Hop glue, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-hip-hop-glue"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "One mistake to avoid with club changeovers",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for club changeovers: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "club"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for club changeovers: keep it simple, labelled, and tested.",
+      "Focus topic: club changeovers. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-club-changeovers"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "A pro habit for club changeovers",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for club changeovers: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "club"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for club changeovers: keep it simple, labelled, and tested.",
+      "Focus topic: club changeovers. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-club-changeovers"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "Why does club changeovers fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "events",
+      "mega",
+      "club"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: club changeovers. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-club-changeovers-fail-on-the-night"
+  },
+  {
+    "category": "events",
+    "kind": "qa",
+    "title": "Anyone else struggle with club changeovers?",
+    "summary": "Common issue. For club changeovers, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "events",
+      "mega",
+      "club"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on club changeovers.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For club changeovers, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-club-changeovers"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "One mistake to avoid with wedding speeches",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for wedding speeches: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "wedding"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for wedding speeches: keep it simple, labelled, and tested.",
+      "Focus topic: wedding speeches. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-wedding-speeches"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "A pro habit for wedding speeches",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for wedding speeches: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "wedding"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for wedding speeches: keep it simple, labelled, and tested.",
+      "Focus topic: wedding speeches. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-wedding-speeches"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "Why does wedding speeches fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "events",
+      "mega",
+      "wedding"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: wedding speeches. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-wedding-speeches-fail-on-the-night"
+  },
+  {
+    "category": "events",
+    "kind": "qa",
+    "title": "Anyone else struggle with wedding speeches?",
+    "summary": "Common issue. For wedding speeches, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "events",
+      "mega",
+      "wedding"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on wedding speeches.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For wedding speeches, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-wedding-speeches"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "One mistake to avoid with corporate briefs",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for corporate briefs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "corporate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for corporate briefs: keep it simple, labelled, and tested.",
+      "Focus topic: corporate briefs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-corporate-briefs"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "A pro habit for corporate briefs",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for corporate briefs: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "corporate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for corporate briefs: keep it simple, labelled, and tested.",
+      "Focus topic: corporate briefs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-corporate-briefs"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "Why does corporate briefs fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "events",
+      "mega",
+      "corporate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: corporate briefs. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-corporate-briefs-fail-on-the-night"
+  },
+  {
+    "category": "events",
+    "kind": "qa",
+    "title": "Anyone else struggle with corporate briefs?",
+    "summary": "Common issue. For corporate briefs, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "events",
+      "mega",
+      "corporate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on corporate briefs.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For corporate briefs, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-corporate-briefs"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "One mistake to avoid with festival timings",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for festival timings: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "festival"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for festival timings: keep it simple, labelled, and tested.",
+      "Focus topic: festival timings. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-festival-timings"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "A pro habit for festival timings",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for festival timings: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "festival"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for festival timings: keep it simple, labelled, and tested.",
+      "Focus topic: festival timings. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-festival-timings"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "Why does festival timings fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "events",
+      "mega",
+      "festival"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: festival timings. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-festival-timings-fail-on-the-night"
+  },
+  {
+    "category": "events",
+    "kind": "qa",
+    "title": "Anyone else struggle with festival timings?",
+    "summary": "Common issue. For festival timings, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "events",
+      "mega",
+      "festival"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on festival timings.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For festival timings, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-festival-timings"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "One mistake to avoid with private party volume",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for private party volume: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "private"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for private party volume: keep it simple, labelled, and tested.",
+      "Focus topic: private party volume. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-private-party-volume"
+  },
+  {
+    "category": "events",
+    "kind": "tip",
+    "title": "A pro habit for private party volume",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for private party volume: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "events",
+      "mega",
+      "private"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for private party volume: keep it simple, labelled, and tested.",
+      "Focus topic: private party volume. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-private-party-volume"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "Why does private party volume fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "events",
+      "mega",
+      "private"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: private party volume. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-private-party-volume-fail-on-the-night"
+  },
+  {
+    "category": "events",
+    "kind": "qa",
+    "title": "Anyone else struggle with private party volume?",
+    "summary": "Common issue. For private party volume, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "events",
+      "mega",
+      "private"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on private party volume.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For private party volume, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-private-party-volume"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "One mistake to avoid with rekordbox export",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for rekordbox export: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "rekordbox"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for rekordbox export: keep it simple, labelled, and tested.",
+      "Focus topic: rekordbox export. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-rekordbox-export"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "A pro habit for rekordbox export",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for rekordbox export: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "rekordbox"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for rekordbox export: keep it simple, labelled, and tested.",
+      "Focus topic: rekordbox export. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-rekordbox-export"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Why does rekordbox export fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "software",
+      "mega",
+      "rekordbox"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: rekordbox export. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-rekordbox-export-fail-on-the-night"
+  },
+  {
+    "category": "software",
+    "kind": "qa",
+    "title": "Anyone else struggle with rekordbox export?",
+    "summary": "Common issue. For rekordbox export, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "software",
+      "mega",
+      "rekordbox"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on rekordbox export.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For rekordbox export, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-rekordbox-export"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "One mistake to avoid with Serato stems",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Serato stems: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "serato"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for Serato stems: keep it simple, labelled, and tested.",
+      "Focus topic: Serato stems. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-serato-stems"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "A pro habit for Serato stems",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for Serato stems: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "serato"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for Serato stems: keep it simple, labelled, and tested.",
+      "Focus topic: Serato stems. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-serato-stems"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Why does Serato stems fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "software",
+      "mega",
+      "serato"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: Serato stems. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-serato-stems-fail-on-the-night"
+  },
+  {
+    "category": "software",
+    "kind": "qa",
+    "title": "Anyone else struggle with Serato stems?",
+    "summary": "Common issue. For Serato stems, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "software",
+      "mega",
+      "serato"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on Serato stems.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For Serato stems, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-serato-stems"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "One mistake to avoid with crate hygiene",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for crate hygiene: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "crate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for crate hygiene: keep it simple, labelled, and tested.",
+      "Focus topic: crate hygiene. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-crate-hygiene"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "A pro habit for crate hygiene",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for crate hygiene: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "crate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for crate hygiene: keep it simple, labelled, and tested.",
+      "Focus topic: crate hygiene. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-crate-hygiene"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Why does crate hygiene fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "software",
+      "mega",
+      "crate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: crate hygiene. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-crate-hygiene-fail-on-the-night"
+  },
+  {
+    "category": "software",
+    "kind": "qa",
+    "title": "Anyone else struggle with crate hygiene?",
+    "summary": "Common issue. For crate hygiene, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "software",
+      "mega",
+      "crate"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on crate hygiene.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For crate hygiene, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-crate-hygiene"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "One mistake to avoid with offline backups",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for offline backups: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "offline"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for offline backups: keep it simple, labelled, and tested.",
+      "Focus topic: offline backups. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-offline-backups"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "A pro habit for offline backups",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for offline backups: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "offline"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for offline backups: keep it simple, labelled, and tested.",
+      "Focus topic: offline backups. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-offline-backups"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Why does offline backups fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "software",
+      "mega",
+      "offline"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: offline backups. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-offline-backups-fail-on-the-night"
+  },
+  {
+    "category": "software",
+    "kind": "qa",
+    "title": "Anyone else struggle with offline backups?",
+    "summary": "Common issue. For offline backups, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "software",
+      "mega",
+      "offline"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on offline backups.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For offline backups, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-offline-backups"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "One mistake to avoid with cue consistency",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for cue consistency: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "cue"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for cue consistency: keep it simple, labelled, and tested.",
+      "Focus topic: cue consistency. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-cue-consistency"
+  },
+  {
+    "category": "software",
+    "kind": "tip",
+    "title": "A pro habit for cue consistency",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for cue consistency: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "software",
+      "mega",
+      "cue"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for cue consistency: keep it simple, labelled, and tested.",
+      "Focus topic: cue consistency. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-cue-consistency"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Why does cue consistency fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "software",
+      "mega",
+      "cue"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: cue consistency. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-cue-consistency-fail-on-the-night"
+  },
+  {
+    "category": "software",
+    "kind": "qa",
+    "title": "Anyone else struggle with cue consistency?",
+    "summary": "Common issue. For cue consistency, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "software",
+      "mega",
+      "cue"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on cue consistency.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For cue consistency, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-cue-consistency"
+  },
+  {
+    "category": "production",
+    "kind": "tip",
+    "title": "One mistake to avoid with clean edits",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for clean edits: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "production",
+      "mega",
+      "clean"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for clean edits: keep it simple, labelled, and tested.",
+      "Focus topic: clean edits. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-clean-edits"
+  },
+  {
+    "category": "production",
+    "kind": "tip",
+    "title": "A pro habit for clean edits",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for clean edits: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "production",
+      "mega",
+      "clean"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for clean edits: keep it simple, labelled, and tested.",
+      "Focus topic: clean edits. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-clean-edits"
+  },
+  {
+    "category": "production",
+    "kind": "faq",
+    "title": "Why does clean edits fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "production",
+      "mega",
+      "clean"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: clean edits. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-clean-edits-fail-on-the-night"
+  },
+  {
+    "category": "production",
+    "kind": "qa",
+    "title": "Anyone else struggle with clean edits?",
+    "summary": "Common issue. For clean edits, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "production",
+      "mega",
+      "clean"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on clean edits.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For clean edits, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-clean-edits"
+  },
+  {
+    "category": "production",
+    "kind": "tip",
+    "title": "One mistake to avoid with extended intros",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for extended intros: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "production",
+      "mega",
+      "extended"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for extended intros: keep it simple, labelled, and tested.",
+      "Focus topic: extended intros. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-extended-intros"
+  },
+  {
+    "category": "production",
+    "kind": "tip",
+    "title": "A pro habit for extended intros",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for extended intros: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "production",
+      "mega",
+      "extended"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for extended intros: keep it simple, labelled, and tested.",
+      "Focus topic: extended intros. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-extended-intros"
+  },
+  {
+    "category": "production",
+    "kind": "faq",
+    "title": "Why does extended intros fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "production",
+      "mega",
+      "extended"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: extended intros. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-extended-intros-fail-on-the-night"
+  },
+  {
+    "category": "production",
+    "kind": "qa",
+    "title": "Anyone else struggle with extended intros?",
+    "summary": "Common issue. For extended intros, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "production",
+      "mega",
+      "extended"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on extended intros.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For extended intros, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-extended-intros"
+  },
+  {
+    "category": "production",
+    "kind": "tip",
+    "title": "One mistake to avoid with file naming",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for file naming: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "production",
+      "mega",
+      "file"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for file naming: keep it simple, labelled, and tested.",
+      "Focus topic: file naming. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-file-naming"
+  },
+  {
+    "category": "production",
+    "kind": "tip",
+    "title": "A pro habit for file naming",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for file naming: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "production",
+      "mega",
+      "file"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for file naming: keep it simple, labelled, and tested.",
+      "Focus topic: file naming. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-file-naming"
+  },
+  {
+    "category": "production",
+    "kind": "faq",
+    "title": "Why does file naming fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "production",
+      "mega",
+      "file"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: file naming. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-file-naming-fail-on-the-night"
+  },
+  {
+    "category": "production",
+    "kind": "qa",
+    "title": "Anyone else struggle with file naming?",
+    "summary": "Common issue. For file naming, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "production",
+      "mega",
+      "file"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on file naming.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For file naming, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-file-naming"
+  },
+  {
+    "category": "career",
+    "kind": "tip",
+    "title": "One mistake to avoid with invoicing",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for invoicing: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "career",
+      "mega",
+      "invoicing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for invoicing: keep it simple, labelled, and tested.",
+      "Focus topic: invoicing. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-invoicing"
+  },
+  {
+    "category": "career",
+    "kind": "tip",
+    "title": "A pro habit for invoicing",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for invoicing: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "career",
+      "mega",
+      "invoicing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for invoicing: keep it simple, labelled, and tested.",
+      "Focus topic: invoicing. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-invoicing"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "Why does invoicing fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "career",
+      "mega",
+      "invoicing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: invoicing. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-invoicing-fail-on-the-night"
+  },
+  {
+    "category": "career",
+    "kind": "qa",
+    "title": "Anyone else struggle with invoicing?",
+    "summary": "Common issue. For invoicing, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "career",
+      "mega",
+      "invoicing"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on invoicing.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For invoicing, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-invoicing"
+  },
+  {
+    "category": "career",
+    "kind": "tip",
+    "title": "One mistake to avoid with EPK updates",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for EPK updates: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "career",
+      "mega",
+      "epk"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for EPK updates: keep it simple, labelled, and tested.",
+      "Focus topic: EPK updates. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-epk-updates"
+  },
+  {
+    "category": "career",
+    "kind": "tip",
+    "title": "A pro habit for EPK updates",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for EPK updates: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "career",
+      "mega",
+      "epk"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for EPK updates: keep it simple, labelled, and tested.",
+      "Focus topic: EPK updates. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-epk-updates"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "Why does EPK updates fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "career",
+      "mega",
+      "epk"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: EPK updates. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-epk-updates-fail-on-the-night"
+  },
+  {
+    "category": "career",
+    "kind": "qa",
+    "title": "Anyone else struggle with EPK updates?",
+    "summary": "Common issue. For EPK updates, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "career",
+      "mega",
+      "epk"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on EPK updates.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For EPK updates, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-epk-updates"
+  },
+  {
+    "category": "career",
+    "kind": "tip",
+    "title": "One mistake to avoid with promoter follow-ups",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for promoter follow-ups: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "career",
+      "mega",
+      "promoter"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for promoter follow-ups: keep it simple, labelled, and tested.",
+      "Focus topic: promoter follow-ups. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-promoter-follow-ups"
+  },
+  {
+    "category": "career",
+    "kind": "tip",
+    "title": "A pro habit for promoter follow-ups",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for promoter follow-ups: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "career",
+      "mega",
+      "promoter"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for promoter follow-ups: keep it simple, labelled, and tested.",
+      "Focus topic: promoter follow-ups. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-promoter-follow-ups"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "Why does promoter follow-ups fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "career",
+      "mega",
+      "promoter"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: promoter follow-ups. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-promoter-follow-ups-fail-on-the-night"
+  },
+  {
+    "category": "career",
+    "kind": "qa",
+    "title": "Anyone else struggle with promoter follow-ups?",
+    "summary": "Common issue. For promoter follow-ups, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "career",
+      "mega",
+      "promoter"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on promoter follow-ups.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For promoter follow-ups, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-promoter-follow-ups"
+  },
+  {
+    "category": "booking",
+    "kind": "tip",
+    "title": "One mistake to avoid with deposit clarity",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for deposit clarity: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "booking",
+      "mega",
+      "deposit"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for deposit clarity: keep it simple, labelled, and tested.",
+      "Focus topic: deposit clarity. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-deposit-clarity"
+  },
+  {
+    "category": "booking",
+    "kind": "tip",
+    "title": "A pro habit for deposit clarity",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for deposit clarity: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "booking",
+      "mega",
+      "deposit"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for deposit clarity: keep it simple, labelled, and tested.",
+      "Focus topic: deposit clarity. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-deposit-clarity"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Why does deposit clarity fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "booking",
+      "mega",
+      "deposit"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: deposit clarity. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-deposit-clarity-fail-on-the-night"
+  },
+  {
+    "category": "booking",
+    "kind": "qa",
+    "title": "Anyone else struggle with deposit clarity?",
+    "summary": "Common issue. For deposit clarity, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "booking",
+      "mega",
+      "deposit"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on deposit clarity.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For deposit clarity, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-deposit-clarity"
+  },
+  {
+    "category": "booking",
+    "kind": "tip",
+    "title": "One mistake to avoid with written quotes",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for written quotes: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "booking",
+      "mega",
+      "written"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for written quotes: keep it simple, labelled, and tested.",
+      "Focus topic: written quotes. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-written-quotes"
+  },
+  {
+    "category": "booking",
+    "kind": "tip",
+    "title": "A pro habit for written quotes",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for written quotes: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "booking",
+      "mega",
+      "written"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for written quotes: keep it simple, labelled, and tested.",
+      "Focus topic: written quotes. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-written-quotes"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Why does written quotes fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "booking",
+      "mega",
+      "written"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: written quotes. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-written-quotes-fail-on-the-night"
+  },
+  {
+    "category": "booking",
+    "kind": "qa",
+    "title": "Anyone else struggle with written quotes?",
+    "summary": "Common issue. For written quotes, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "booking",
+      "mega",
+      "written"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on written quotes.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For written quotes, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-written-quotes"
+  },
+  {
+    "category": "booking",
+    "kind": "tip",
+    "title": "One mistake to avoid with overtime rates",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for overtime rates: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "booking",
+      "mega",
+      "overtime"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for overtime rates: keep it simple, labelled, and tested.",
+      "Focus topic: overtime rates. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-overtime-rates"
+  },
+  {
+    "category": "booking",
+    "kind": "tip",
+    "title": "A pro habit for overtime rates",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for overtime rates: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "booking",
+      "mega",
+      "overtime"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for overtime rates: keep it simple, labelled, and tested.",
+      "Focus topic: overtime rates. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-overtime-rates"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Why does overtime rates fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "booking",
+      "mega",
+      "overtime"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: overtime rates. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-overtime-rates-fail-on-the-night"
+  },
+  {
+    "category": "booking",
+    "kind": "qa",
+    "title": "Anyone else struggle with overtime rates?",
+    "summary": "Common issue. For overtime rates, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "booking",
+      "mega",
+      "overtime"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on overtime rates.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For overtime rates, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-overtime-rates"
+  },
+  {
+    "category": "room-tips",
+    "kind": "tip",
+    "title": "One mistake to avoid with room reading",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for room reading: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "room-tips",
+      "mega",
+      "room"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for room reading: keep it simple, labelled, and tested.",
+      "Focus topic: room reading. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-room-reading"
+  },
+  {
+    "category": "room-tips",
+    "kind": "tip",
+    "title": "A pro habit for room reading",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for room reading: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "room-tips",
+      "mega",
+      "room"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for room reading: keep it simple, labelled, and tested.",
+      "Focus topic: room reading. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-room-reading"
+  },
+  {
+    "category": "room-tips",
+    "kind": "faq",
+    "title": "Why does room reading fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "room-tips",
+      "mega",
+      "room"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: room reading. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-room-reading-fail-on-the-night"
+  },
+  {
+    "category": "room-tips",
+    "kind": "qa",
+    "title": "Anyone else struggle with room reading?",
+    "summary": "Common issue. For room reading, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "room-tips",
+      "mega",
+      "room"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on room reading.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For room reading, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-room-reading"
+  },
+  {
+    "category": "room-tips",
+    "kind": "tip",
+    "title": "One mistake to avoid with hydration",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for hydration: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "room-tips",
+      "mega",
+      "hydration"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for hydration: keep it simple, labelled, and tested.",
+      "Focus topic: hydration. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-hydration"
+  },
+  {
+    "category": "room-tips",
+    "kind": "tip",
+    "title": "A pro habit for hydration",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for hydration: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "room-tips",
+      "mega",
+      "hydration"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for hydration: keep it simple, labelled, and tested.",
+      "Focus topic: hydration. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-hydration"
+  },
+  {
+    "category": "room-tips",
+    "kind": "faq",
+    "title": "Why does hydration fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "room-tips",
+      "mega",
+      "hydration"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: hydration. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-hydration-fail-on-the-night"
+  },
+  {
+    "category": "room-tips",
+    "kind": "qa",
+    "title": "Anyone else struggle with hydration?",
+    "summary": "Common issue. For hydration, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "room-tips",
+      "mega",
+      "hydration"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on hydration.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For hydration, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-hydration"
+  },
+  {
+    "category": "room-tips",
+    "kind": "tip",
+    "title": "One mistake to avoid with post-gig notes",
+    "summary": "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for post-gig notes: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "room-tips",
+      "mega",
+      "post-gig"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Treat it as a failure point you can eliminate with a checklist before doors. Specifically for post-gig notes: keep it simple, labelled, and tested.",
+      "Focus topic: post-gig notes. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "one-mistake-to-avoid-with-post-gig-notes"
+  },
+  {
+    "category": "room-tips",
+    "kind": "tip",
+    "title": "A pro habit for post-gig notes",
+    "summary": "Do the boring prep once, then trust it under pressure. Specifically for post-gig notes: keep it simple, labelled, and tested.",
+    "tags": [
+      "tip",
+      "room-tips",
+      "mega",
+      "post-gig"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Do the boring prep once, then trust it under pressure. Specifically for post-gig notes: keep it simple, labelled, and tested.",
+      "Focus topic: post-gig notes. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "slug": "a-pro-habit-for-post-gig-notes"
+  },
+  {
+    "category": "room-tips",
+    "kind": "faq",
+    "title": "Why does post-gig notes fail on the night?",
+    "summary": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+    "tags": [
+      "faq",
+      "room-tips",
+      "mega",
+      "post-gig"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+      "Focus topic: post-gig notes. Make one improvement this week, then verify it live.",
+      "Ridiculous detail compounds — small booth truths beat vague internet flexes."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Because it was not tested under gig conditions. Rehearse the failure mode, not only the happy path.",
+        "helpful": 11
+      }
+    ],
+    "slug": "why-does-post-gig-notes-fail-on-the-night"
+  },
+  {
+    "category": "room-tips",
+    "kind": "qa",
+    "title": "Anyone else struggle with post-gig notes?",
+    "summary": "Common issue. For post-gig notes, slow down, isolate variables, and use The Room checklists before spending money.",
+    "tags": [
+      "qa",
+      "room-tips",
+      "mega",
+      "post-gig"
+    ],
+    "published": "2026-03-28",
+    "body": [
+      "Community question in The Room."
+    ],
+    "answers": [
+      {
+        "author": "community",
+        "name": "Room visitor",
+        "text": "Stuck on post-gig notes.",
+        "helpful": 2
+      },
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Common issue. For post-gig notes, slow down, isolate variables, and use The Room checklists before spending money.",
+        "helpful": 11
+      }
+    ],
+    "slug": "anyone-else-struggle-with-post-gig-notes"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Intermittent left channel on RCA",
+    "summary": "Practical booth note on intermittent left channel on rca — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on intermittent left channel on rca.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-intermittent-left-channel-on-rca"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: XLR pin 1 damage symptoms",
+    "summary": "Practical booth note on xlr pin 1 damage symptoms — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on xlr pin 1 damage symptoms.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-xlr-pin-1-damage-symptoms"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: TRS partially inserted headphone risks",
+    "summary": "Practical booth note on trs partially inserted headphone risks — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on trs partially inserted headphone risks.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-trs-partially-inserted-headphone-risks"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: speakON not locking fully",
+    "summary": "Practical booth note on speakon not locking fully — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on speakon not locking fully.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-speakon-not-locking-fully"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: IEC strain relief failure",
+    "summary": "Practical booth note on iec strain relief failure — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on iec strain relief failure.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-iec-strain-relief-failure"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Adapter barrel that loses ground",
+    "summary": "Practical booth note on adapter barrel that loses ground — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on adapter barrel that loses ground.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-adapter-barrel-that-loses-ground"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Snake fanout mislabel",
+    "summary": "Practical booth note on snake fanout mislabel — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on snake fanout mislabel.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-snake-fanout-mislabel"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Stage cable under door pinch",
+    "summary": "Practical booth note on stage cable under door pinch — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on stage cable under door pinch.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-stage-cable-under-door-pinch"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Wet cable outdoor contingency",
+    "summary": "Practical booth note on wet cable outdoor contingency — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on wet cable outdoor contingency.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-wet-cable-outdoor-contingency"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Coiling speakON without jacket twists",
+    "summary": "Practical booth note on coiling speakon without jacket twists — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on coiling speakon without jacket twists.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-coiling-speakon-without-jacket-twists"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Colour coding loom with tape",
+    "summary": "Practical booth note on colour coding loom with tape — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on colour coding loom with tape.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-colour-coding-loom-with-tape"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Testing continuity with a cheap tester",
+    "summary": "Practical booth note on testing continuity with a cheap tester — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on testing continuity with a cheap tester.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-testing-continuity-with-a-cheap-tester"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Replacing a broken RCA end vs whole cable",
+    "summary": "Practical booth note on replacing a broken rca end vs whole cable — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on replacing a broken rca end vs whole cable.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-replacing-a-broken-rca-end-vs-whole-cable"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: When to retire a cable immediately",
+    "summary": "Practical booth note on when to retire a cable immediately — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on when to retire a cable immediately.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-when-to-retire-a-cable-immediately"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Keeping spare tails for FOH preference",
+    "summary": "Practical booth note on keeping spare tails for foh preference — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on keeping spare tails for foh preference.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-keeping-spare-tails-for-foh-preference"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Avoiding mystery cables from the venue drawer",
+    "summary": "Practical booth note on avoiding mystery cables from the venue drawer — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on avoiding mystery cables from the venue drawer.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-avoiding-mystery-cables-from-the-venue-drawer"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Labelling both ends identically",
+    "summary": "Practical booth note on labelling both ends identically — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on labelling both ends identically.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-labelling-both-ends-identically"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Separating power and audio in the bag",
+    "summary": "Practical booth note on separating power and audio in the bag — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on separating power and audio in the bag.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-separating-power-and-audio-in-the-bag"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Velcro vs gaffer for temporary bundling",
+    "summary": "Practical booth note on velcro vs gaffer for temporary bundling — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on velcro vs gaffer for temporary bundling.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-velcro-vs-gaffer-for-temporary-bundling"
+  },
+  {
+    "category": "gear",
+    "kind": "tip",
+    "title": "Cables: Travel kit minimum for flights",
+    "summary": "Practical booth note on travel kit minimum for flights — diagnose, swap, and retire bad leads without drama.",
+    "tags": [
+      "cables",
+      "troubleshooting",
+      "tip"
+    ],
+    "published": "2026-03-29",
+    "body": [
+      "Practical booth note on travel kit minimum for flights.",
+      "Swap with a known-good cable before you redesign the whole signal path. Most “mixer faults” are leads.",
+      "If a cable fails once under load, retire it. Intermittent cables wait for peak time to betray you."
+    ],
+    "slug": "cables-travel-kit-minimum-for-flights"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "What is phantom power and do DJs need it?",
+    "summary": "48V phantom powers condenser mics. Most DJ booths do not need it for CDJs — only for certain mics. Do not send phantom into gear that hates it.",
+    "tags": [
+      "faq",
+      "gear",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "48V phantom powers condenser mics. Most DJ booths do not need it for CDJs — only for certain mics. Do not send phantom into gear that hates it.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "48V phantom powers condenser mics. Most DJ booths do not need it for CDJs — only for certain mics. Do not send phantom into gear that hates it.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-is-phantom-power-and-do-djs-need-it"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Can I run CDJs on a domestic extension reel?",
+    "summary": "Use proper rated distribution; fully unwind reels under load. Ask about venue power before improvising dangerous daisy chains.",
+    "tags": [
+      "faq",
+      "gear",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Use proper rated distribution; fully unwind reels under load. Ask about venue power before improvising dangerous daisy chains.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Use proper rated distribution; fully unwind reels under load. Ask about venue power before improvising dangerous daisy chains.",
+        "helpful": 13
+      }
+    ],
+    "slug": "can-i-run-cdjs-on-a-domestic-extension-reel"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Why does my controller need a power supply and USB?",
+    "summary": "USB alone may not feed enough power. Use the manufacturer PSU for stability on long gigs.",
+    "tags": [
+      "faq",
+      "gear",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "USB alone may not feed enough power. Use the manufacturer PSU for stability on long gigs.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "USB alone may not feed enough power. Use the manufacturer PSU for stability on long gigs.",
+        "helpful": 13
+      }
+    ],
+    "slug": "why-does-my-controller-need-a-power-supply-and-usb"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "What is a booth insert / send for FX?",
+    "summary": "Some desks provide send/return paths for external FX. Know whether you are on insert or aux before patching.",
+    "tags": [
+      "faq",
+      "gear",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Some desks provide send/return paths for external FX. Know whether you are on insert or aux before patching.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Some desks provide send/return paths for external FX. Know whether you are on insert or aux before patching.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-is-a-booth-insert-send-for-fx"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "What does “ringing out” a system mean?",
+    "summary": "Engineers find feedback frequencies and notch them before the show. Stay quiet during that process.",
+    "tags": [
+      "faq",
+      "sound",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Engineers find feedback frequencies and notch them before the show. Stay quiet during that process.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Engineers find feedback frequencies and notch them before the show. Stay quiet during that process.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-does-ringing-out-a-system-mean"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Should DJs carry earplugs every gig?",
+    "summary": "Yes for crowd time and often for long nights. Hearing is a tool — protect it.",
+    "tags": [
+      "faq",
+      "sound",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Yes for crowd time and often for long nights. Hearing is a tool — protect it.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Yes for crowd time and often for long nights. Hearing is a tool — protect it.",
+        "helpful": 13
+      }
+    ],
+    "slug": "should-djs-carry-earplugs-every-gig"
+  },
+  {
+    "category": "sound",
+    "kind": "faq",
+    "title": "Why do battery PA systems compress late at night?",
+    "summary": "Batteries sag under load. Programme with that limit; bring mains when promised.",
+    "tags": [
+      "faq",
+      "sound",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Batteries sag under load. Programme with that limit; bring mains when promised.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Batteries sag under load. Programme with that limit; bring mains when promised.",
+        "helpful": 13
+      }
+    ],
+    "slug": "why-do-battery-pa-systems-compress-late-at-night"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "How do I practice without neighbours complaining?",
+    "summary": "Headphones, daytime sessions, and controller volume discipline. Record instead of repeating peaks aloud.",
+    "tags": [
+      "faq",
+      "mixing",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Headphones, daytime sessions, and controller volume discipline. Record instead of repeating peaks aloud.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Headphones, daytime sessions, and controller volume discipline. Record instead of repeating peaks aloud.",
+        "helpful": 13
+      }
+    ],
+    "slug": "how-do-i-practice-without-neighbours-complaining"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "What is a transition library?",
+    "summary": "Saved loops/edits/FX gestures you can deploy. Useful — until every blend sounds identical.",
+    "tags": [
+      "faq",
+      "mixing",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Saved loops/edits/FX gestures you can deploy. Useful — until every blend sounds identical.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Saved loops/edits/FX gestures you can deploy. Useful — until every blend sounds identical.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-is-a-transition-library"
+  },
+  {
+    "category": "mixing",
+    "kind": "faq",
+    "title": "Should I look at the waveform or the room?",
+    "summary": "Both. Waveform for precision; room for truth. Never only the screen.",
+    "tags": [
+      "faq",
+      "mixing",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Both. Waveform for precision; room for truth. Never only the screen.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Both. Waveform for precision; room for truth. Never only the screen.",
+        "helpful": 13
+      }
+    ],
+    "slug": "should-i-look-at-the-waveform-or-the-room"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "What is a riddim in Dancehall?",
+    "summary": "A shared instrumental bed multiple vocals can ride. Selector literacy includes riddim awareness.",
+    "tags": [
+      "faq",
+      "genres",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "A shared instrumental bed multiple vocals can ride. Selector literacy includes riddim awareness.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "A shared instrumental bed multiple vocals can ride. Selector literacy includes riddim awareness.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-is-a-riddim-in-dancehall"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "How do I avoid offensive tracks at mixed events?",
+    "summary": "Know lyrics, keep clean crates, and ask the client about cultural/religious sensitivities early.",
+    "tags": [
+      "faq",
+      "genres",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Know lyrics, keep clean crates, and ask the client about cultural/religious sensitivities early.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Know lyrics, keep clean crates, and ask the client about cultural/religious sensitivities early.",
+        "helpful": 13
+      }
+    ],
+    "slug": "how-do-i-avoid-offensive-tracks-at-mixed-events"
+  },
+  {
+    "category": "genres",
+    "kind": "faq",
+    "title": "Is Amapiano the same as Afro house?",
+    "summary": "No. Related audiences sometimes, different rhythmic and production languages.",
+    "tags": [
+      "faq",
+      "genres",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "No. Related audiences sometimes, different rhythmic and production languages.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "No. Related audiences sometimes, different rhythmic and production languages.",
+        "helpful": 13
+      }
+    ],
+    "slug": "is-amapiano-the-same-as-afro-house"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "Who controls volume — DJ or venue?",
+    "summary": "Venue/FOH usually owns legal limits. Cooperate. Your ears in the booth are not the council meter.",
+    "tags": [
+      "faq",
+      "events",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Venue/FOH usually owns legal limits. Cooperate. Your ears in the booth are not the council meter.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Venue/FOH usually owns legal limits. Cooperate. Your ears in the booth are not the council meter.",
+        "helpful": 13
+      }
+    ],
+    "slug": "who-controls-volume-dj-or-venue"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "How do I handle a drunk guest on the mic?",
+    "summary": "Keep control of the mic, short interventions, and host/security backup. Do not escalate on open channel.",
+    "tags": [
+      "faq",
+      "events",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Keep control of the mic, short interventions, and host/security backup. Do not escalate on open channel.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Keep control of the mic, short interventions, and host/security backup. Do not escalate on open channel.",
+        "helpful": 13
+      }
+    ],
+    "slug": "how-do-i-handle-a-drunk-guest-on-the-mic"
+  },
+  {
+    "category": "events",
+    "kind": "faq",
+    "title": "What’s a reasonable DJ meal / break rider?",
+    "summary": "Water is non-negotiable. Food helps long bookings. Keep riders human, not rockstar parody.",
+    "tags": [
+      "faq",
+      "events",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Water is non-negotiable. Food helps long bookings. Keep riders human, not rockstar parody.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Water is non-negotiable. Food helps long bookings. Keep riders human, not rockstar parody.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-s-a-reasonable-dj-meal-break-rider"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Should I analyse at 1x or with advanced features on?",
+    "summary": "Use the analysis that matches your workflow, then verify grids on critical tracks by ear.",
+    "tags": [
+      "faq",
+      "software",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Use the analysis that matches your workflow, then verify grids on critical tracks by ear.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Use the analysis that matches your workflow, then verify grids on critical tracks by ear.",
+        "helpful": 13
+      }
+    ],
+    "slug": "should-i-analyse-at-1x-or-with-advanced-features-on"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Can two DJs share one rekordbox library live?",
+    "summary": "Plan export format and sticks in advance. Mid-gig library merging is chaos.",
+    "tags": [
+      "faq",
+      "software",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Plan export format and sticks in advance. Mid-gig library merging is chaos.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Plan export format and sticks in advance. Mid-gig library merging is chaos.",
+        "helpful": 13
+      }
+    ],
+    "slug": "can-two-djs-share-one-rekordbox-library-live"
+  },
+  {
+    "category": "software",
+    "kind": "faq",
+    "title": "Why are my hot cues missing on the club USB?",
+    "summary": "Export settings, playlist not synced, or wrong USB slot. Test the exact export path before travel.",
+    "tags": [
+      "faq",
+      "software",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Export settings, playlist not synced, or wrong USB slot. Test the exact export path before travel.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Export settings, playlist not synced, or wrong USB slot. Test the exact export path before travel.",
+        "helpful": 13
+      }
+    ],
+    "slug": "why-are-my-hot-cues-missing-on-the-club-usb"
+  },
+  {
+    "category": "production",
+    "kind": "faq",
+    "title": "Do I need Ableton to DJ?",
+    "summary": "No. Basic editing helps. DJing and producing overlap but are different jobs.",
+    "tags": [
+      "faq",
+      "production",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "No. Basic editing helps. DJing and producing overlap but are different jobs.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "No. Basic editing helps. DJing and producing overlap but are different jobs.",
+        "helpful": 13
+      }
+    ],
+    "slug": "do-i-need-ableton-to-dj"
+  },
+  {
+    "category": "production",
+    "kind": "faq",
+    "title": "Is pitching a whole set in the DAW cheating?",
+    "summary": "Prep is fine. Live reading still matters. Do not confuse a fixed timeline with a living room.",
+    "tags": [
+      "faq",
+      "production",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Prep is fine. Live reading still matters. Do not confuse a fixed timeline with a living room.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Prep is fine. Live reading still matters. Do not confuse a fixed timeline with a living room.",
+        "helpful": 13
+      }
+    ],
+    "slug": "is-pitching-a-whole-set-in-the-daw-cheating"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "How do I write a short DJ bio?",
+    "summary": "Who you are, where, what you play, notable stages, contact. Cut adjectives that do not earn their place.",
+    "tags": [
+      "faq",
+      "career",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Who you are, where, what you play, notable stages, contact. Cut adjectives that do not earn their place.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Who you are, where, what you play, notable stages, contact. Cut adjectives that do not earn their place.",
+        "helpful": 13
+      }
+    ],
+    "slug": "how-do-i-write-a-short-dj-bio"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "Should I put rates on my website?",
+    "summary": "Transparent ranges reduce tyre-kickers. DJ RHUE publishes ranges and itemises extras.",
+    "tags": [
+      "faq",
+      "career",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Transparent ranges reduce tyre-kickers. DJ RHUE publishes ranges and itemises extras.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Transparent ranges reduce tyre-kickers. DJ RHUE publishes ranges and itemises extras.",
+        "helpful": 13
+      }
+    ],
+    "slug": "should-i-put-rates-on-my-website"
+  },
+  {
+    "category": "career",
+    "kind": "faq",
+    "title": "How do I deal with burnout?",
+    "summary": "Fewer heroic weeks, sleep, ear rest, and saying no. A tired DJ makes thin decisions.",
+    "tags": [
+      "faq",
+      "career",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Fewer heroic weeks, sleep, ear rest, and saying no. A tired DJ makes thin decisions.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Fewer heroic weeks, sleep, ear rest, and saying no. A tired DJ makes thin decisions.",
+        "helpful": 13
+      }
+    ],
+    "slug": "how-do-i-deal-with-burnout"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "What is a reasonable deposit percentage?",
+    "summary": "Enough to secure the date meaningfully. DJ RHUE uses clear booking fees by set type.",
+    "tags": [
+      "faq",
+      "booking",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Enough to secure the date meaningfully. DJ RHUE uses clear booking fees by set type.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Enough to secure the date meaningfully. DJ RHUE uses clear booking fees by set type.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-is-a-reasonable-deposit-percentage"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Can clients supply a full Spotify playlist only?",
+    "summary": "As inspiration yes; as rigid law no. Provide must-plays and energy targets instead.",
+    "tags": [
+      "faq",
+      "booking",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "As inspiration yes; as rigid law no. Provide must-plays and energy targets instead.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "As inspiration yes; as rigid law no. Provide must-plays and energy targets instead.",
+        "helpful": 13
+      }
+    ],
+    "slug": "can-clients-supply-a-full-spotify-playlist-only"
+  },
+  {
+    "category": "booking",
+    "kind": "faq",
+    "title": "Do you soft-hold dates?",
+    "summary": "Short courtesy holds maybe — with expiry. Long unpaid holds block real work.",
+    "tags": [
+      "faq",
+      "booking",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Short courtesy holds maybe — with expiry. Long unpaid holds block real work.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Short courtesy holds maybe — with expiry. Long unpaid holds block real work.",
+        "helpful": 13
+      }
+    ],
+    "slug": "do-you-soft-hold-dates"
+  },
+  {
+    "category": "room-tips",
+    "kind": "faq",
+    "title": "How do I search if I do not know the term?",
+    "summary": "Type the symptom: no sound, hum, USB, muddy bass, wedding speeches. The Room tags synonyms and glossary entries.",
+    "tags": [
+      "faq",
+      "room-tips",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Type the symptom: no sound, hum, USB, muddy bass, wedding speeches. The Room tags synonyms and glossary entries.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Type the symptom: no sound, hum, USB, muddy bass, wedding speeches. The Room tags synonyms and glossary entries.",
+        "helpful": 13
+      }
+    ],
+    "slug": "how-do-i-search-if-i-do-not-know-the-term"
+  },
+  {
+    "category": "room-tips",
+    "kind": "faq",
+    "title": "What’s the fastest cable literacy path?",
+    "summary": "Read Understanding your cables, then XLR, RCA, speakON, power — then pack a tested pouch.",
+    "tags": [
+      "faq",
+      "room-tips",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Read Understanding your cables, then XLR, RCA, speakON, power — then pack a tested pouch.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Read Understanding your cables, then XLR, RCA, speakON, power — then pack a tested pouch.",
+        "helpful": 13
+      }
+    ],
+    "slug": "what-s-the-fastest-cable-literacy-path"
+  },
+  {
+    "category": "gear",
+    "kind": "faq",
+    "title": "Difference between NL2 and NL4 speakON?",
+    "summary": "Contact configurations differ. Match cable, amp and cab. Forcing the wrong type breaks gear.",
+    "tags": [
+      "faq",
+      "gear",
+      "comprehensive"
+    ],
+    "published": "2026-03-30",
+    "body": [
+      "Contact configurations differ. Match cable, amp and cab. Forcing the wrong type breaks gear.",
+      "Filed in The Room so the next person with the same 2am problem finds a straight answer."
+    ],
+    "answers": [
+      {
+        "author": "room",
+        "name": "DJ RHUE",
+        "text": "Contact configurations differ. Match cable, amp and cab. Forcing the wrong type breaks gear.",
+        "helpful": 13
+      }
+    ],
+    "slug": "difference-between-nl2-and-nl4-speakon"
   }
 ]
