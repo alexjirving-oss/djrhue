@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-mark">
-        <img src="/brand/signature.png" alt="Dj Rhue" />
+        <img src="/brand/signature.png" alt="DJ RHUE" />
       </div>
       <div className="container footer-inner">
         <div className="footer-brand">

@@ -4,35 +4,37 @@ import { motionTransition, viewportOnce } from '../lib/motion'
 
 const performance = [
   {
+    price: '£50',
+    unit: 'per hour',
+    title: 'Standard / Extended Multi-Hour',
+    featured: false,
+    copy: 'Multi-hour private events, bars and longer bookings. Minimum booking may apply.',
+  },
+  {
     price: 'From £70',
     unit: 'up to 1 hour',
-    title: 'Warm-Up or Guest Set',
+    title: 'Warm-Up / Guest Set',
     featured: true,
-    copy: 'Opening sets, supporting artists and shorter club slots — the entry point for most bookings.',
+    copy: 'Opening sets, supporting artists, guest appearances and shorter club slots.',
   },
   {
     price: 'From £100',
     unit: 'quoted from',
-    title: 'Headline Set or Peak Dates',
+    title: 'Headline Set / Peak Dates',
     featured: true,
-    copy: 'Peak-time Afrobeats, Dancehall, Amapiano & Caribbean/Urban sets. NYE, Halloween, Christmas and special dates quoted individually.',
-  },
-  {
-    price: '£50',
-    unit: 'per hour',
-    title: 'Extended / Multi-Hour',
-    featured: false,
-    copy: 'Multi-hour private events, bars and longer residencies. Minimum booking may apply.',
+    copy: 'Peak-time Afrobeats, Dancehall, Amapiano and Caribbean/Urban sets. NYE, Halloween, Christmas and special dates quoted individually.',
   },
 ]
 
 const packageSummary = [
-  'Essential DJ setup from +£50',
-  'Branded booth from +£80',
-  'PA package from +£150',
-  'Pro CDJ setups from +£120',
-  'Large event & industry packages available',
-  'Standalone equipment hire from £100/day',
+  'Essential DJ Setup — from +£50',
+  'Branded DJ Setup — from +£80',
+  'Essential PA Package — from +£150',
+  'Pro DJ Setup (FLX10 / Rane ONE) — from +£120',
+  'Pro PA Setup — from +£220',
+  'Large Event Setup — from +£300',
+  'Industry / Multi-DJ Setup (CDJ-2000 / DJM-900) — from +£400',
+  'Standalone equipment hire — from £100/day',
 ]
 
 export function Rates() {

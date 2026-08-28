@@ -49,7 +49,8 @@ export function Gallery() {
             <h2 className="section-title">Live in the booth</h2>
           </div>
           <p className="section-copy">
-            Real rooms. Real crowds. Tap any photo to view full size.
+            Live moments from clubs, carnivals, fashion events, radio sessions
+            and international bookings. Tap any photo to view full size.
           </p>
         </motion.div>
       </div>

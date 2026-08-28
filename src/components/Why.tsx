@@ -4,23 +4,23 @@ import { motionTransition, viewportOnce } from '../lib/motion'
 const reasons = [
   {
     n: '01',
-    title: 'Reads the room',
-    copy: 'Set direction shifts with the crowd — no rigid playlist, no dead moments.',
+    title: 'Reads the Room',
+    copy: 'Set direction adapts with the crowd — from warm-up through to peak time, without relying on a rigid playlist.',
   },
   {
     n: '02',
-    title: 'Turnkey when needed',
-    copy: 'From controller-only to full PA and CDJ rigs — one contact, one setup.',
+    title: 'Creative DJ Techniques',
+    copy: 'Wordplay, scratching, live remixing, Serato Stems, loops and creative transitions keep sets fresh and distinctive.',
   },
   {
     n: '03',
-    title: 'Promoter-ready',
-    copy: 'On time, clear comms, EPK and terms sorted before you ask.',
+    title: 'Caribbean & Urban Specialist',
+    copy: 'Afrobeats, Dancehall, Amapiano, Reggae, Soca, R&B and Hip-Hop — delivered with a specialist understanding of the music and culture.',
   },
   {
     n: '04',
-    title: 'UK & Malta',
-    copy: 'Regular Bristol bookings plus international dates and growing radio credits.',
+    title: 'UK & International Experience',
+    copy: 'Bristol bookings, radio appearances and international performances in Malta — with a growing network across both scenes.',
   },
 ]
 

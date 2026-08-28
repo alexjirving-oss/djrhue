@@ -11,16 +11,12 @@ const credits = [
     detail: 'Guest DJ & radio sessions',
   },
   {
-    venue: 'Rinse FM',
-    detail: 'Guest mix features',
-  },
-  {
     venue: 'Laid Blak Radio',
     detail: 'Featured artist',
   },
   {
     venue: 'Manoel Island · Malta',
-    detail: 'International festival stages',
+    detail: 'Filmed DJ sessions / international content',
   },
   {
     venue: 'UK clubs & festivals',
@@ -41,8 +37,8 @@ export function Proof() {
           <p className="eyebrow">Proof</p>
           <h2 className="section-title">Stages & airtime</h2>
           <p className="section-copy">
-            From carnival crowds to radio booths — real bookings, not filler
-            logos.
+            From carnival stages and live events to radio sessions and
+            international performances.
           </p>
         </motion.div>
 
