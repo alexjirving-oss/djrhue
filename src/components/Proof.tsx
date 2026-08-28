@@ -11,6 +11,10 @@ const credits = [
     detail: 'Guest DJ & radio sessions',
   },
   {
+    venue: 'Rinse FM',
+    detail: 'Guest mix / radio session',
+  },
+  {
     venue: 'Laid Blak Radio',
     detail: 'Featured artist',
   },
