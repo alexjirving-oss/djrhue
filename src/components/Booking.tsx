@@ -129,7 +129,7 @@ export function Booking() {
   return (
     <section className="section booking" id="book">
       <div className="booking-banner">
-        <img src="/photos/setup-outdoor-day.jpg" alt="" />
+        <img src="/photos/setup-outdoor-day.jpg" alt="" loading="lazy" />
         <div className="booking-banner-veil" />
         <div className="container booking-banner-copy">
           <p className="eyebrow">Bookings & Enquiries</p>

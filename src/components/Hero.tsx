@@ -19,18 +19,17 @@ export function Hero() {
           transition={motionTransition({ duration: 1, ease: [0.22, 1, 0.36, 1] })}
         />
 
-        <h1 className="sr-only">
-          DJ RHUE — Bristol DJ · Afrobeats, Dancehall &amp; Caribbean bookings
-        </h1>
-
-        <motion.p
-          className="hero-kicker"
+        <motion.h1
+          className="hero-h1"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={motionTransition({ duration: 0.9, delay: 0.08, ease: [0.22, 1, 0.36, 1] })}
         >
-          DJ RHUE · Bristol
-        </motion.p>
+          <span className="hero-h1-name">DJ RHUE</span>
+          <span className="hero-h1-meta">
+            Bristol · Afrobeats · Dancehall · Amapiano · Reggae
+          </span>
+        </motion.h1>
 
         <motion.h2
           className="hero-tagline"

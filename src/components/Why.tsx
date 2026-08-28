@@ -28,7 +28,7 @@ export function Why() {
   return (
     <section className="section why" id="why">
       <div className="why-visual">
-        <img src="/photos/setup-outdoor-dusk.jpg" alt="" />
+        <img src="/photos/setup-outdoor-dusk.jpg" alt="" loading="lazy" />
         <div className="why-visual-veil" />
       </div>
 

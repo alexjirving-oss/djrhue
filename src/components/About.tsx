@@ -12,7 +12,11 @@ export function About() {
           viewport={viewportOnce(0.15)}
           transition={motionTransition({ duration: 0.85, ease: [0.22, 1, 0.36, 1] })}
         >
-          <img src="/photos/press-full.jpg" alt="DJ RHUE full press portrait" />
+          <img
+            src="/photos/press-full.jpg"
+            alt="DJ RHUE full press portrait — Bristol Afrobeats and Dancehall DJ"
+            loading="lazy"
+          />
           <motion.figure
             className="about-float"
             initial={{ opacity: 0, y: 28 }}
@@ -20,7 +24,11 @@ export function About() {
             viewport={viewportOnce(0.2)}
             transition={motionTransition({ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] })}
           >
-            <img src="/photos/perf-trinidad.jpg" alt="DJ RHUE live with Trinidad flag" />
+            <img
+              src="/photos/perf-trinidad.jpg"
+              alt="DJ RHUE live at St Paul's Carnival Bristol with Trinidad & Tobago flag"
+              loading="lazy"
+            />
           </motion.figure>
         </motion.div>
 
@@ -40,6 +48,14 @@ export function About() {
             through to peak-time pressure — for clubs, festivals, private events
             and Malta stages across the UK.
           </p>
+          <p className="section-copy about-seo">
+            Available for DJ hire in Bristol and nationwide — club nights, St
+            Paul&apos;s Carnival, wedding receptions with Caribbean and Afrobeats
+            programming, corporate functions and brand activations. As a
+            Dancehall DJ in the UK with Malta bookings and radio sessions on
+            SWU.FM and Rinse FM, RHUE brings the same energy from festival
+            stages to intimate rooms.
+          </p>
           <div className="about-meta">
             <span>Bristol, United Kingdom</span>
             <span>Malta</span>
@@ -48,9 +64,9 @@ export function About() {
       </div>
 
       <div className="about-strip" aria-hidden="true">
-        <img src="/photos/perf-cdj.jpg" alt="" />
-        <img src="/photos/perf-manoel.jpg" alt="" />
-        <img src="/photos/press-headphones-1.jpg" alt="" />
+        <img src="/photos/perf-cdj.jpg" alt="" loading="lazy" />
+        <img src="/photos/perf-manoel.jpg" alt="" loading="lazy" />
+        <img src="/photos/press-headphones-1.jpg" alt="" loading="lazy" />
       </div>
     </section>
   )

@@ -6,6 +6,7 @@ import { About } from './components/About'
 import { Gallery } from './components/Gallery'
 import { Services } from './components/Services'
 import { Why } from './components/Why'
+import { FAQ } from './components/FAQ'
 import { Rates } from './components/Rates'
 import { Booking } from './components/Booking'
 import { Terms } from './components/Terms'
@@ -24,6 +25,7 @@ export default function App() {
         <Gallery />
         <Services />
         <Why />
+        <FAQ />
         <Rates />
         <Booking />
         <Terms />

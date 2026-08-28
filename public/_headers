@@ -1,0 +1,12 @@
+# Cache static assets (honoured by Cloudflare Pages / Netlify; GitHub Pages ignores custom headers).
+/photos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/brand/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/docs/*
+  Cache-Control: public, max-age=604800
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

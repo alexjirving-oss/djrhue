@@ -36,5 +36,8 @@ Bookings: `booking.djrhue@gmail.com` · `07305 940 902` · [@DJ_RHUE](https://in
 
 ## SEO & performance
 
-- `public/robots.txt` and `public/sitemap.xml` are served at deploy — submit `https://djrhue.com/sitemap.xml` in [Google Search Console](https://search.google.com/search-console).
-- Gallery and hero photos are high-resolution JPEGs (often 1–3 MB each). For faster LCP and better Core Web Vitals, compress with [Squoosh](https://squoosh.app/) or `npx @squoosh/cli --mozjpeg auto` before replacing files in `public/photos/`. Target ~150–300 KB per image without visible quality loss.
+See **[docs/SEO.md](docs/SEO.md)** for Google Search Console, Google Business Profile, and directory submission checklists.
+
+- `public/robots.txt`, `public/sitemap.xml` (with image entries), and crawlable `/book/` + `/rates/` redirect pages ship at deploy.
+- Run `python scripts/compress_photos.py` after adding photos to keep files under ~200 KB.
+- `public/_headers` applies on Cloudflare/Netlify; GitHub Pages does not support custom cache headers natively.
