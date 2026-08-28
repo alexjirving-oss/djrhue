@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Google Search Console: uncomment and paste content= from search.google.com/search-console -->
+    <!-- <meta name="google-site-verification" content="PASTE_VERIFICATION_CODE_HERE" /> -->
     <link rel="icon" type="image/png" href="/brand/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://djrhue.com/" />
@@ -75,7 +77,9 @@
               "R&B",
               "Caribbean music",
               "Club DJ",
-              "Festival DJ"
+              "Festival DJ",
+              "Wedding DJ",
+              "Corporate events"
             ],
             "sameAs": [
               "https://www.instagram.com/dj_rhue/",
@@ -104,15 +108,6 @@
               { "@type": "Country", "name": "United Kingdom" },
               { "@type": "Country", "name": "Malta" }
             ],
-            "knowsAbout": [
-              "Afrobeats",
-              "Dancehall",
-              "Amapiano",
-              "Reggae",
-              "Hip Hop",
-              "R&B",
-              "Caribbean music"
-            ],
             "member": { "@id": "https://djrhue.com/#person" },
             "sameAs": [
               "https://www.instagram.com/dj_rhue/",
@@ -124,6 +119,111 @@
             ]
           },
           {
+            "@type": "ProfessionalService",
+            "@id": "https://djrhue.com/#business",
+            "name": "DJ RHUE",
+            "url": "https://djrhue.com/",
+            "image": "https://djrhue.com/photos/og-share.jpg",
+            "telephone": "+447305940902",
+            "email": "booking.djrhue@gmail.com",
+            "priceRange": "££",
+            "description": "Bristol DJ for Afrobeats, Dancehall, Amapiano and Caribbean sets — club nights, weddings, corporate events, festivals and Malta bookings.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bristol",
+              "addressRegion": "England",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.4545,
+              "longitude": -2.5879
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Bristol" },
+              { "@type": "Country", "name": "United Kingdom" },
+              { "@type": "Country", "name": "Malta" }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "DJ services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Club DJ Bristol" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding DJ Bristol Caribbean" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate DJ Bristol" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Festival & Carnival DJ" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DJ Malta international bookings" } }
+              ]
+            },
+            "founder": { "@id": "https://djrhue.com/#person" },
+            "sameAs": [
+              "https://www.instagram.com/dj_rhue/",
+              "https://youtube.com/@rhue_james7"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://djrhue.com/#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://djrhue.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Listen", "item": "https://djrhue.com/#listen" },
+              { "@type": "ListItem", "position": 3, "name": "Gallery", "item": "https://djrhue.com/#gallery" },
+              { "@type": "ListItem", "position": 4, "name": "Services", "item": "https://djrhue.com/#services" },
+              { "@type": "ListItem", "position": 5, "name": "Rates", "item": "https://djrhue.com/rates/" },
+              { "@type": "ListItem", "position": 6, "name": "Book", "item": "https://djrhue.com/book/" }
+            ]
+          },
+          {
+            "@type": "VideoObject",
+            "@id": "https://djrhue.com/#video-latest-mix",
+            "name": "DJ RHUE — Latest Afrobeats & Dancehall Mix",
+            "description": "Latest mix from DJ RHUE — Afrobeats, Dancehall, Amapiano and Caribbean selection. Book for Bristol clubs, weddings and Malta events.",
+            "thumbnailUrl": "https://i.ytimg.com/vi/ehH6LHv1TiA/hqdefault.jpg",
+            "uploadDate": "2024-01-01",
+            "contentUrl": "https://www.youtube.com/watch?v=ehH6LHv1TiA",
+            "embedUrl": "https://www.youtube.com/embed/ehH6LHv1TiA",
+            "publisher": { "@id": "https://djrhue.com/#person" }
+          },
+          {
+            "@type": "ImageGallery",
+            "@id": "https://djrhue.com/#gallery-schema",
+            "name": "DJ RHUE live performance photos",
+            "description": "Gallery of DJ RHUE performing at St Paul's Carnival Bristol, Malta clubs, festival stages and radio sessions.",
+            "author": { "@id": "https://djrhue.com/#person" },
+            "image": [
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://djrhue.com/photos/perf-trinidad.jpg",
+                "name": "St Paul's Carnival Bristol",
+                "description": "DJ RHUE live at St Paul's Carnival with Trinidad flag"
+              },
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://djrhue.com/photos/perf-malta.jpg",
+                "name": "Malta club performance",
+                "description": "Afrobeats and Dancehall set at Malta club night"
+              },
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://djrhue.com/photos/perf-manoel.jpg",
+                "name": "Manoel Island Malta",
+                "description": "Filmed DJ session at Manoel Island Malta"
+              },
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://djrhue.com/photos/perf-cdj.jpg",
+                "name": "Club CDJ performance",
+                "description": "Mixing on Pioneer CDJ-3000s at Bristol club"
+              },
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://djrhue.com/photos/perf-bunjy.jpg",
+                "name": "Outdoor festival set",
+                "description": "Bristol carnival and festival stage performance"
+              }
+            ]
+          },
+          {
             "@type": "FAQPage",
             "@id": "https://djrhue.com/#faq",
             "mainEntity": [
@@ -132,7 +232,7 @@
                 "name": "How much does a DJ cost in Bristol?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "DJ RHUE performance fees start from £50 per hour for extended multi-hour bookings, from £70 for warm-up and guest sets (up to 1 hour), and from £100 for headline peak-time sets. Equipment hire, PA and travel are quoted separately. Full 2026 rates are on djrhue.com/#rates."
+                  "text": "Performance fees start from £50 per hour for extended multi-hour bookings, from £70 for warm-up and guest sets (up to 1 hour), and from £100 for headline peak-time sets. Equipment hire, PA and travel are quoted separately — see djrhue.com/#rates for full 2026 pricing."
                 }
               },
               {
@@ -140,7 +240,15 @@
                 "name": "What genres does DJ RHUE play?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "DJ RHUE specialises in Afrobeats, Dancehall, Amapiano, Reggae, Hip Hop and R&B — Caribbean and urban sets tailored for clubs, festivals, carnivals and private events."
+                  "text": "Afrobeats, Dancehall, Amapiano, Reggae, Hip Hop and R&B — Caribbean and urban sets tailored for clubs, festivals, carnivals, weddings and private events across Bristol and the UK."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you DJ weddings in Bristol with Caribbean music?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Wedding and celebration bookings welcome — sets blend Afrobeats, Dancehall and Caribbean favourites with R&B and Hip Hop. Share playlist must-haves when you enquire at djrhue.com/#book."
                 }
               },
               {
@@ -148,15 +256,39 @@
                 "name": "Does DJ RHUE travel to Malta?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. DJ RHUE performs in Malta as well as across the UK, including filmed sessions at Manoel Island and club bookings. Enquire via the booking form at djrhue.com/#book or WhatsApp 07305 940 902."
+                  "text": "Yes. International bookings include Malta — filmed sessions at Manoel Island, club nights and private events. Enquire via the booking form or WhatsApp 07305 940 902."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How do I book DJ RHUE?",
+                "name": "How do I book DJ RHUE for a club or corporate event?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Submit the booking form at djrhue.com/#book with your event date, location and details, message on WhatsApp at 07305 940 902, or email booking.djrhue@gmail.com. A booking fee (£50 standard / £70 guest / £100 headline) secures your date."
+                  "text": "Submit the booking form at djrhue.com/#book, message WhatsApp at 07305 940 902, or email booking.djrhue@gmail.com. A booking fee secures your date (£50 standard / £70 guest / £100 headline)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you provide DJ equipment and a PA for outdoor events?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes — branded booth, Pioneer CDJ setup and PA hire are available for festivals, carnivals and outdoor private events. Equipment is quoted separately from the performance fee."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How far in advance should I book?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Peak summer weekends, carnival season and Malta dates fill quickly — booking 4–8 weeks ahead is ideal. Last-minute enquiries welcome when the calendar allows."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where does DJ RHUE perform in the UK?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Based in Bristol with regular bookings across the South West, London and nationwide — St Paul's Carnival, SWU.FM and Rinse FM sessions, club residencies and festival stages."
                 }
               }
             ]
@@ -166,6 +298,9 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800&family=Sora:wght@300;400;500;600&display=swap"
       rel="stylesheet"

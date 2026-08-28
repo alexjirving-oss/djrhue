@@ -42,3 +42,5 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Ping Google sitemap
+        run: curl -fsS "https://www.google.com/ping?sitemap=https://djrhue.com/sitemap.xml" || true

@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/prerender.mjs",
     "build:epk": "node scripts/build-epk.mjs",
     "build:qr": "node scripts/generate-qr.mjs",
     "build:flyers": "node scripts/build-flyers.mjs",
+    "compress:photos": "python scripts/compress_photos.py",
     "lint": "oxlint",
     "preview": "vite preview"
   },
