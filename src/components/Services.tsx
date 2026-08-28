@@ -46,8 +46,8 @@ export function Services() {
           <p className="eyebrow">Services</p>
           <h2 className="section-title">Book for any room</h2>
           <p className="section-copy">
-            Intimate venues, packed clubs, outdoor stages — professional sets that
-            keep the floor moving.
+            Intimate venues, packed clubs, outdoor stages — professional Afrobeats,
+            Dancehall and Caribbean DJ sets that keep the floor moving.
           </p>
         </motion.div>
 

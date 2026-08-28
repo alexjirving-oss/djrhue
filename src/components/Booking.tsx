@@ -162,7 +162,7 @@ export function Booking() {
             <a href="tel:+447305940902">07305 940 902</a>
             <a href={`mailto:${BOOKING_EMAIL}`}>{BOOKING_EMAIL}</a>
             <SocialLinks className="booking-social" />
-            <span>Bristol, UK &amp; Malta</span>
+            <span>Bristol, United Kingdom &amp; Malta</span>
           </div>
 
           <div className="booking-qr">

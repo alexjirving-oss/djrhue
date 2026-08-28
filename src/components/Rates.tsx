@@ -52,8 +52,9 @@ export function Rates() {
           <p className="eyebrow">2026 Rates</p>
           <h2 className="section-title">Performance pricing</h2>
           <p className="section-copy">
-            DJ fees are exclusive of equipment hire, PA and travel unless agreed.
-            Setup packages available exclusively with DJ RHUE bookings.
+            DJ fees for Bristol and UK bookings — exclusive of equipment hire,
+            PA and travel unless agreed. Setup packages available exclusively
+            with DJ RHUE bookings.
           </p>
         </motion.div>
 

@@ -45,8 +45,10 @@ export function Proof() {
           <p className="eyebrow">Proof</p>
           <h2 className="section-title">Stages & airtime</h2>
           <p className="section-copy">
-            From carnival stages and live events to radio sessions and
-            international performances.
+            DJ RHUE has performed at St Paul&apos;s Carnival in Bristol, guest
+            sessions on SWU.FM, Rinse FM and Laid Blak Radio, and international
+            sets in Malta including Manoel Island. Bookings span UK clubs,
+            festivals and private events across Bristol, London and nationwide.
           </p>
         </motion.div>
 

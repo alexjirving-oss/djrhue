@@ -3,17 +3,61 @@ import { motion } from 'framer-motion'
 import { motionTransition, viewportOnce } from '../lib/motion'
 
 const shots = [
-  { src: '/photos/perf-trinidad.jpg', alt: 'DJ RHUE with Trinidad & Tobago flag', wide: false },
-  { src: '/photos/perf-malta.jpg', alt: 'DJ RHUE performing in Malta', wide: false },
-  { src: '/photos/perf-enzo.jpg', alt: 'DJ RHUE with Enzo', wide: false },
-  { src: '/photos/perf-cdj.jpg', alt: 'DJ RHUE on CDJ-3000s', wide: true },
-  { src: '/photos/perf-bunjy.jpg', alt: 'DJ RHUE outdoor festival set', wide: false },
-  { src: '/photos/hero-black-gold.jpg', alt: 'DJ RHUE black and gold private event', wide: true },
-  { src: '/photos/setup-outdoor-day.jpg', alt: 'Branded outdoor booth with PA — day setup', wide: false },
-  { src: '/photos/setup-outdoor-dusk.jpg', alt: 'Branded outdoor booth at dusk', wide: false },
-  { src: '/photos/perf-manoel.jpg', alt: 'DJ RHUE at Manoel Island, Malta', wide: true },
-  { src: '/photos/press-gun.jpg', alt: 'DJ RHUE press portrait', wide: false },
-  { src: '/photos/perf-white-close.jpg', alt: 'DJ RHUE close-up mixing', wide: false },
+  {
+    src: '/photos/perf-trinidad.jpg',
+    alt: 'DJ RHUE live at St Paul\'s Carnival Bristol with Trinidad & Tobago flag',
+    wide: false,
+  },
+  {
+    src: '/photos/perf-malta.jpg',
+    alt: 'DJ RHUE performing Afrobeats and Dancehall set at club night in Malta',
+    wide: false,
+  },
+  {
+    src: '/photos/perf-enzo.jpg',
+    alt: 'DJ RHUE with Enzo at live Bristol club event',
+    wide: false,
+  },
+  {
+    src: '/photos/perf-cdj.jpg',
+    alt: 'DJ RHUE mixing on Pioneer CDJ-3000s at club performance',
+    wide: true,
+  },
+  {
+    src: '/photos/perf-bunjy.jpg',
+    alt: 'DJ RHUE outdoor festival set — Bristol carnival energy',
+    wide: false,
+  },
+  {
+    src: '/photos/hero-black-gold.jpg',
+    alt: 'DJ RHUE at black and gold themed private event — Bristol DJ',
+    wide: true,
+  },
+  {
+    src: '/photos/setup-outdoor-day.jpg',
+    alt: 'Branded outdoor DJ booth with PA system — day festival setup',
+    wide: false,
+  },
+  {
+    src: '/photos/setup-outdoor-dusk.jpg',
+    alt: 'Branded outdoor DJ booth at dusk — carnival and festival setup',
+    wide: false,
+  },
+  {
+    src: '/photos/perf-manoel.jpg',
+    alt: 'DJ RHUE performing at Manoel Island Malta — international booking',
+    wide: true,
+  },
+  {
+    src: '/photos/press-gun.jpg',
+    alt: 'DJ RHUE press portrait — Bristol Caribbean and urban DJ',
+    wide: false,
+  },
+  {
+    src: '/photos/perf-white-close.jpg',
+    alt: 'DJ RHUE close-up mixing live Afrobeats and Dancehall set',
+    wide: false,
+  },
 ]
 
 export function Gallery() {

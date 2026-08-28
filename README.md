@@ -33,3 +33,8 @@ From the official media pack:
 - Gold `#f6c64a`
 
 Bookings: `booking.djrhue@gmail.com` · `07305 940 902` · [@DJ_RHUE](https://instagram.com/dj_rhue)
+
+## SEO & performance
+
+- `public/robots.txt` and `public/sitemap.xml` are served at deploy — submit `https://djrhue.com/sitemap.xml` in [Google Search Console](https://search.google.com/search-console).
+- Gallery and hero photos are high-resolution JPEGs (often 1–3 MB each). For faster LCP and better Core Web Vitals, compress with [Squoosh](https://squoosh.app/) or `npx @squoosh/cli --mozjpeg auto` before replacing files in `public/photos/`. Target ~150–300 KB per image without visible quality loss.

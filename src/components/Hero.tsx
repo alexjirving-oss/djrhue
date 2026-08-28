@@ -19,7 +19,21 @@ export function Hero() {
           transition={motionTransition({ duration: 1, ease: [0.22, 1, 0.36, 1] })}
         />
 
-        <motion.h1
+        <h1 className="sr-only">
+          DJ RHUE — Bristol DJ · Afrobeats, Dancehall &amp; Caribbean bookings
+        </h1>
+
+        <motion.p
+          className="hero-kicker"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={motionTransition({ duration: 0.9, delay: 0.08, ease: [0.22, 1, 0.36, 1] })}
+        >
+          DJ RHUE · Bristol
+        </motion.p>
+
+        <motion.h2
+          className="hero-tagline"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={motionTransition({ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] })}
@@ -27,7 +41,7 @@ export function Hero() {
           Caribbean heat.
           <br />
           Urban nights.
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           className="hero-lead"
@@ -35,7 +49,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={motionTransition({ duration: 0.9, delay: 0.22, ease: [0.22, 1, 0.36, 1] })}
         >
-          Afrobeats · Dancehall · Amapiano · Reggae — Bristol, UK &amp; Malta.
+          Afrobeats · Dancehall · Amapiano · Reggae — Bristol, United Kingdom &amp; Malta.
         </motion.p>
 
         <motion.div

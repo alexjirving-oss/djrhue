@@ -35,12 +35,13 @@ export function About() {
           <h2 className="section-title">Built for crowds that came to move</h2>
           <div className="gold-rule" />
           <p className="section-copy">
-            Bristol-based selector with roots in Caribbean and urban nightlife.
-            Sets are tailored in real time — warm-up grooves through to peak-time
-            pressure — for clubs, festivals, private events and Malta stages.
+            Bristol-based Afrobeats and Dancehall DJ with roots in Caribbean and
+            urban nightlife. Sets are tailored in real time — warm-up grooves
+            through to peak-time pressure — for clubs, festivals, private events
+            and Malta stages across the UK.
           </p>
           <div className="about-meta">
-            <span>Bristol, UK</span>
+            <span>Bristol, United Kingdom</span>
             <span>Malta</span>
           </div>
         </motion.div>

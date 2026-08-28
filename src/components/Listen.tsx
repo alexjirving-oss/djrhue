@@ -5,11 +5,13 @@ const YOUTUBE_CHANNEL = 'https://youtube.com/@rhue_james7'
 const YOUTUBE_LATEST_MIX = 'https://www.youtube.com/watch?v=ehH6LHv1TiA'
 const YOUTUBE_OLD_SCHOOL_MIX = 'https://www.youtube.com/watch?v=-FJbNvuNojM'
 
+const MIXCLOUD = 'https://www.mixcloud.com/DJRHUE/'
+
 const genres = [
-  'Afrobeats',
-  'Dancehall',
-  'Amapiano',
-  'Reggae',
+  { label: 'Afrobeats', href: MIXCLOUD },
+  { label: 'Dancehall', href: MIXCLOUD },
+  { label: 'Amapiano', href: YOUTUBE_LATEST_MIX },
+  { label: 'Reggae', href: MIXCLOUD },
   { label: 'Hip Hop & R&B', href: YOUTUBE_OLD_SCHOOL_MIX },
 ] as const
 
@@ -35,26 +37,18 @@ export function Listen() {
             </a>
           </h2>
           <p className="section-copy">
-            Mixes and sets spanning Caribbean heat and urban nights — the same
-            energy you get in the booth.
+            Afrobeats, Dancehall, Amapiano, Reggae, Hip Hop and R&amp;B mixes —
+            the same Caribbean and urban energy you get when you book DJ RHUE
+            in Bristol or Malta.
           </p>
-          <ul className="listen-genres" aria-label="Genres">
-            {genres.map((genre) => {
-              const label = typeof genre === 'string' ? genre : genre.label
-              const href = typeof genre === 'string' ? undefined : genre.href
-
-              return (
-                <li key={label}>
-                  {href ? (
-                    <a href={href} target="_blank" rel="noopener noreferrer">
-                      {label}
-                    </a>
-                  ) : (
-                    label
-                  )}
-                </li>
-              )
-            })}
+          <ul className="listen-genres" aria-label="Genres played by DJ RHUE">
+            {genres.map((genre) => (
+              <li key={genre.label}>
+                <a href={genre.href} target="_blank" rel="noopener noreferrer">
+                  {genre.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </motion.div>
 

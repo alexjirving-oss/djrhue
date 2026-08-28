@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container footer-inner">
         <div className="footer-brand">
           <img src="/brand/logo.png" alt="" />
-          <p>Caribbean &amp; Urban DJ · Est. 2025 · Bristol, UK · Malta</p>
+          <p>Caribbean &amp; Urban DJ · Est. 2025 · Bristol, United Kingdom · Malta</p>
         </div>
 
         <div className="footer-meta">
