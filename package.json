@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:epk": "node scripts/build-epk.mjs",
+    "build:qr": "node scripts/generate-qr.mjs",
     "build:flyers": "node scripts/build-flyers.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
@@ -24,6 +25,7 @@
     "oxlint": "^1.75.0",
     "pdf-lib": "^1.17.1",
     "playwright": "^1.62.1",
+    "qrcode": "^1.5.4",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"
   }

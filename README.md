@@ -18,10 +18,11 @@ npm run preview
 
 ## Booking form
 
-The booking form sends enquiries to `booking.djrhue@gmail.com`.
+The booking form sends enquiries via [Formspree](https://formspree.io) to `booking.djrhue@gmail.com`.
 
-- **Preferred:** [Web3Forms](https://web3forms.com) — sign in at [app.web3forms.com](https://app.web3forms.com) with Google (booking inbox), copy your access key, then set GitHub secret `VITE_WEB3FORMS_ACCESS_KEY` and redeploy.
-- **Fallback:** [FormSubmit](https://formsubmit.co) until Web3Forms is configured. If FormSubmit is not activated yet, the form opens the visitor’s email app with the enquiry pre-filled (still delivers to the booking inbox).
+- **Endpoint:** `https://formspree.io/f/mzepjnra` (override with `VITE_FORM_ENDPOINT` if needed)
+- **Format:** `FormData` POST — Formspree expects form fields, not JSON
+- **Fallback:** If the form is not yet activated, the visitor’s email app opens with the enquiry pre-filled
 
 ## Brand
 

@@ -75,6 +75,9 @@ export function Rates() {
                 <div>
                   <h4>{rate.title}</h4>
                   <p>{rate.copy}</p>
+                  <p className="rate-deposit-note">
+                    Booking fee is a deposit toward your total — not the full performance price.
+                  </p>
                 </div>
               </motion.article>
             ))}

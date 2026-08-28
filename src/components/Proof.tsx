@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { motionTransition, viewportOnce } from '../lib/motion'
 
+const MIXCLOUD = 'https://www.mixcloud.com/DJRHUE/'
+
 const credits = [
   {
     venue: "St Paul's Carnival",
@@ -9,10 +11,12 @@ const credits = [
   {
     venue: 'SWU.FM',
     detail: 'Guest DJ & radio sessions',
+    href: MIXCLOUD,
   },
   {
     venue: 'Rinse FM',
     detail: 'Guest mix / radio session',
+    href: MIXCLOUD,
   },
   {
     venue: 'Laid Blak Radio',
@@ -47,19 +51,31 @@ export function Proof() {
         </motion.div>
 
         <div className="proof-grid">
-          {credits.map((item, i) => (
-            <motion.article
-              className="proof-badge"
-              key={item.venue}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={viewportOnce(0.25)}
-              transition={motionTransition({ duration: 0.5, delay: i * 0.04 })}
-            >
-              <strong>{item.venue}</strong>
-              <span>{item.detail}</span>
-            </motion.article>
-          ))}
+          {credits.map((item, i) => {
+            const Tag = item.href ? 'a' : 'article'
+            const linkProps = item.href
+              ? {
+                  href: item.href,
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                }
+              : {}
+
+            return (
+              <motion.div
+                key={item.venue}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={viewportOnce(0.25)}
+                transition={motionTransition({ duration: 0.5, delay: i * 0.04 })}
+              >
+                <Tag className={`proof-badge${item.href ? ' proof-badge--link' : ''}`} {...linkProps}>
+                  <strong>{item.venue}</strong>
+                  <span>{item.detail}</span>
+                </Tag>
+              </motion.div>
+            )
+          })}
         </div>
 
         <motion.div

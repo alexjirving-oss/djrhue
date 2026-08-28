@@ -40,8 +40,7 @@ export function About() {
             pressure — for clubs, festivals, private events and Malta stages.
           </p>
           <div className="about-meta">
-            <span>Bristol</span>
-            <span>UK</span>
+            <span>Bristol, UK</span>
             <span>Malta</span>
           </div>
         </motion.div>

@@ -60,24 +60,19 @@ async function submitViaFormspree(data: FormData) {
   const name = String(data.get('name') || '').trim()
   const eventType = String(data.get('eventType') || '').trim()
 
-  const payload = {
-    name,
-    email: String(data.get('email') || '').trim(),
-    phone: String(data.get('phone') || '').trim(),
-    eventType,
-    date: String(data.get('date') || '').trim(),
-    location: String(data.get('location') || '').trim(),
-    message: String(data.get('message') || '').trim(),
-    _subject: `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`,
+  const payload = new FormData()
+  for (const [key, value] of data.entries()) {
+    if (typeof value === 'string') payload.append(key, value)
   }
+  payload.set(
+    '_subject',
+    `DJ RHUE Booking — ${eventType || 'Enquiry'} — ${name}`,
+  )
 
   const res = await fetch(FORMSPREE_ENDPOINT, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify(payload),
+    headers: { Accept: 'application/json' },
+    body: payload,
   })
 
   const json = (await res.json().catch(() => null)) as {
@@ -126,10 +121,8 @@ export function Booking() {
         return
       }
 
-      window.location.href = buildMailto(data)
-      setStatus('mailto')
-      form.reset()
-      setEventType('')
+      setStatus('error')
+      setErrorMsg(message || 'Could not send. Try WhatsApp or email instead.')
     }
   }
 
@@ -274,13 +267,7 @@ export function Booking() {
               <input type="checkbox" name="termsAccepted" required />
               <span>
                 I agree to the{' '}
-                <a
-                  href="/docs/DJ_RHUE_Terms_2026.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Terms &amp; Conditions
-                </a>
+                <a href="#terms">Terms &amp; Conditions</a>
               </span>
             </label>
           </div>
