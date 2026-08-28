@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { motionTransition, viewportOnce } from '../lib/motion'
 
@@ -69,6 +70,15 @@ export function FAQ() {
             </motion.div>
           ))}
         </dl>
+
+        <div className="faq-room-link">
+          <p>
+            Want gear guides, mixing craft, genre notes, Room tips and community Q&amp;A?
+          </p>
+          <Link className="btn btn-ghost" to="/room">
+            Open The Room
+          </Link>
+        </div>
       </div>
     </section>
   )

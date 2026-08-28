@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { motionTransition } from '../lib/motion'
 
@@ -57,23 +58,18 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={motionTransition({ duration: 0.85, delay: 0.34, ease: [0.22, 1, 0.36, 1] })}
         >
-          <a className="btn btn-primary" href="#book">
+          <Link className="btn btn-primary" to="/book">
             Book DJ RHUE
             <span className="hero-eq" aria-hidden="true">
               <i /><i /><i /><i /><i />
             </span>
-          </a>
-          <a className="btn btn-ghost" href="#listen">
+          </Link>
+          <Link className="btn btn-ghost" to="/listen">
             Listen to mixes
-          </a>
-          <a
-            className="btn btn-ghost hero-epk"
-            href="/docs/DJ_RHUE_EPK_2026.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Download EPK
-          </a>
+          </Link>
+          <Link className="btn btn-ghost" to="/room">
+            The Room
+          </Link>
         </motion.div>
       </div>
 

@@ -116,7 +116,7 @@ export function Rates() {
         </div>
 
         <div className="rate-cta">
-          <a className="btn btn-primary" href="#book">
+          <a className="btn btn-primary" href="/book">
             Request a quote
           </a>
           <a className="btn btn-ghost" href="/docs/DJ_RHUE_Rates_2026.pdf" target="_blank" rel="noreferrer">

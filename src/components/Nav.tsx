@@ -1,20 +1,22 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const links = [
-  { href: '#listen', label: 'Listen' },
-  { href: '#proof', label: 'Proof' },
-  { href: '#about', label: 'About' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#services', label: 'Services' },
-  { href: '#why', label: 'Why' },
-  { href: '#faq', label: 'FAQ' },
-  { href: '#rates', label: 'Rates' },
-  { href: '#terms', label: 'Terms' },
+  { to: '/listen', label: 'Listen' },
+  { to: '/about', label: 'About' },
+  { to: '/gallery', label: 'Gallery' },
+  { to: '/services', label: 'Services' },
+  { to: '/room', label: 'Room' },
+  { to: '/faq', label: 'FAQ' },
+  { to: '/rates', label: 'Rates' },
+  { to: '/terms', label: 'Terms' },
 ]
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+  const notHome = location.pathname !== '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -23,12 +25,16 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    setOpen(false)
+  }, [location.pathname])
+
   return (
-    <header className={`nav${scrolled ? ' scrolled' : ''}`}>
+    <header className={`nav${scrolled || notHome ? ' scrolled' : ''}`}>
       <div className="container nav-inner">
-        <a href="#top" aria-label="DJ RHUE home">
+        <Link to="/" aria-label="DJ RHUE home">
           <img className="nav-logo" src="/brand/logo.png" alt="DJ RHUE" />
-        </a>
+        </Link>
 
         <button
           className="nav-toggle"
@@ -42,13 +48,23 @@ export function Nav() {
         </button>
 
         <ul className={`nav-links${open ? ' open' : ''}`}>
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} onClick={() => setOpen(false)}>
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {links.map((link) => {
+            const active =
+              link.to === '/room'
+                ? location.pathname.startsWith('/room')
+                : location.pathname === link.to
+            return (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  className={active ? 'nav-active' : undefined}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            )
+          })}
           <li>
             <a
               className="btn btn-ghost nav-epk"
@@ -61,9 +77,9 @@ export function Nav() {
             </a>
           </li>
           <li>
-            <a className="btn btn-primary nav-cta" href="#book" onClick={() => setOpen(false)}>
+            <Link className="btn btn-primary nav-cta" to="/book" onClick={() => setOpen(false)}>
               Book
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

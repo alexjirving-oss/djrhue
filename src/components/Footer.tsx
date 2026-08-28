@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { SocialLinks } from './SocialLinks'
 
 export function Footer() {
@@ -15,16 +16,17 @@ export function Footer() {
         <div className="footer-meta">
           <SocialLinks className="footer-social" />
           <div className="footer-links">
-            <a href="#listen">Listen</a>
-            <a href="#rates">Rates</a>
-            <a href="#terms">Terms</a>
+            <Link to="/listen">Listen</Link>
+            <Link to="/room">The Room</Link>
+            <Link to="/rates">Rates</Link>
+            <Link to="/terms">Terms</Link>
             <a href="/docs/DJ_RHUE_EPK_2026.pdf" target="_blank" rel="noreferrer">
               EPK
             </a>
             <a href="/docs/DJ_RHUE_Rates_2026.pdf" target="_blank" rel="noreferrer">
               Rates PDF
             </a>
-            <a href="#book">Book</a>
+            <Link to="/book">Book</Link>
           </div>
         </div>
       </div>

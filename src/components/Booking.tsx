@@ -179,7 +179,7 @@ export function Booking() {
           <p className="booking-note">
             Booking fee secures your date (£50 standard / £70 guest / £100 headline).
             Remaining balance due no later than 48 hours before the event. See{' '}
-            <a href="#rates">rates</a> and <a href="#terms">terms</a>.
+            <a href="/rates">rates</a> and <a href="/terms">terms</a>.
           </p>
         </motion.div>
 
@@ -267,7 +267,7 @@ export function Booking() {
               <input type="checkbox" name="termsAccepted" required />
               <span>
                 I agree to the{' '}
-                <a href="#terms">Terms &amp; Conditions</a>
+                <a href="/terms">Terms &amp; Conditions</a>
               </span>
             </label>
           </div>

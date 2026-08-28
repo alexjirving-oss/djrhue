@@ -1,12 +1,26 @@
 import { chromium } from 'playwright'
 import { createServer } from 'node:http'
-import { readFileSync, writeFileSync, existsSync, statSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync, copyFileSync } from 'node:fs'
 import { join, dirname, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
 const dist = join(root, 'dist')
+
+/** Every top-level app route that must resolve on GitHub Pages (directory index). */
+const STATIC_ROUTES = [
+  { path: '/', out: 'index.html', wait: '#root .hero-h1-name', terms: ['DJ RHUE', 'Bristol', 'Afrobeats'] },
+  { path: '/listen', out: 'listen/index.html', wait: '#listen', terms: ['Listen'] },
+  { path: '/about', out: 'about/index.html', wait: '#about', terms: ['About'] },
+  { path: '/gallery', out: 'gallery/index.html', wait: '#gallery', terms: ['Gallery'] },
+  { path: '/services', out: 'services/index.html', wait: '#services', terms: ['Services'] },
+  { path: '/rates', out: 'rates/index.html', wait: '#rates', terms: ['Rates'] },
+  { path: '/book', out: 'book/index.html', wait: '#book', terms: ['Book'] },
+  { path: '/faq', out: 'faq/index.html', wait: '#faq', terms: ['FAQ'] },
+  { path: '/terms', out: 'terms/index.html', wait: '#terms', terms: ['Terms'] },
+  { path: '/room', out: 'room/index.html', wait: '.room-hero-title', terms: ['The Room', 'DJ knowledge'] },
+]
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -37,7 +51,8 @@ function resolveFile(urlPath) {
   }
 
   if (existsSync(filePath)) return filePath
-  return join(dist, 'index.html')
+  // SPA fallback while prerendering deep links
+  return join(dist, '404.html')
 }
 
 function startServer() {
@@ -49,7 +64,7 @@ function startServer() {
         const type = MIME[extname(filePath)] ?? 'application/octet-stream'
         res.writeHead(200, { 'Content-Type': type })
         res.end(body)
-      } catch (err) {
+      } catch {
         res.writeHead(404)
         res.end('Not found')
       }
@@ -63,6 +78,26 @@ function startServer() {
   })
 }
 
+async function prerenderPath(page, port, routePath, shellHtml, outFile, waitSelector, verifyTerms) {
+  await page.goto(`http://127.0.0.1:${port}${routePath}`, {
+    waitUntil: 'networkidle',
+    timeout: 60_000,
+  })
+  await page.waitForSelector(waitSelector, { timeout: 30_000 })
+
+  const rootHtml = await page.locator('#root').innerHTML()
+  const html = shellHtml.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${rootHtml}</div>`)
+
+  const missing = verifyTerms.filter((term) => !html.includes(term))
+  if (missing.length) {
+    throw new Error(`Prerender ${routePath} failed — missing: ${missing.join(', ')}`)
+  }
+
+  mkdirSync(dirname(outFile), { recursive: true })
+  writeFileSync(outFile, html, 'utf8')
+  console.log(`Prerender OK — ${routePath}`)
+}
+
 async function main() {
   const indexPath = join(dist, 'index.html')
   if (!existsSync(indexPath)) {
@@ -70,29 +105,38 @@ async function main() {
     process.exit(1)
   }
 
+  const shellHtml = readFileSync(indexPath, 'utf8')
+  if (!shellHtml.includes('id="root"')) {
+    throw new Error('dist/index.html missing #root')
+  }
+
+  // GitHub Pages: unknown paths (deep Room articles) fall back to this SPA shell
+  copyFileSync(indexPath, join(dist, '404.html'))
+
+  // Wipe any static redirects Vite copied from /public so prerender hits the SPA
+  for (const route of STATIC_ROUTES) {
+    if (route.path === '/') continue
+    const out = join(dist, route.out)
+    mkdirSync(dirname(out), { recursive: true })
+    copyFileSync(join(dist, '404.html'), out)
+  }
+
   const { server, port } = await startServer()
   const browser = await chromium.launch()
   const page = await browser.newPage()
 
   try {
-    await page.goto(`http://127.0.0.1:${port}/`, { waitUntil: 'networkidle', timeout: 60_000 })
-    await page.waitForSelector('#root .hero-h1-name', { timeout: 30_000 })
-    await page.waitForSelector('#faq', { timeout: 30_000 })
-
-    const rootHtml = await page.locator('#root').innerHTML()
-    let indexHtml = readFileSync(indexPath, 'utf8')
-
-    indexHtml = indexHtml.replace(/<div id="root">\s*<\/div>/, `<div id="root">${rootHtml}</div>`)
-    writeFileSync(indexPath, indexHtml, 'utf8')
-
-    const terms = ['DJ RHUE', 'Bristol', 'Afrobeats', 'Dancehall', 'How much does a DJ cost']
-    const missing = terms.filter((term) => !indexHtml.includes(term))
-    if (missing.length) {
-      console.error(`Prerender verification failed — missing: ${missing.join(', ')}`)
-      process.exit(1)
+    for (const route of STATIC_ROUTES) {
+      await prerenderPath(
+        page,
+        port,
+        route.path,
+        shellHtml,
+        join(dist, route.out),
+        route.wait,
+        route.terms,
+      )
     }
-
-    console.log(`Prerender OK — dist/index.html contains ${rootHtml.length.toLocaleString()} chars of crawlable content`)
   } finally {
     await browser.close()
     server.close()

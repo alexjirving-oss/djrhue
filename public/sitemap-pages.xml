@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://djrhue.com/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://djrhue.com/photos/perf-trinidad.jpg</image:loc>
+      <image:title>DJ RHUE at St Paul's Carnival Bristol</image:title>
+      <image:caption>Live carnival performance with Trinidad &amp; Tobago flag</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://djrhue.com/photos/perf-malta.jpg</image:loc>
+      <image:title>DJ RHUE club performance Malta</image:title>
+      <image:caption>Afrobeats and Dancehall set at Malta club night</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://djrhue.com/photos/og-share.jpg</image:loc>
+      <image:title>DJ RHUE — Bristol DJ</image:title>
+      <image:caption>Book DJ RHUE for Afrobeats, Dancehall and Caribbean sets</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://djrhue.com/listen/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://djrhue.com/about/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://djrhue.com/gallery/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djrhue.com/services/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://djrhue.com/faq/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djrhue.com/rates/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://djrhue.com/book/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://djrhue.com/terms/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
