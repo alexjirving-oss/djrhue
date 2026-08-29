@@ -1127,50 +1127,260 @@
 }
 
 /* ========== LISTEN ========== */
+.listen {
+  background:
+    radial-gradient(ellipse 70% 45% at 85% 0%, rgba(246, 198, 74, 0.08), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 0% 60%, rgba(246, 198, 74, 0.04), transparent 50%),
+    var(--black);
+}
+
+.listen-deck {
+  margin-top: 2.2rem;
+}
+
+.listen-deck-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  background: rgba(22, 22, 22, 0.9);
+  overflow: hidden;
+  position: relative;
+}
+
+.listen-deck-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.listen-deck-art {
+  position: relative;
+  min-height: 22rem;
+  background: var(--black-soft);
+  overflow: hidden;
+}
+
+.listen-deck-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.listen-deck-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 40%, rgba(13, 13, 13, 0.72) 100%),
+    linear-gradient(90deg, transparent 55%, rgba(13, 13, 13, 0.35) 100%);
+  pointer-events: none;
+}
+
+.listen-eq {
+  position: absolute;
+  left: 1.1rem;
+  bottom: 1.1rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 1.6rem;
+  z-index: 1;
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.listen-eq.is-live {
+  opacity: 1;
+}
+
+.listen-eq i {
+  display: block;
+  width: 3px;
+  height: 28%;
+  background: var(--gold);
+  transform-origin: bottom center;
+}
+
+.listen-eq.is-live i {
+  animation: listen-eq 0.85s var(--ease) infinite alternate;
+}
+
+.listen-eq i:nth-child(2) {
+  animation-delay: 0.12s;
+  height: 55%;
+}
+.listen-eq i:nth-child(3) {
+  animation-delay: 0.24s;
+  height: 90%;
+}
+.listen-eq i:nth-child(4) {
+  animation-delay: 0.08s;
+  height: 45%;
+}
+.listen-eq i:nth-child(5) {
+  animation-delay: 0.32s;
+  height: 70%;
+}
+
+@keyframes listen-eq {
+  from {
+    transform: scaleY(0.35);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.listen-deck-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  padding: clamp(1.25rem, 3vw, 1.85rem);
+  min-width: 0;
+}
+
+.listen-now {
+  position: relative;
+  min-height: 5.5rem;
+}
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.55rem;
+}
+
+.listen-now-title {
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+
+.listen-now-meta {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .listen-genres {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 0.75rem;
-  margin: 1.4rem 0 0;
+  gap: 0.45rem;
+  margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-.listen-genres li {
-  padding: 0.35rem 0.75rem;
+.listen-genre {
+  appearance: none;
+  cursor: pointer;
+  padding: 0.45rem 0.85rem;
   border: 1px solid var(--line);
+  background: transparent;
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(245, 245, 245, 0.88);
+  color: rgba(245, 245, 245, 0.78);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s var(--ease);
 }
 
-.listen-genres a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.listen-genres a:hover,
-.listen-genres a:focus-visible {
+.listen-genre:hover,
+.listen-genre:focus-visible {
   color: var(--gold);
+  border-color: rgba(246, 198, 74, 0.45);
+  outline: none;
 }
 
-.listen-title-link {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
+.listen-genre.is-active {
+  color: var(--black);
+  background: var(--gold);
+  border-color: var(--gold);
 }
 
-.listen-title-link:hover,
-.listen-title-link:focus-visible {
+.listen-genre:active {
+  transform: translateY(1px);
+}
+
+.listen-player {
+  position: relative;
+  margin-top: auto;
+  border: 1px solid rgba(246, 198, 74, 0.16);
+  background: rgba(13, 13, 13, 0.55);
+  overflow: hidden;
+}
+
+.listen-player iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  min-height: 60px;
+}
+
+.listen-tap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+  border: 0;
+  background: rgba(13, 13, 13, 0.88);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.listen-tap:hover,
+.listen-tap:focus-visible {
+  background: rgba(22, 22, 22, 0.95);
   color: var(--gold);
+  outline: none;
+}
+
+.listen-tap-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.45rem 0 0.45rem 0.75rem;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.listen-video {
+  margin-top: clamp(3rem, 7vw, 4.5rem);
+}
+
+.listen-video-head {
+  margin-bottom: 1.4rem;
+}
+
+.listen-video-title {
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+  margin: 0.35rem 0 0.65rem;
 }
 
 .listen-embed {
-  margin-top: 2.2rem;
   border: 1px solid var(--line);
   background: rgba(22, 22, 22, 0.85);
   overflow: hidden;
@@ -1186,8 +1396,47 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  padding: 1rem 1.1rem;
-  border-top: 1px solid var(--line);
+  padding: 1rem 0 0;
+}
+
+.listen-mixcloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 6vw, 3.5rem);
+  padding: 1.4rem 1.45rem;
+  border: 1px solid rgba(246, 198, 74, 0.28);
+  background:
+    linear-gradient(135deg, rgba(246, 198, 74, 0.06), transparent 55%),
+    rgba(22, 22, 22, 0.7);
+}
+
+.listen-mixcloud .section-copy {
+  max-width: 42ch;
+}
+
+.listen-mixcloud-title {
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  margin: 0.3rem 0 0.55rem;
+}
+
+@media (max-width: 860px) {
+  .listen-deck-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .listen-deck-art {
+    min-height: 14rem;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .listen-eq.is-live i {
+    animation: none;
+  }
 }
 
 /* ========== PROOF ========== */
