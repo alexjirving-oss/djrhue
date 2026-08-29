@@ -80,10 +80,13 @@ function startServer() {
 
 async function prerenderPath(page, port, routePath, shellHtml, outFile, waitSelector, verifyTerms) {
   await page.goto(`http://127.0.0.1:${port}${routePath}`, {
-    waitUntil: 'networkidle',
+    waitUntil: 'load',
     timeout: 60_000,
   })
   await page.waitForSelector(waitSelector, { timeout: 30_000 })
+  for (const term of verifyTerms) {
+    await page.getByText(term, { exact: false }).first().waitFor({ timeout: 15_000 })
+  }
 
   const rootHtml = await page.locator('#root').innerHTML()
   const html = shellHtml.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${rootHtml}</div>`)
@@ -124,6 +127,20 @@ async function main() {
   const { server, port } = await startServer()
   const browser = await chromium.launch()
   const page = await browser.newPage()
+
+  // Third-party players keep the network busy and are useless for static HTML.
+  await page.route('**/*', (route) => {
+    const host = new URL(route.request().url()).hostname
+    if (
+      host.includes('mixcloud.com') ||
+      host.includes('youtube.com') ||
+      host.includes('ytimg.com') ||
+      host.includes('googlevideo.com')
+    ) {
+      return route.abort()
+    }
+    return route.continue()
+  })
 
   try {
     for (const route of STATIC_ROUTES) {
