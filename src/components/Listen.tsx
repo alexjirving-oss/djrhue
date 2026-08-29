@@ -21,6 +21,8 @@ type GenreMix = {
   feed: string
   art: string
   duration: string
+  /** Seconds to seek past Mixcloud intro silence (from silence probe). */
+  startAt: number
 }
 
 const genres: GenreMix[] = [
@@ -32,6 +34,7 @@ const genres: GenreMix[] = [
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-afrobeats-throwback-sunset-mix/',
     art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/1/2/7/d/a2d1-45c6-4229-88f9-6f96a58b7827',
     duration: '19:49',
+    startAt: 4.8,
   },
   {
     id: 'dancehall',
@@ -41,6 +44,7 @@ const genres: GenreMix[] = [
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-trending-dancehall-mix-high-energy-vybz-kartel-kraff/',
     art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/c/2/c/a/8d23-cdb5-4d7d-8e73-17d61c2b5e43',
     duration: '18:26',
+    startAt: 0,
   },
   {
     id: 'amapiano',
@@ -50,6 +54,7 @@ const genres: GenreMix[] = [
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-amapiano-radio-mix/',
     art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/b/4/a/5/f79a-cb4b-4adc-b926-d154472250c9',
     duration: '18:32',
+    startAt: 4.8,
   },
   {
     id: 'reggae',
@@ -59,6 +64,7 @@ const genres: GenreMix[] = [
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-reggae-mix-sean-paul-chronixx/',
     art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/d/2/5/7/09c2-81f5-4490-8a25-fc4b71f3c489',
     duration: '15:14',
+    startAt: 4.1,
   },
   {
     id: 'hiphop',
@@ -68,6 +74,7 @@ const genres: GenreMix[] = [
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-rb-afrobeats-dancehall-party-mix-2026/',
     art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/4/2/d/3/ac96-dcee-4c2a-98e0-1c839439d936',
     duration: '40:42',
+    startAt: 4.8,
   },
 ]
 
@@ -76,6 +83,8 @@ type MixcloudWidget = {
   play: () => void
   pause: () => void
   load: (cloudcastKey: string, startPlaying?: boolean) => void
+  seek: (seconds: number) => void
+  getPosition: (cb: (position: number) => void) => void
   events: {
     play: { on: (cb: () => void) => void; off: (cb: () => void) => void }
     pause: { on: (cb: () => void) => void; off: (cb: () => void) => void }
@@ -137,6 +146,8 @@ export function Listen() {
   const activeIdRef = useRef(activeId)
   const playingRef = useRef(false)
   const feedRef = useRef(genres[0].feed)
+  /** Mixcloud key we already intro-sought for — avoids re-seek on pause/resume. */
+  const introSeekedKeyRef = useRef<string | null>(null)
   activeIdRef.current = activeId
   playingRef.current = playing
   feedRef.current = (genres.find((g) => g.id === activeId) ?? genres[0]).feed
@@ -149,6 +160,18 @@ export function Listen() {
     clearListenAutoplayArm()
   })
   const onPause = useEffectEvent(() => setPlaying(false))
+
+  const skipIntroSilence = useEffectEvent((widget: MixcloudWidget) => {
+    const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
+    if (introSeekedKeyRef.current === mix.key) return
+    introSeekedKeyRef.current = mix.key
+    if (!mix.startAt) return
+    try {
+      widget.seek(mix.startAt)
+    } catch {
+      /* seek may fail if the widget is still buffering */
+    }
+  })
 
   useEffect(() => {
     const iframe = iframeRef.current
@@ -173,6 +196,7 @@ export function Listen() {
       const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
       const widget = widgetRef.current
       if (widget) {
+        introSeekedKeyRef.current = null
         try {
           widget.load(mix.key, true)
         } catch {
@@ -183,6 +207,7 @@ export function Listen() {
           }
         }
       } else if (iframeRef.current) {
+        introSeekedKeyRef.current = null
         iframeRef.current.src = widgetSrc(mix.feed, true)
       }
       setNeedsGesture(false)
@@ -202,6 +227,7 @@ export function Listen() {
           playHandler = () => {
             if (retryTimer) window.clearInterval(retryTimer)
             onPlay()
+            skipIntroSilence(widget)
           }
           pauseHandler = () => onPause()
           widget.events.play.on(playHandler)
@@ -266,16 +292,19 @@ export function Listen() {
     const next = genres.find((g) => g.id === id)
     if (!next) return
     setActiveId(id)
+    activeIdRef.current = id
     setNeedsGesture(false)
 
     const widget = widgetRef.current
     if (widget && widgetReady) {
+      introSeekedKeyRef.current = null
       widget.load(next.key, true)
       return
     }
 
     const iframe = iframeRef.current
     if (iframe) {
+      introSeekedKeyRef.current = null
       iframe.src = widgetSrc(next.feed, true)
     }
   }
@@ -285,6 +314,7 @@ export function Listen() {
     const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
     const widget = widgetRef.current
     if (widget) {
+      introSeekedKeyRef.current = null
       try {
         widget.load(mix.key, true)
       } catch {
@@ -293,7 +323,10 @@ export function Listen() {
       return
     }
     const iframe = iframeRef.current
-    if (iframe) iframe.src = widgetSrc(mix.feed, true)
+    if (iframe) {
+      introSeekedKeyRef.current = null
+      iframe.src = widgetSrc(mix.feed, true)
+    }
   }
 
   return (

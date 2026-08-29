@@ -9,6 +9,7 @@
     "build": "npm run generate:room && tsc -b && vite build && node scripts/prerender.mjs",
     "build:epk": "node scripts/build-epk.mjs",
     "build:qr": "node scripts/generate-qr.mjs",
+    "build:pwa-icons": "node scripts/generate-pwa-icons.mjs",
     "build:flyers": "node scripts/build-flyers.mjs",
     "compress:photos": "python scripts/compress_photos.py",
     "lint": "oxlint",
