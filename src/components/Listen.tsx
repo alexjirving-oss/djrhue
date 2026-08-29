@@ -1,6 +1,10 @@
 import { useEffect, useEffectEvent, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { motionTransition, viewportOnce } from '../lib/motion'
+import {
+  clearListenAutoplayArm,
+  listenAutoplayArmed,
+} from '../lib/listenAutoplay'
 
 const YOUTUBE_CHANNEL = 'https://youtube.com/@rhue_james7'
 const YOUTUBE_EMBED = 'https://www.youtube.com/embed/ehH6LHv1TiA'
@@ -102,11 +106,14 @@ function loadWidgetApi(): Promise<void> {
   const existing = document.querySelector<HTMLScriptElement>(`script[src="${WIDGET_API}"]`)
   if (existing) {
     return new Promise((resolve, reject) => {
+      if (window.Mixcloud?.PlayerWidget) {
+        resolve()
+        return
+      }
       existing.addEventListener('load', () => resolve(), { once: true })
       existing.addEventListener('error', () => reject(new Error('Mixcloud widget failed')), {
         once: true,
       })
-      if (window.Mixcloud?.PlayerWidget) resolve()
     })
   }
   return new Promise((resolve, reject) => {
@@ -129,14 +136,17 @@ export function Listen() {
   const widgetRef = useRef<MixcloudWidget | null>(null)
   const activeIdRef = useRef(activeId)
   const playingRef = useRef(false)
+  const feedRef = useRef(genres[0].feed)
   activeIdRef.current = activeId
   playingRef.current = playing
+  feedRef.current = (genres.find((g) => g.id === activeId) ?? genres[0]).feed
 
   const active = genres.find((g) => g.id === activeId) ?? genres[0]
 
   const onPlay = useEffectEvent(() => {
     setPlaying(true)
     setNeedsGesture(false)
+    clearListenAutoplayArm()
   })
   const onPause = useEffectEvent(() => setPlaying(false))
 
@@ -147,7 +157,40 @@ export function Listen() {
     let cancelled = false
     let playHandler: (() => void) | null = null
     let pauseHandler: (() => void) | null = null
-    let autoplayTimer: number | undefined
+    let retryTimer: number | undefined
+    let giveUpTimer: number | undefined
+    let attempts = 0
+
+    const gestureOpts: AddEventListenerOptions = { capture: true, passive: true }
+    const gestureEvents = ['pointerdown', 'touchstart', 'keydown'] as const
+
+    const unlockOnGesture = () => {
+      for (const evt of gestureEvents) {
+        window.removeEventListener(evt, unlockOnGesture, gestureOpts)
+      }
+      if (cancelled || playingRef.current) return
+
+      const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
+      const widget = widgetRef.current
+      if (widget) {
+        try {
+          widget.load(mix.key, true)
+        } catch {
+          try {
+            widget.play()
+          } catch {
+            /* ignore */
+          }
+        }
+      } else if (iframeRef.current) {
+        iframeRef.current.src = widgetSrc(mix.feed, true)
+      }
+      setNeedsGesture(false)
+    }
+
+    for (const evt of gestureEvents) {
+      window.addEventListener(evt, unlockOnGesture, gestureOpts)
+    }
 
     loadWidgetApi()
       .then(() => {
@@ -156,28 +199,55 @@ export function Listen() {
         widgetRef.current = widget
         return widget.ready.then(() => {
           if (cancelled) return
-          playHandler = () => onPlay()
+          playHandler = () => {
+            if (retryTimer) window.clearInterval(retryTimer)
+            onPlay()
+          }
           pauseHandler = () => onPause()
           widget.events.play.on(playHandler)
           widget.events.pause.on(pauseHandler)
           setWidgetReady(true)
-          try {
-            widget.play()
-          } catch {
-            /* autoplay may be blocked */
+
+          const tryPlay = () => {
+            if (cancelled || playingRef.current) return
+            attempts += 1
+            try {
+              widget.play()
+            } catch {
+              /* autoplay may be blocked */
+            }
+            if (attempts === 3 && iframeRef.current) {
+              // One hard reload with autoplay flag if early attempts fail.
+              iframeRef.current.src = widgetSrc(feedRef.current, true)
+            }
           }
-          autoplayTimer = window.setTimeout(() => {
+
+          tryPlay()
+          const armed = listenAutoplayArmed()
+          retryTimer = window.setInterval(tryPlay, armed ? 350 : 450)
+          giveUpTimer = window.setTimeout(() => {
+            if (retryTimer) window.clearInterval(retryTimer)
             if (!cancelled && !playingRef.current) setNeedsGesture(true)
-          }, 1100)
+            clearListenAutoplayArm()
+          }, armed ? 5000 : 2800)
         })
       })
       .catch(() => {
-        if (!cancelled) setNeedsGesture(true)
+        if (!cancelled) {
+          // Widget API failed — still rely on iframe autoplay=1 + gesture unlock.
+          giveUpTimer = window.setTimeout(() => {
+            if (!cancelled && !playingRef.current) setNeedsGesture(true)
+          }, 2000)
+        }
       })
 
     return () => {
       cancelled = true
-      if (autoplayTimer) window.clearTimeout(autoplayTimer)
+      if (retryTimer) window.clearInterval(retryTimer)
+      if (giveUpTimer) window.clearTimeout(giveUpTimer)
+      for (const evt of gestureEvents) {
+        window.removeEventListener(evt, unlockOnGesture, gestureOpts)
+      }
       const widget = widgetRef.current
       if (widget && playHandler && pauseHandler) {
         widget.events.play.off(playHandler)
@@ -212,13 +282,18 @@ export function Listen() {
 
   const startPlayback = () => {
     setNeedsGesture(false)
+    const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
     const widget = widgetRef.current
     if (widget) {
-      widget.play()
+      try {
+        widget.load(mix.key, true)
+      } catch {
+        widget.play()
+      }
       return
     }
     const iframe = iframeRef.current
-    if (iframe) iframe.src = widgetSrc(active.feed, true)
+    if (iframe) iframe.src = widgetSrc(mix.feed, true)
   }
 
   return (
@@ -233,8 +308,8 @@ export function Listen() {
           <p className="eyebrow">Listen</p>
           <h2 className="section-title">Hear the selection</h2>
           <p className="section-copy">
-            Pick a lane — Afrobeats kicks in first. Switch genres and the mix
-            changes on this page, no leaving the site.
+            Afrobeats starts automatically — tap another genre to switch the mix
+            instantly, without leaving the site.
           </p>
         </motion.div>
 
@@ -246,7 +321,14 @@ export function Listen() {
           transition={motionTransition({ duration: 0.75, delay: 0.06 })}
         >
           <div className="listen-deck-stage" data-playing={playing ? 'true' : 'false'}>
-            <div className="listen-deck-art" aria-hidden="true">
+            <button
+              type="button"
+              className="listen-deck-art"
+              aria-label={playing ? `${active.label} playing` : `Play ${active.label}`}
+              onClick={() => {
+                if (!playing) startPlayback()
+              }}
+            >
               <AnimatePresence mode="wait">
                 <motion.img
                   key={active.id}
@@ -266,7 +348,12 @@ export function Listen() {
                 <i />
                 <i />
               </div>
-            </div>
+              {!playing && (
+                <span className="listen-art-play" aria-hidden="true">
+                  <i />
+                </span>
+              )}
+            </button>
 
             <div className="listen-deck-main">
               <div className="listen-now">
@@ -327,7 +414,7 @@ export function Listen() {
                   title={`DJ RHUE — ${active.label} mix`}
                   width="100%"
                   height="60"
-                  allow="autoplay; encrypted-media"
+                  allow="autoplay; encrypted-media; fullscreen"
                   loading="eager"
                   src={widgetSrc(genres[0].feed, true)}
                 />
