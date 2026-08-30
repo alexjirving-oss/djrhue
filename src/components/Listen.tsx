@@ -228,7 +228,7 @@ export function Listen() {
         return
       }
       setWidgetPainted(true)
-    }, 360)
+    }, 1400)
   }, [])
 
   const seekPastIntro = useCallback(
