@@ -180,6 +180,7 @@ export function Listen() {
   const pendingIntentRef = useRef<PlaybackIntent | null>(null)
   const playbackInFlightRef = useRef(false)
   const playbackInFlightKeyRef = useRef<string | null>(null)
+  const playbackInFlightSourceRef = useRef<PlaybackIntent['source'] | null>(null)
   const playbackRunRef = useRef(0)
   const runPlaybackIntentRef = useRef<(intent: PlaybackIntent) => void>(() => undefined)
   const firstGestureHandledRef = useRef(false)
@@ -331,6 +332,7 @@ export function Listen() {
 
       playbackInFlightRef.current = true
       playbackInFlightKeyRef.current = intent.mix.key
+      playbackInFlightSourceRef.current = intent.source
       const runId = playbackRunRef.current + 1
       playbackRunRef.current = runId
       const isNewMix = loadedKeyRef.current !== intent.mix.key
@@ -378,6 +380,7 @@ export function Listen() {
         if (runId === playbackRunRef.current) {
           playbackInFlightRef.current = false
           playbackInFlightKeyRef.current = null
+          playbackInFlightSourceRef.current = null
         }
 
         const next = pendingIntentRef.current
@@ -416,7 +419,24 @@ export function Listen() {
       return
     }
     if (playbackInFlightRef.current) {
-      if (playbackInFlightKeyRef.current !== mix.key) {
+      if (
+        playbackInFlightKeyRef.current === mix.key &&
+        source === 'gesture' &&
+        playbackInFlightSourceRef.current === 'autoplay' &&
+        loadedKeyRef.current === mix.key &&
+        loadingKeyRef.current === null
+      ) {
+        playbackInFlightSourceRef.current = 'gesture'
+        const widget = widgetRef.current
+        if (widget) {
+          try {
+            // Supersede a policy-blocked automatic command inside this real gesture.
+            void widget.play().catch(() => undefined)
+          } catch {
+            // Verification below will expose the normal tap-to-play fallback.
+          }
+        }
+      } else if (playbackInFlightKeyRef.current !== mix.key) {
         pendingIntentRef.current = intent
       }
       return
@@ -532,6 +552,7 @@ export function Listen() {
       widgetReadyRef.current = false
       playbackInFlightRef.current = false
       playbackInFlightKeyRef.current = null
+      playbackInFlightSourceRef.current = null
       pendingIntentRef.current = null
       loadingKeyRef.current = null
       loadedKeyRef.current = genres[0].key
