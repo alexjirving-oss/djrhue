@@ -2,6 +2,7 @@ import { useEffect, useEffectEvent, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { motionTransition, viewportOnce } from '../lib/motion'
 import {
+  armListenAutoplay,
   clearListenAutoplayArm,
   listenAutoplayArmed,
 } from '../lib/listenAutoplay'
@@ -82,8 +83,8 @@ type MixcloudWidget = {
   ready: Promise<void>
   play: () => void
   pause: () => void
-  load: (cloudcastKey: string, startPlaying?: boolean) => void
-  seek: (seconds: number) => void
+  load: (cloudcastKey: string, startPlaying?: boolean) => Promise<void>
+  seek: (seconds: number) => Promise<boolean> | void
   getPosition: (cb: (position: number) => void) => void
   events: {
     play: { on: (cb: () => void) => void; off: (cb: () => void) => void }
@@ -135,6 +136,10 @@ function loadWidgetApi(): Promise<void> {
   })
 }
 
+function mixForId(id: GenreId): GenreMix {
+  return genres.find((g) => g.id === id) ?? genres[0]
+}
+
 export function Listen() {
   const [activeId, setActiveId] = useState<GenreId>('afrobeats')
   const [playing, setPlaying] = useState(false)
@@ -143,35 +148,114 @@ export function Listen() {
 
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const widgetRef = useRef<MixcloudWidget | null>(null)
+  const widgetReadyRef = useRef(false)
   const activeIdRef = useRef(activeId)
   const playingRef = useRef(false)
-  const feedRef = useRef(genres[0].feed)
   /** Mixcloud key we already intro-sought for — avoids re-seek on pause/resume. */
   const introSeekedKeyRef = useRef<string | null>(null)
+  const seekTimersRef = useRef<number[]>([])
+
   activeIdRef.current = activeId
   playingRef.current = playing
-  feedRef.current = (genres.find((g) => g.id === activeId) ?? genres[0]).feed
+  widgetReadyRef.current = widgetReady
 
-  const active = genres.find((g) => g.id === activeId) ?? genres[0]
+  const active = mixForId(activeId)
+
+  const clearSeekTimers = useEffectEvent(() => {
+    for (const id of seekTimersRef.current) window.clearTimeout(id)
+    seekTimersRef.current = []
+  })
 
   const onPlay = useEffectEvent(() => {
     setPlaying(true)
     setNeedsGesture(false)
     clearListenAutoplayArm()
   })
+
   const onPause = useEffectEvent(() => setPlaying(false))
 
-  const skipIntroSilence = useEffectEvent((widget: MixcloudWidget) => {
-    const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
-    if (introSeekedKeyRef.current === mix.key) return
-    introSeekedKeyRef.current = mix.key
-    if (!mix.startAt) return
-    try {
-      widget.seek(mix.startAt)
-    } catch {
-      /* seek may fail if the widget is still buffering */
+  const skipIntroSilence = useEffectEvent((widget: MixcloudWidget, mix: GenreMix) => {
+    if (!mix.startAt || introSeekedKeyRef.current === mix.key) return
+
+    clearSeekTimers()
+    let attempts = 0
+    const maxAttempts = 5
+    const target = mix.startAt
+
+    const markDone = () => {
+      introSeekedKeyRef.current = mix.key
+      clearSeekTimers()
     }
+
+    const verifyOrRetry = () => {
+      widget.getPosition((pos) => {
+        if (pos >= target - 0.35) {
+          markDone()
+          return
+        }
+        if (attempts < maxAttempts) scheduleSeek()
+      })
+    }
+
+    const scheduleSeek = () => {
+      attempts += 1
+      const delay = 60 + attempts * 120
+      const timer = window.setTimeout(() => {
+        try {
+          const result = widget.seek(target)
+          if (result && typeof (result as Promise<boolean>).then === 'function') {
+            void (result as Promise<boolean>).then((ok) => {
+              if (ok) markDone()
+              else verifyOrRetry()
+            })
+          } else {
+            verifyOrRetry()
+          }
+        } catch {
+          if (attempts < maxAttempts) scheduleSeek()
+        }
+      }, delay)
+      seekTimersRef.current.push(timer)
+    }
+
+    scheduleSeek()
   })
+
+  const startPlayback = useEffectEvent(() => {
+    setNeedsGesture(false)
+    const mix = mixForId(activeIdRef.current)
+    introSeekedKeyRef.current = null
+    clearSeekTimers()
+
+    const widget = widgetRef.current
+    if (widget && widgetReadyRef.current) {
+      void widget
+        .load(mix.key, true)
+        .then(() => {
+          try {
+            widget.play()
+          } catch {
+            /* ignore */
+          }
+          skipIntroSilence(widget, mix)
+        })
+        .catch(() => {
+          try {
+            widget.play()
+          } catch {
+            /* ignore */
+          }
+        })
+      return
+    }
+
+    const iframe = iframeRef.current
+    if (iframe) iframe.src = widgetSrc(mix.feed, true)
+  })
+
+  useEffect(() => {
+    armListenAutoplay()
+  }, [])
 
   useEffect(() => {
     const iframe = iframeRef.current
@@ -192,85 +276,71 @@ export function Listen() {
         window.removeEventListener(evt, unlockOnGesture, gestureOpts)
       }
       if (cancelled || playingRef.current) return
-
-      const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
-      const widget = widgetRef.current
-      if (widget) {
-        introSeekedKeyRef.current = null
-        try {
-          widget.load(mix.key, true)
-        } catch {
-          try {
-            widget.play()
-          } catch {
-            /* ignore */
-          }
-        }
-      } else if (iframeRef.current) {
-        introSeekedKeyRef.current = null
-        iframeRef.current.src = widgetSrc(mix.feed, true)
-      }
-      setNeedsGesture(false)
+      startPlayback()
     }
 
     for (const evt of gestureEvents) {
       window.addEventListener(evt, unlockOnGesture, gestureOpts)
     }
 
-    loadWidgetApi()
-      .then(() => {
-        if (cancelled || !iframeRef.current || !window.Mixcloud?.PlayerWidget) return
-        const widget = window.Mixcloud.PlayerWidget(iframeRef.current)
-        widgetRef.current = widget
-        return widget.ready.then(() => {
-          if (cancelled) return
-          playHandler = () => {
-            if (retryTimer) window.clearInterval(retryTimer)
-            onPlay()
-            skipIntroSilence(widget)
-          }
-          pauseHandler = () => onPause()
-          widget.events.play.on(playHandler)
-          widget.events.pause.on(pauseHandler)
-          setWidgetReady(true)
-
-          const tryPlay = () => {
-            if (cancelled || playingRef.current) return
-            attempts += 1
-            try {
-              widget.play()
-            } catch {
-              /* autoplay may be blocked */
-            }
-            if (attempts === 3 && iframeRef.current) {
-              // One hard reload with autoplay flag if early attempts fail.
-              iframeRef.current.src = widgetSrc(feedRef.current, true)
-            }
-          }
-
-          tryPlay()
-          const armed = listenAutoplayArmed()
-          retryTimer = window.setInterval(tryPlay, armed ? 350 : 450)
-          giveUpTimer = window.setTimeout(() => {
-            if (retryTimer) window.clearInterval(retryTimer)
-            if (!cancelled && !playingRef.current) setNeedsGesture(true)
-            clearListenAutoplayArm()
-          }, armed ? 5000 : 2800)
+    const onIframeLoad = () => {
+      if (cancelled || widgetRef.current) return
+      loadWidgetApi()
+        .then(() => {
+          if (cancelled || !iframeRef.current || !window.Mixcloud?.PlayerWidget) return
+          if (widgetRef.current) return
+          const widget = window.Mixcloud.PlayerWidget(iframeRef.current)
+          widgetRef.current = widget
+          return widget.ready.then(() => {
+            if (cancelled) return
+            bindWidget(widget)
+          })
         })
-      })
-      .catch(() => {
-        if (!cancelled) {
-          // Widget API failed — still rely on iframe autoplay=1 + gesture unlock.
-          giveUpTimer = window.setTimeout(() => {
-            if (!cancelled && !playingRef.current) setNeedsGesture(true)
-          }, 2000)
+        .catch(() => {
+          /* widget API unavailable — iframe autoplay + gesture unlock still apply */
+        })
+    }
+
+    const bindWidget = (widget: MixcloudWidget) => {
+      playHandler = () => {
+        if (retryTimer) window.clearInterval(retryTimer)
+        onPlay()
+        skipIntroSilence(widget, mixForId(activeIdRef.current))
+      }
+      pauseHandler = () => onPause()
+      widget.events.play.on(playHandler)
+      widget.events.pause.on(pauseHandler)
+      setWidgetReady(true)
+
+      const tryPlay = () => {
+        if (cancelled || playingRef.current) return
+        attempts += 1
+        try {
+          widget.play()
+        } catch {
+          /* autoplay may be blocked */
         }
-      })
+      }
+
+      tryPlay()
+      const armed = listenAutoplayArmed()
+      retryTimer = window.setInterval(tryPlay, armed ? 300 : 400)
+      giveUpTimer = window.setTimeout(() => {
+        if (retryTimer) window.clearInterval(retryTimer)
+        if (!cancelled && !playingRef.current) setNeedsGesture(true)
+        clearListenAutoplayArm()
+      }, armed ? 6000 : 3500)
+    }
+
+    iframe.addEventListener('load', onIframeLoad)
+    onIframeLoad()
 
     return () => {
       cancelled = true
+      clearSeekTimers()
       if (retryTimer) window.clearInterval(retryTimer)
       if (giveUpTimer) window.clearTimeout(giveUpTimer)
+      iframe.removeEventListener('load', onIframeLoad)
       for (const evt of gestureEvents) {
         window.removeEventListener(evt, unlockOnGesture, gestureOpts)
       }
@@ -280,53 +350,42 @@ export function Listen() {
         widget.events.pause.off(pauseHandler)
       }
       widgetRef.current = null
+      widgetReadyRef.current = false
       setWidgetReady(false)
     }
   }, [])
 
   const selectGenre = (id: GenreId) => {
     if (id === activeIdRef.current) {
-      if (!playing) startPlayback()
+      if (!playingRef.current) startPlayback()
       return
     }
-    const next = genres.find((g) => g.id === id)
-    if (!next) return
+    const next = mixForId(id)
     setActiveId(id)
     activeIdRef.current = id
     setNeedsGesture(false)
+    introSeekedKeyRef.current = null
+    clearSeekTimers()
 
     const widget = widgetRef.current
-    if (widget && widgetReady) {
-      introSeekedKeyRef.current = null
-      widget.load(next.key, true)
+    if (widget && widgetReadyRef.current) {
+      void widget
+        .load(next.key, true)
+        .then(() => {
+          skipIntroSilence(widget, next)
+        })
+        .catch(() => {
+          try {
+            widget.play()
+          } catch {
+            /* ignore */
+          }
+        })
       return
     }
 
     const iframe = iframeRef.current
-    if (iframe) {
-      introSeekedKeyRef.current = null
-      iframe.src = widgetSrc(next.feed, true)
-    }
-  }
-
-  const startPlayback = () => {
-    setNeedsGesture(false)
-    const mix = genres.find((g) => g.id === activeIdRef.current) ?? genres[0]
-    const widget = widgetRef.current
-    if (widget) {
-      introSeekedKeyRef.current = null
-      try {
-        widget.load(mix.key, true)
-      } catch {
-        widget.play()
-      }
-      return
-    }
-    const iframe = iframeRef.current
-    if (iframe) {
-      introSeekedKeyRef.current = null
-      iframe.src = widgetSrc(mix.feed, true)
-    }
+    if (iframe) iframe.src = widgetSrc(next.feed, true)
   }
 
   return (
@@ -341,8 +400,9 @@ export function Listen() {
           <p className="eyebrow">Listen</p>
           <h2 className="section-title">Hear the selection</h2>
           <p className="section-copy">
-            Afrobeats starts automatically — tap another genre to switch the mix
-            instantly, without leaving the site.
+            Afrobeats, Dancehall, Amapiano, Reggae, Hip Hop and R&amp;B mixes — the
+            same Caribbean and urban energy you&apos;ll hear at clubs, carnivals and
+            private events.
           </p>
         </motion.div>
 
@@ -358,9 +418,8 @@ export function Listen() {
               type="button"
               className="listen-deck-art"
               aria-label={playing ? `${active.label} playing` : `Play ${active.label}`}
-              onClick={() => {
-                if (!playing) startPlayback()
-              }}
+              onPointerDown={() => startPlayback()}
+              onClick={() => startPlayback()}
             >
               <AnimatePresence mode="wait">
                 <motion.img
@@ -431,7 +490,10 @@ export function Listen() {
                 })}
               </div>
 
-              <div className="listen-player">
+              <div
+                className={`listen-player${widgetReady ? ' is-ready' : ''}`}
+                data-loading={widgetReady ? 'false' : 'true'}
+              >
                 {needsGesture && (
                   <button
                     type="button"
