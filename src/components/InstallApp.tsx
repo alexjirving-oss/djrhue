@@ -109,13 +109,28 @@ export function InstallApp() {
               <span>00</span> Mobile access
             </p>
             <h2 id="install-app-title">DJ RHUE app.</h2>
-            <p>Mixes, bookings and The Room — one tap from your Home Screen.</p>
           </div>
 
           <div className="install-promo__actions">
-            <p className="install-promo__platform" id="install-app-platform">
-              Android <span aria-hidden="true">·</span> iPhone
-            </p>
+            <div className="install-promo__availability" id="install-app-platform">
+              <span className="install-promo__availability-label">Available on</span>
+              <span className="install-promo__platform-marks">
+                <span className="install-promo__platform-mark install-promo__platform-mark--apple">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.32.07 2.24.72 3.02.77 1.17-.24 2.29-.93 3.54-.84 1.5.12 2.63.71 3.38 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.42 4.11ZM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3c.29 2.58-2.34 4.5-3.74 4.25Z" />
+                  </svg>
+                  <span className="sr-only">iPhone / iOS</span>
+                </span>
+                <span className="install-promo__platform-mark install-promo__platform-mark--android">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M7.2 8.6a4.8 4.8 0 0 1 9.6 0M8.2 4.5 6.8 2.7m9 1.8 1.4-1.8M6.2 9h11.6v7.2H6.2zM4.2 10v5.2m15.6-5.2v5.2M8.7 16.2v4m6.6-4v4" />
+                    <circle cx="9.3" cy="6.9" r=".55" />
+                    <circle cx="14.7" cy="6.9" r=".55" />
+                  </svg>
+                  <span className="sr-only">Android</span>
+                </span>
+              </span>
+            </div>
             <button
               type="button"
               className="btn btn-primary install-promo__button"

@@ -28,7 +28,7 @@
 .install-promo__card {
   position: relative;
   display: grid;
-  min-height: 13.5rem;
+  min-height: 11.75rem;
   padding: clamp(1.7rem, 4vw, 2.8rem) 0;
   grid-template-columns: auto minmax(0, 1fr) minmax(13.5rem, 15.5rem);
   gap: clamp(1.2rem, 3.4vw, 2.8rem);
@@ -143,14 +143,6 @@
   text-transform: uppercase;
 }
 
-.install-promo__copy > p:last-child {
-  max-width: 35rem;
-  margin-top: 0.75rem;
-  color: rgba(245, 245, 245, 0.72);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
 .install-promo__actions {
   position: relative;
   z-index: 1;
@@ -161,20 +153,67 @@
   align-items: stretch;
 }
 
-.install-promo__platform {
+.install-promo__availability {
+  display: flex;
+  min-height: 2.15rem;
+  gap: 0.65rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.install-promo__availability-label {
   color: rgba(245, 245, 245, 0.76);
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 0.17em;
-  line-height: 1.2;
-  text-align: center;
+  letter-spacing: 0.15em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
-.install-promo__platform span {
-  margin-inline: 0.3rem;
+.install-promo__platform-marks {
+  display: flex;
+  gap: 0.38rem;
+  align-items: center;
+}
+
+.install-promo__platform-mark {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(245, 245, 245, 0.2);
+  border-radius: 50%;
+  place-items: center;
+  background: rgba(245, 245, 245, 0.045);
+  color: var(--white);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+}
+
+.install-promo__platform-mark svg {
+  width: 1.08rem;
+  height: 1.08rem;
+}
+
+.install-promo__platform-mark--apple svg {
+  fill: currentColor;
+}
+
+.install-promo__platform-mark--android {
   color: var(--gold);
+}
+
+.install-promo__platform-mark--android svg {
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.55;
+}
+
+.install-promo__platform-mark--android circle {
+  fill: currentColor;
+  stroke: none;
 }
 
 .install-promo__button {
@@ -241,13 +280,6 @@
     font-size: clamp(1.85rem, 9vw, 2.8rem);
   }
 
-  .install-promo__copy > p:last-child {
-    max-width: 28rem;
-    margin-top: 0.55rem;
-    font-size: 0.79rem;
-    line-height: 1.42;
-  }
-
   .install-promo__label {
     margin-bottom: 0.5rem;
     font-size: 0.64rem;
@@ -281,10 +313,6 @@
 
   .install-promo__icon {
     width: 3.8rem;
-  }
-
-  .install-promo__copy > p:last-child {
-    font-size: 0.75rem;
   }
 
   .install-promo__button {
