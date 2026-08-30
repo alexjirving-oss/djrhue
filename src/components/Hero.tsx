@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { motionTransition } from '../lib/motion'
-import { armListenAutoplay } from '../lib/listenAutoplay'
 
 export function Hero() {
   return (
@@ -65,12 +64,7 @@ export function Hero() {
               <i /><i /><i /><i /><i />
             </span>
           </Link>
-          <Link
-            className="btn btn-ghost"
-            to="/listen"
-            onPointerDown={() => armListenAutoplay()}
-            onClick={() => armListenAutoplay()}
-          >
+          <Link className="btn btn-ghost" to="/listen">
             Listen to mixes
           </Link>
           <Link className="btn btn-ghost" to="/room">

@@ -1223,6 +1223,22 @@
   border-color: transparent transparent transparent var(--gold);
 }
 
+.listen-art-play.is-starting i {
+  animation: listen-play-pulse 0.8s var(--ease) infinite alternate;
+}
+
+@keyframes listen-play-pulse {
+  from {
+    transform: scale(0.94);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+  }
+  to {
+    transform: scale(1.04);
+    border-color: rgba(246, 198, 74, 0.9);
+    box-shadow: 0 10px 44px rgba(246, 198, 74, 0.2);
+  }
+}
+
 .listen-eq {
   position: absolute;
   left: 1.1rem;
@@ -1485,6 +1501,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .listen-art-play.is-starting i,
   .listen-eq.is-live i {
     animation: none;
   }

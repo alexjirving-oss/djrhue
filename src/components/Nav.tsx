@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { armListenAutoplay } from '../lib/listenAutoplay'
 
 const links = [
   { to: '/listen', label: 'Listen' },
@@ -59,11 +58,7 @@ export function Nav() {
                 <Link
                   to={link.to}
                   className={active ? 'nav-active' : undefined}
-                  onPointerDown={() => {
-                    if (link.to === '/listen') armListenAutoplay()
-                  }}
                   onClick={() => {
-                    if (link.to === '/listen') armListenAutoplay()
                     setOpen(false)
                   }}
                 >
