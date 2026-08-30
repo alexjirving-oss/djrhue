@@ -2,10 +2,19 @@
   aspect-ratio: 1 / 1;
   min-height: 0;
   background: #0d0d0d;
-  cursor: default;
+  cursor: pointer;
   isolation: isolate;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
+}
+
+.listen-deck-stage .listen-deck-art:disabled {
+  cursor: default;
+}
+
+.listen-deck-stage .listen-deck-art:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -3px;
 }
 
 .listen-deck-art .listen-art-backdrop {
@@ -29,56 +38,42 @@
   z-index: 3;
 }
 
-.listen-native-widget {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  background: #0d0d0d;
-  clip-path: circle(2.4rem at 50% 50%);
-  opacity: 0;
-  pointer-events: none;
+.listen-deck-art .listen-art-play {
+  z-index: 3;
 }
 
-.listen-deck-art.is-player-painted .listen-native-widget {
+.listen-deck-art .listen-art-play i {
+  width: 3.1rem;
+  height: 3.1rem;
+  border-color: rgba(246, 198, 74, 0.72);
+  background: rgba(13, 13, 13, 0.86);
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.42);
+}
+
+.listen-deck-art .listen-art-play i::before {
+  border-width: 0.5rem 0 0.5rem 0.82rem;
+}
+
+.listen-deck-stage .listen-player iframe {
+  display: block;
+  opacity: 1;
+}
+
+.listen-player-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  background: #0d0d0d;
   opacity: 1;
   pointer-events: auto;
+  transition: none;
 }
 
-.listen-art-loading {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 0.85rem;
-  background: #0d0d0d;
-  color: rgba(245, 245, 245, 0.76);
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.listen-art-loading > i {
-  width: 2rem;
-  height: 2rem;
-  border: 2px solid rgba(246, 198, 74, 0.18);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: listen-loading-spin 0.8s linear infinite;
-}
-
-@keyframes listen-loading-spin {
-  to {
-    transform: rotate(1turn);
-  }
+.listen-player.is-painted .listen-player-cover {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.16s ease;
 }
 
 .listen-playback-error {
@@ -96,8 +91,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .listen-art-loading > i {
-    animation-duration: 1.6s;
+  .listen-player.is-painted .listen-player-cover {
+    transition: none;
   }
-
 }
