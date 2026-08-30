@@ -17,6 +17,7 @@ type GenreMix = {
   key: string
   feed: string
   art: string
+  artPosition: string
   duration: string
   /** Exact playback position requested after the mix starts. */
   startAt: number
@@ -29,7 +30,8 @@ const genres: GenreMix[] = [
     title: 'Afrobeats Throwback Sunset Mix',
     key: '/DJRHUE/dj-rhue-afrobeats-throwback-sunset-mix/',
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-afrobeats-throwback-sunset-mix/',
-    art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/1/2/7/d/a2d1-45c6-4229-88f9-6f96a58b7827',
+    art: '/listen/afrobeats.webp',
+    artPosition: '50% 20%',
     duration: '19:49',
     startAt: 3,
   },
@@ -39,7 +41,8 @@ const genres: GenreMix[] = [
     title: 'Trending Dancehall Mix',
     key: '/DJRHUE/dj-rhue-trending-dancehall-mix-high-energy-vybz-kartel-kraff/',
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-trending-dancehall-mix-high-energy-vybz-kartel-kraff/',
-    art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/c/2/c/a/8d23-cdb5-4d7d-8e73-17d61c2b5e43',
+    art: '/listen/dancehall.webp',
+    artPosition: '50% 24%',
     duration: '18:26',
     startAt: 0,
   },
@@ -49,7 +52,8 @@ const genres: GenreMix[] = [
     title: 'Amapiano Radio Mix',
     key: '/DJRHUE/dj-rhue-amapiano-radio-mix/',
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-amapiano-radio-mix/',
-    art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/b/4/a/5/f79a-cb4b-4adc-b926-d154472250c9',
+    art: '/listen/amapiano.webp',
+    artPosition: '60% 50%',
     duration: '18:32',
     startAt: 4,
   },
@@ -59,7 +63,8 @@ const genres: GenreMix[] = [
     title: 'Reggae Mix — Sean Paul, Chronixx+',
     key: '/DJRHUE/dj-rhue-reggae-mix-sean-paul-chronixx/',
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-reggae-mix-sean-paul-chronixx/',
-    art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/d/2/5/7/09c2-81f5-4490-8a25-fc4b71f3c489',
+    art: '/listen/reggae.webp',
+    artPosition: '50% 25%',
     duration: '15:14',
     startAt: 4.1,
   },
@@ -69,7 +74,8 @@ const genres: GenreMix[] = [
     title: 'R&B, Afrobeats & Dancehall Party Mix',
     key: '/DJRHUE/dj-rhue-rb-afrobeats-dancehall-party-mix-2026/',
     feed: 'https://www.mixcloud.com/DJRHUE/dj-rhue-rb-afrobeats-dancehall-party-mix-2026/',
-    art: 'https://thumbnailer.mixcloud.com/unsafe/640x640/extaudio/4/2/d/3/ac96-dcee-4c2a-98e0-1c839439d936',
+    art: '/listen/hiphop.webp',
+    artPosition: '54% 50%',
     duration: '40:42',
     startAt: 5,
   },
@@ -164,7 +170,7 @@ function wait(ms: number): Promise<void> {
 export function Listen() {
   const [activeId, setActiveId] = useState<GenreId>('afrobeats')
   const [playing, setPlaying] = useState(false)
-  const [starting, setStarting] = useState(false)
+  const [, setStarting] = useState(false)
   const [, setNeedsGesture] = useState(false)
   const [widgetReady, setWidgetReady] = useState(false)
   const [artSwitching, setArtSwitching] = useState(false)
@@ -187,9 +193,9 @@ export function Listen() {
   const pendingIntentRef = useRef<PlaybackIntent | null>(null)
   const playbackInFlightRef = useRef(false)
   const playbackInFlightKeyRef = useRef<string | null>(null)
-  const playInFlightRef = useRef(false)
   const playbackRunRef = useRef(0)
   const runPlaybackIntentRef = useRef<(intent: PlaybackIntent) => void>(() => undefined)
+  const coldAutoplayAttemptedRef = useRef(false)
   const iframeLoadedRef = useRef(false)
   const initializeWidgetRef = useRef<() => void>(() => undefined)
   /** Mixcloud key verified at its requested start position. */
@@ -214,22 +220,25 @@ export function Listen() {
     clearSeekTimers()
   }, [clearSeekTimers])
 
-  const revealWidgetAfterPaint = useCallback((mix: GenreMix, runId?: number) => {
-    if (paintTimerRef.current !== null) {
-      window.clearTimeout(paintTimerRef.current)
-    }
-    paintTimerRef.current = window.setTimeout(() => {
-      paintTimerRef.current = null
-      if (
-        !mountedRef.current ||
-        activeIdRef.current !== mix.id ||
-        (runId !== undefined && runId !== playbackRunRef.current)
-      ) {
-        return
+  const revealWidgetAfterPaint = useCallback(
+    (mix: GenreMix, runId?: number, delay = 5000) => {
+      if (paintTimerRef.current !== null) {
+        window.clearTimeout(paintTimerRef.current)
       }
-      setWidgetPainted(true)
-    }, 1400)
-  }, [])
+      paintTimerRef.current = window.setTimeout(() => {
+        paintTimerRef.current = null
+        if (
+          !mountedRef.current ||
+          activeIdRef.current !== mix.id ||
+          (runId !== undefined && runId !== playbackRunRef.current)
+        ) {
+          return
+        }
+        setWidgetPainted(true)
+      }, delay)
+    },
+    [],
+  )
 
   const seekPastIntro = useCallback(
     (widget: MixcloudWidget, mix: GenreMix) => {
@@ -331,6 +340,8 @@ export function Listen() {
             markPlaying(widget, mix)
             return true
           }
+          playingRef.current = false
+          setPlaying(false)
         } catch {
           // Retry: postMessage getters can fail while the player is buffering.
         }
@@ -342,6 +353,9 @@ export function Listen() {
 
   const verifyInitialAutoplay = useCallback(
     (widget: MixcloudWidget, mix: GenreMix) => {
+      if (coldAutoplayAttemptedRef.current) return
+      coldAutoplayAttemptedRef.current = true
+
       const runId = playbackRunRef.current + 1
       playbackRunRef.current = runId
 
@@ -425,13 +439,15 @@ export function Listen() {
             void widget.pause().catch(() => undefined)
             // startPlaying is sent with the one load during the originating click.
             setLoadAttempts((count) => count + 1)
-            await widget.load(intent.mix.key, true)
+            const loadCommand = widget.load(intent.mix.key, true)
+            revealWidgetAfterPaint(intent.mix, runId)
+            await loadCommand
             if (
               runId === playbackRunRef.current &&
               activeIdRef.current === intent.mix.id
             ) {
               loadedKeyRef.current = intent.mix.key
-              revealWidgetAfterPaint(intent.mix, runId)
+              revealWidgetAfterPaint(intent.mix, runId, 1400)
             }
           } catch {
             commandSucceeded = false
@@ -474,12 +490,10 @@ export function Listen() {
           runId === playbackRunRef.current &&
           activeIdRef.current === intent.mix.id
         ) {
-          playingRef.current = false
-          setPlaying(false)
           setStarting(false)
           setNeedsGesture(true)
           setNativeFallback(true)
-          setPlaybackError('Use the Mixcloud player below to start audio.')
+          setPlaybackError(null)
         }
       } finally {
         if (runId === playbackRunRef.current) {
@@ -532,65 +546,6 @@ export function Listen() {
     runPlaybackIntentRef.current(intent)
   }, [])
 
-  const handleArtworkClick = useCallback(() => {
-    const widget = widgetRef.current
-    const mix = mixForId(activeIdRef.current)
-    if (
-      !widget ||
-      !widgetReadyRef.current ||
-      loadingKeyRef.current !== null ||
-      loadedKeyRef.current !== mix.key ||
-      playingRef.current ||
-      playInFlightRef.current
-    ) {
-      return
-    }
-
-    playInFlightRef.current = true
-    const runId = playbackRunRef.current + 1
-    playbackRunRef.current = runId
-    setStarting(true)
-    setNeedsGesture(false)
-    setPlaybackError(null)
-
-    let playCommand: Promise<void>
-    try {
-      setPlayAttempts((count) => count + 1)
-      setLastPlayUserActivated(
-        window.navigator.userActivation?.isActive ? 'true' : 'false',
-      )
-      // This must stay in the click call stack on physical mobile.
-      playCommand = widget.play()
-    } catch {
-      playCommand = Promise.resolve()
-    }
-
-    void (async () => {
-      try {
-        await playCommand
-      } catch {
-        // The paused-state probe below is authoritative.
-      }
-
-      const started = await verifyPlayback(widget, mix, runId)
-      if (
-        !started &&
-        mountedRef.current &&
-        runId === playbackRunRef.current &&
-        activeIdRef.current === mix.id
-      ) {
-        playingRef.current = false
-        setPlaying(false)
-        setNeedsGesture(true)
-        setPlaybackError('Use the Mixcloud player below to start audio.')
-      }
-      if (runId === playbackRunRef.current) {
-        playInFlightRef.current = false
-        setStarting(false)
-      }
-    })()
-  }, [verifyPlayback])
-
   const handleIframeLoad = useCallback(() => {
     iframeLoadedRef.current = true
     revealWidgetAfterPaint(mixForId(activeIdRef.current))
@@ -637,7 +592,7 @@ export function Listen() {
       widget.events.pause.on(pauseHandler)
       widgetReadyRef.current = true
       setWidgetReady(true)
-      revealWidgetAfterPaint(mixForId(activeIdRef.current))
+      revealWidgetAfterPaint(mixForId(activeIdRef.current), undefined, 1400)
 
       const pending = pendingIntentRef.current
       pendingIntentRef.current = null
@@ -653,7 +608,7 @@ export function Listen() {
       // Keep the native dark iframe available if the control API fails.
       setNativeFallback(true)
       setStarting(false)
-      setPlaybackError('Use the Mixcloud player below to start audio.')
+      setPlaybackError(null)
       if (iframeLoadedRef.current) {
         revealWidgetAfterPaint(mixForId(activeIdRef.current))
       }
@@ -723,7 +678,6 @@ export function Listen() {
       widgetReadyRef.current = false
       playbackInFlightRef.current = false
       playbackInFlightKeyRef.current = null
-      playInFlightRef.current = false
       pendingIntentRef.current = null
       loadingKeyRef.current = null
       loadedKeyRef.current = genres[0].key
@@ -750,9 +704,6 @@ export function Listen() {
     const next = mixForId(id)
     setActiveId(id)
     activeIdRef.current = id
-    playingRef.current = false
-    playInFlightRef.current = false
-    setPlaying(false)
     setNeedsGesture(false)
     setCoverReady(false)
     setNativeFallback(false)
@@ -809,38 +760,16 @@ export function Listen() {
                       : 'loading-widget'
             }
           >
-            <button
-              type="button"
+            <div
               className={`listen-deck-art${widgetReady ? ' is-ready' : ''}${artSwitching ? ' is-switching' : ''}`}
-              aria-label={
-                playing
-                  ? `${active.label} is playing`
-                  : widgetReady
-                    ? `Play ${active.label}`
-                    : 'Mixcloud player loading'
-              }
               aria-busy={!widgetReady || artSwitching || !coverReady}
-              disabled={
-                !widgetReady ||
-                artSwitching ||
-                !coverReady ||
-                playing ||
-                starting
-              }
-              onClick={handleArtworkClick}
             >
-              <img
-                className="listen-art-backdrop"
-                key={`${active.id}-backdrop`}
-                src={active.art}
-                alt=""
-                aria-hidden="true"
-              />
               <img
                 className="listen-art-cover"
                 key={active.id}
                 src={active.art}
                 alt=""
+                style={{ objectPosition: active.artPosition }}
                 onLoad={() => {
                   if (activeIdRef.current === active.id) setCoverReady(true)
                 }}
@@ -853,23 +782,18 @@ export function Listen() {
                 <i />
                 <i />
               </div>
-              {widgetReady && coverReady && !artSwitching && !playing && !starting ? (
-                <span className="listen-art-play" aria-hidden="true">
-                  <i />
-                </span>
-              ) : null}
-            </button>
+            </div>
 
             <div className="listen-deck-main">
               <div className="listen-now">
                 <span className="listen-now-label">
-                  {playing
-                    ? 'Now playing'
-                    : artSwitching
-                      ? 'Loading'
+                  {artSwitching
+                    ? 'Loading'
+                    : playing
+                      ? 'Now playing'
                       : !widgetReady && !nativeFallback
-                      ? 'Loading'
-                      : 'Ready / paused'}
+                        ? 'Loading'
+                        : 'Ready / paused'}
                 </span>
                 <AnimatePresence mode="sync">
                   <motion.div

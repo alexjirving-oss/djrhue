@@ -1,31 +1,13 @@
 .listen-deck-stage .listen-deck-art {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   min-height: 0;
   background: #0d0d0d;
-  cursor: pointer;
-  isolation: isolate;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.listen-deck-stage .listen-deck-art:disabled {
   cursor: default;
-}
-
-.listen-deck-stage .listen-deck-art:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: -3px;
-}
-
-.listen-deck-art .listen-art-backdrop {
-  object-fit: cover;
-  filter: blur(18px) saturate(0.85);
-  opacity: 0.5;
-  transform: scale(1.1);
+  isolation: isolate;
 }
 
 .listen-deck-art .listen-art-cover {
-  object-fit: contain;
+  object-fit: cover;
   z-index: 1;
 }
 
@@ -38,20 +20,14 @@
   z-index: 3;
 }
 
-.listen-deck-art .listen-art-play {
-  z-index: 3;
+.listen-deck-stage .listen-genre {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.listen-deck-art .listen-art-play i {
-  width: 3.1rem;
-  height: 3.1rem;
-  border-color: rgba(246, 198, 74, 0.72);
-  background: rgba(13, 13, 13, 0.86);
-  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.42);
-}
-
-.listen-deck-art .listen-art-play i::before {
-  border-width: 0.5rem 0 0.5rem 0.82rem;
+.listen-deck-stage .listen-genre:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }
 
 .listen-deck-stage .listen-player iframe {
@@ -85,7 +61,7 @@
 
 @media (max-width: 860px) {
   .listen-deck-stage .listen-deck-art {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     min-height: 0;
   }
 }
