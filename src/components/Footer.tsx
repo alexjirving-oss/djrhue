@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { InstallApp } from './InstallApp'
 import { SocialLinks } from './SocialLinks'
 
 export function Footer() {
@@ -29,7 +28,6 @@ export function Footer() {
             </a>
             <Link to="/book">Book</Link>
           </div>
-          <InstallApp />
         </div>
       </div>
     </footer>

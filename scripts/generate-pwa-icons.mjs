@@ -35,10 +35,10 @@ function makeIcon(outName, canvas, logoFit) {
   console.log('wrote', outName)
 }
 
-makeIcon('icon-192.png', 192, 172)
-makeIcon('icon-512.png', 512, 460)
-makeIcon('icon-192-maskable.png', 192, 144)
-makeIcon('icon-512-maskable.png', 512, 360)
-makeIcon('apple-touch-icon.png', 180, 160)
+makeIcon('icon-192.png', 192, 192)
+makeIcon('icon-512.png', 512, 512)
+makeIcon('icon-192-maskable.png', 192, 160)
+makeIcon('icon-512-maskable.png', 512, 400)
+makeIcon('apple-touch-icon.png', 180, 180)
 
 console.log('PWA icons ready in public/icons/')

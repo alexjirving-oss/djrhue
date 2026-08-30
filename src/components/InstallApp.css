@@ -1,0 +1,293 @@
+.install-promo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-block: 1px solid rgba(246, 198, 74, 0.2);
+  background:
+    radial-gradient(circle at 12% 50%, rgba(246, 198, 74, 0.18), transparent 18rem),
+    linear-gradient(105deg, #15130d, #0d0d0d 48%, #121212);
+}
+
+.install-promo::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(112deg, transparent 34%, rgba(255, 224, 138, 0.045) 50%, transparent 66%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 7.5rem,
+      rgba(255, 255, 255, 0.018) 7.5rem,
+      rgba(255, 255, 255, 0.018) calc(7.5rem + 1px)
+    );
+  content: '';
+  pointer-events: none;
+}
+
+.install-promo__card {
+  position: relative;
+  display: grid;
+  min-height: 13.5rem;
+  padding: clamp(1.7rem, 4vw, 2.8rem) 0;
+  grid-template-columns: auto minmax(0, 1fr) minmax(13.5rem, 15.5rem);
+  gap: clamp(1.2rem, 3.4vw, 2.8rem);
+  align-items: center;
+}
+
+.install-promo__card::before {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 12%;
+  content: 'APP';
+  color: rgba(246, 198, 74, 0.055);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 18vw, 14rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.7;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.install-promo__card::after {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: clamp(5rem, 13vw, 9rem);
+  height: 3px;
+  background: var(--gold);
+  content: '';
+  box-shadow: 0 0 24px rgba(246, 198, 74, 0.45);
+}
+
+.install-promo__icon {
+  position: relative;
+  display: grid;
+  width: clamp(5.25rem, 8.5vw, 6.4rem);
+  aspect-ratio: 1;
+  flex: none;
+  place-items: center;
+  transform: rotate(-4deg);
+}
+
+.install-promo__icon::before {
+  position: absolute;
+  inset: -0.45rem;
+  border: 1px solid rgba(246, 198, 74, 0.3);
+  border-radius: 26%;
+  content: '';
+  transform: rotate(8deg);
+}
+
+.install-promo__icon::after {
+  position: absolute;
+  top: -0.15rem;
+  right: -0.2rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid #17130a;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 16px rgba(246, 198, 74, 0.7);
+  content: '';
+}
+
+.install-promo__icon img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(246, 198, 74, 0.42);
+  border-radius: 22%;
+  object-fit: cover;
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.42),
+    0 0 28px rgba(246, 198, 74, 0.12);
+}
+
+.install-promo__copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.install-promo__label {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  margin-bottom: 0.65rem;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 0.71rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.install-promo__label span {
+  display: inline-grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid rgba(246, 198, 74, 0.48);
+  place-items: center;
+  color: var(--white);
+  letter-spacing: 0;
+}
+
+.install-promo__copy h2 {
+  font-size: clamp(2.15rem, 5vw, 4.25rem);
+  letter-spacing: -0.055em;
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+.install-promo__copy > p:last-child {
+  max-width: 35rem;
+  margin-top: 0.75rem;
+  color: rgba(245, 245, 245, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.install-promo__actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.55rem;
+  align-items: stretch;
+}
+
+.install-promo__platform {
+  color: rgba(245, 245, 245, 0.76);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.install-promo__platform span {
+  margin-inline: 0.3rem;
+  color: var(--gold);
+}
+
+.install-promo__button {
+  width: 100%;
+  min-height: 3.2rem;
+  padding-inline: 1rem;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.install-promo__button svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.install-promo__button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.install-promo__feedback:empty {
+  display: none;
+}
+
+.install-promo__hint {
+  color: rgba(245, 245, 245, 0.74);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.install-promo__hint strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .install-promo__card {
+    min-height: 0;
+    padding: 1.65rem 0 1.5rem;
+    grid-template-columns: 4.6rem minmax(0, 1fr);
+    gap: 1rem 0.95rem;
+  }
+
+  .install-promo__card::before {
+    top: 1rem;
+    right: -0.05em;
+    font-size: clamp(7.25rem, 33vw, 10rem);
+    transform: none;
+  }
+
+  .install-promo__icon {
+    width: 4.4rem;
+    margin-left: 0.15rem;
+  }
+
+  .install-promo__copy h2 {
+    font-size: clamp(1.85rem, 9vw, 2.8rem);
+  }
+
+  .install-promo__copy > p:last-child {
+    max-width: 28rem;
+    margin-top: 0.55rem;
+    font-size: 0.79rem;
+    line-height: 1.42;
+  }
+
+  .install-promo__label {
+    margin-bottom: 0.5rem;
+    font-size: 0.64rem;
+  }
+
+  .install-promo__label span {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+
+  .install-promo__actions {
+    grid-column: 1 / -1;
+    gap: 0.55rem;
+  }
+
+  .install-promo__button {
+    min-height: 3.1rem;
+  }
+
+  .install-promo__hint {
+    max-width: 29rem;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .install-promo__card {
+    grid-template-columns: 3.9rem minmax(0, 1fr);
+    gap: 0.9rem 0.8rem;
+  }
+
+  .install-promo__icon {
+    width: 3.8rem;
+  }
+
+  .install-promo__copy > p:last-child {
+    font-size: 0.75rem;
+  }
+
+  .install-promo__button {
+    font-size: 0.82rem;
+  }
+}
