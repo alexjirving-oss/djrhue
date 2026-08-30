@@ -8,12 +8,12 @@ import './HomePage.css'
 const MIXCLOUD = 'https://www.mixcloud.com/DJRHUE/'
 
 const credits = [
-  { name: "St Paul's Carnival" },
-  { name: 'SWU.FM', href: MIXCLOUD },
-  { name: 'Rinse FM', href: MIXCLOUD },
-  { name: 'Laid Blak Radio' },
-  { name: 'Manoel Island' },
-  { name: 'UK clubs & festivals' },
+  { name: "St Paul's Carnival", detail: 'Bristol' },
+  { name: 'SWU.FM', detail: 'Guest DJ · radio sessions', href: MIXCLOUD },
+  { name: 'Rinse FM', detail: 'Guest mix · radio session', href: MIXCLOUD },
+  { name: 'Laid Blak Radio', detail: 'Featured artist' },
+  { name: 'Manoel Island', detail: 'Malta sessions' },
+  { name: 'UK clubs & festivals', detail: 'Live sets' },
 ]
 
 const destinations = [
@@ -73,14 +73,6 @@ const destinations = [
   },
 ]
 
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M4 10h11M11 6l4 4-4 4" />
-    </svg>
-  )
-}
-
 export function HomePage() {
   return (
     <main>
@@ -91,88 +83,130 @@ export function HomePage() {
 
         <section className="home-proof" id="proof" aria-labelledby="home-proof-title">
           <div className="container">
-            <header className="home-section-heading home-proof__heading">
-              <p className="home-section-label">
-                <span aria-hidden="true" />
-                Stages &amp; airtime
-              </p>
-              <div className="home-section-heading__row">
-                <h2 id="home-proof-title">Proven live.</h2>
-                <p>
-                  Carnival stages, radio sessions and international sets — a focused selection from
-                  the record.
+            <motion.header
+              className="home-proof__header"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={viewportOnce(0.25)}
+              transition={motionTransition({ duration: 0.7 })}
+            >
+              <div>
+                <p className="home-kicker">
+                  <span>01</span> On record
                 </p>
+                <h2 id="home-proof-title">
+                  Bristol
+                  <span>to Malta.</span>
+                </h2>
               </div>
-            </header>
+              <p className="home-proof__intro">
+                Carnival stages, radio sessions and international sets. The names below are the
+                record — no filler.
+              </p>
+            </motion.header>
+          </div>
 
-            <div className="home-proof__grid">
-              <article className="home-proof-card">
-                <div className="home-proof-card__media">
-                  <img
-                    src="/photos/perf-trinidad.jpg"
-                    alt="DJ RHUE performing at St Paul's Carnival in Bristol"
-                    width="1024"
-                    height="1280"
-                    loading="lazy"
-                  />
-                  <span className="home-proof-card__tag">Bristol</span>
+          <div className="home-marquee" aria-hidden="true">
+            <div className="home-marquee__track">
+              {[0, 1].map((group) => (
+                <div className="home-marquee__group" key={group}>
+                  {credits.map((credit) => (
+                    <span key={`${group}-${credit.name}`}>
+                      {credit.name}
+                      <i>✦</i>
+                    </span>
+                  ))}
                 </div>
-                <div className="home-proof-card__body">
-                  <div>
-                    <p>Live performance</p>
-                    <h3>St Paul&apos;s Carnival</h3>
-                  </div>
-                  <span className="home-proof-card__mark" aria-hidden="true">
-                    <ArrowIcon />
-                  </span>
-                </div>
-              </article>
-
-              <div className="home-proof__support">
-                <div className="home-credits">
-                  <div className="home-credits__heading">
-                    <h3>Selected credits</h3>
-                    <span>Live &amp; broadcast</span>
-                  </div>
-                  <ul>
-                    {credits.map((credit) => (
-                      <li key={credit.name}>
-                        {credit.href ? (
-                          <a
-                            href={credit.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`${credit.name} on Mixcloud (opens in a new tab)`}
-                          >
-                            <span>{credit.name}</span>
-                            <span aria-hidden="true">↗</span>
-                          </a>
-                        ) : (
-                          <span>{credit.name}</span>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <figure className="home-proof-secondary">
-                  <div className="home-proof-secondary__media">
-                    <img
-                      src="/photos/perf-manoel.jpg"
-                      alt="DJ RHUE performing beside the water at Manoel Island, Malta"
-                      width="1024"
-                      height="576"
-                      loading="lazy"
-                    />
-                  </div>
-                  <figcaption>
-                    <span>International sessions</span>
-                    <strong>Manoel Island</strong>
-                    <small>Malta</small>
-                  </figcaption>
-                </figure>
-              </div>
+              ))}
             </div>
+          </div>
+
+          <div className="container home-proof__layout">
+            <motion.figure
+              className="home-proof__feature"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={viewportOnce(0.15)}
+              transition={motionTransition({ duration: 0.7 })}
+            >
+              <div className="home-proof__image">
+                <img
+                  src="/photos/perf-trinidad.jpg"
+                  alt="DJ RHUE performing at St Paul's Carnival in Bristol"
+                  loading="lazy"
+                />
+                <span className="home-proof__image-word" aria-hidden="true">
+                  Carnival
+                </span>
+              </div>
+              <figcaption>
+                <span>Live / Bristol</span>
+                <strong>St Paul&apos;s Carnival</strong>
+              </figcaption>
+            </motion.figure>
+
+            <motion.div
+              className="home-proof__ledger"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={viewportOnce(0.15)}
+              transition={motionTransition({ duration: 0.65, delay: 0.08 })}
+            >
+              <div className="home-proof__ledger-head">
+                <p>Selected credits</p>
+                <span>06 entries</span>
+              </div>
+              <ol>
+                {credits.map((credit, index) => {
+                  const content = (
+                    <>
+                      <span className="home-proof__number">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="home-proof__credit">
+                        <strong>{credit.name}</strong>
+                        <small>{credit.detail}</small>
+                      </span>
+                      {credit.href ? (
+                        <span className="home-proof__outbound" aria-hidden="true">
+                          ↗
+                        </span>
+                      ) : null}
+                    </>
+                  )
+
+                  return (
+                    <li key={credit.name}>
+                      {credit.href ? (
+                        <a href={credit.href} target="_blank" rel="noopener noreferrer">
+                          {content}
+                        </a>
+                      ) : (
+                        <div>{content}</div>
+                      )}
+                    </li>
+                  )
+                })}
+              </ol>
+            </motion.div>
+
+            <motion.figure
+              className="home-proof__malta"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={viewportOnce(0.15)}
+              transition={motionTransition({ duration: 0.65, delay: 0.12 })}
+            >
+              <img
+                src="/photos/perf-manoel.jpg"
+                alt="DJ RHUE performing beside the water at Manoel Island, Malta"
+                loading="lazy"
+              />
+              <figcaption>
+                <span>International sessions</span>
+                <strong>Manoel Island · Malta</strong>
+              </figcaption>
+            </motion.figure>
           </div>
         </section>
 
