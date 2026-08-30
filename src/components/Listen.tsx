@@ -79,7 +79,7 @@ type MixcloudWidget = {
   play: () => Promise<void>
   pause: () => Promise<void>
   load: (cloudcastKey: string, startPlaying?: boolean) => Promise<void>
-  seek: (seconds: number) => Promise<void>
+  seek: (seconds: number) => Promise<boolean>
   getPosition: () => Promise<number>
   getIsPaused: () => Promise<boolean>
   events: {
@@ -98,7 +98,6 @@ declare global {
 
 type PlaybackIntent = {
   mix: GenreMix
-  source: 'autoplay' | 'gesture'
 }
 
 const PLAYBACK_VERIFY_DELAYS = [250, 650, 1200] as const
@@ -180,10 +179,10 @@ export function Listen() {
   const pendingIntentRef = useRef<PlaybackIntent | null>(null)
   const playbackInFlightRef = useRef(false)
   const playbackInFlightKeyRef = useRef<string | null>(null)
-  const playbackInFlightSourceRef = useRef<PlaybackIntent['source'] | null>(null)
   const playbackRunRef = useRef(0)
   const runPlaybackIntentRef = useRef<(intent: PlaybackIntent) => void>(() => undefined)
-  const firstGestureHandledRef = useRef(false)
+  const iframeLoadedRef = useRef(false)
+  const initializeWidgetRef = useRef<() => void>(() => undefined)
   /** Mixcloud key verified at its requested start position. */
   const introSeekedKeyRef = useRef<string | null>(null)
   const introSeekingKeyRef = useRef<string | null>(null)
@@ -242,12 +241,20 @@ export function Listen() {
           }
 
           try {
-            await widget.seek(target)
+            const seekAllowed = await widget.seek(target)
+            if (!seekAllowed) {
+              scheduleNext()
+              return
+            }
             await wait(120)
             if (runId !== introSeekRunRef.current) return
 
             const position = await widget.getPosition()
-            if (Number.isFinite(position) && position >= target - 0.25) {
+            if (
+              Number.isFinite(position) &&
+              position >= target - 0.25 &&
+              position <= target + 1.5
+            ) {
               introSeekedKeyRef.current = mix.key
               introSeekingKeyRef.current = null
               introSeekRunRef.current += 1
@@ -308,6 +315,26 @@ export function Listen() {
     [markPlaying],
   )
 
+  const verifyInitialAutoplay = useCallback(
+    async (widget: MixcloudWidget, mix: GenreMix) => {
+      const runId = playbackRunRef.current + 1
+      playbackRunRef.current = runId
+      setStarting(true)
+
+      const started = await verifyPlayback(widget, mix, runId)
+      if (
+        !started &&
+        mountedRef.current &&
+        runId === playbackRunRef.current &&
+        activeIdRef.current === mix.id
+      ) {
+        setStarting(false)
+        setNeedsGesture(true)
+      }
+    },
+    [verifyPlayback],
+  )
+
   const runPlaybackIntent = useCallback(
     async (intent: PlaybackIntent) => {
       const widget = widgetRef.current
@@ -332,7 +359,6 @@ export function Listen() {
 
       playbackInFlightRef.current = true
       playbackInFlightKeyRef.current = intent.mix.key
-      playbackInFlightSourceRef.current = intent.source
       const runId = playbackRunRef.current + 1
       playbackRunRef.current = runId
       const isNewMix = loadedKeyRef.current !== intent.mix.key
@@ -380,17 +406,16 @@ export function Listen() {
         if (runId === playbackRunRef.current) {
           playbackInFlightRef.current = false
           playbackInFlightKeyRef.current = null
-          playbackInFlightSourceRef.current = null
-        }
 
-        const next = pendingIntentRef.current
-        pendingIntentRef.current = null
-        if (
-          next &&
-          mountedRef.current &&
-          activeIdRef.current === next.mix.id
-        ) {
-          window.queueMicrotask(() => runPlaybackIntentRef.current(next))
+          const next = pendingIntentRef.current
+          pendingIntentRef.current = null
+          if (
+            next &&
+            mountedRef.current &&
+            activeIdRef.current === next.mix.id
+          ) {
+            window.queueMicrotask(() => runPlaybackIntentRef.current(next))
+          }
         }
       }
     },
@@ -401,7 +426,7 @@ export function Listen() {
     void runPlaybackIntent(intent)
   }
 
-  const requestPlayback = useCallback((mix: GenreMix, source: PlaybackIntent['source']) => {
+  const requestPlayback = useCallback((mix: GenreMix) => {
     setNeedsGesture(false)
     if (
       playingRef.current &&
@@ -413,30 +438,13 @@ export function Listen() {
     }
 
     setStarting(true)
-    const intent = { mix, source }
+    const intent = { mix }
     if (!widgetRef.current || !widgetReadyRef.current) {
       pendingIntentRef.current = intent
       return
     }
     if (playbackInFlightRef.current) {
-      if (
-        playbackInFlightKeyRef.current === mix.key &&
-        source === 'gesture' &&
-        playbackInFlightSourceRef.current === 'autoplay' &&
-        loadedKeyRef.current === mix.key &&
-        loadingKeyRef.current === null
-      ) {
-        playbackInFlightSourceRef.current = 'gesture'
-        const widget = widgetRef.current
-        if (widget) {
-          try {
-            // Supersede a policy-blocked automatic command inside this real gesture.
-            void widget.play().catch(() => undefined)
-          } catch {
-            // Verification below will expose the normal tap-to-play fallback.
-          }
-        }
-      } else if (playbackInFlightKeyRef.current !== mix.key) {
+      if (playbackInFlightKeyRef.current !== mix.key) {
         pendingIntentRef.current = intent
       }
       return
@@ -444,69 +452,18 @@ export function Listen() {
     runPlaybackIntentRef.current(intent)
   }, [])
 
-  useEffect(() => {
-    const iframe = iframeRef.current
-    if (!iframe) return
+  const handleIframeLoad = useCallback(() => {
+    iframeLoadedRef.current = true
+    initializeWidgetRef.current()
+  }, [])
 
+  useEffect(() => {
     mountedRef.current = true
     let cancelled = false
+    let initializing = false
+    let initializingWidget: MixcloudWidget | null = null
     let playHandler: (() => void) | null = null
     let pauseHandler: (() => void) | null = null
-
-    const gestureOpts: AddEventListenerOptions = { capture: true, passive: true }
-    const gestureEvents = ['pointerdown', 'touchstart', 'keydown'] as const
-
-    const removeGestureListeners = () => {
-      for (const evt of gestureEvents) {
-        window.removeEventListener(evt, unlockOnGesture, gestureOpts)
-      }
-    }
-
-    const unlockOnGesture = (event: Event) => {
-      if (
-        event instanceof KeyboardEvent &&
-        event.key !== 'Enter' &&
-        event.key !== ' '
-      ) {
-        return
-      }
-      removeGestureListeners()
-      if (cancelled || firstGestureHandledRef.current || playingRef.current) return
-      firstGestureHandledRef.current = true
-
-      // Listen controls execute their own click intent; capture must not pre-empt it.
-      const target = event.target
-      if (target instanceof Element && target.closest('.listen-deck-stage button')) {
-        return
-      }
-      requestPlayback(mixForId(activeIdRef.current), 'gesture')
-    }
-
-    for (const evt of gestureEvents) {
-      window.addEventListener(evt, unlockOnGesture, gestureOpts)
-    }
-
-    const onIframeLoad = () => {
-      if (cancelled || widgetRef.current) return
-      loadWidgetApi()
-        .then(() => {
-          if (cancelled || !iframeRef.current || !window.Mixcloud?.PlayerWidget) return
-          if (widgetRef.current) return
-          const widget = window.Mixcloud.PlayerWidget(iframeRef.current)
-          widgetRef.current = widget
-          return widget.ready.then(() => {
-            if (cancelled) return
-            bindWidget(widget)
-          })
-        })
-        .catch(() => {
-          if (!cancelled) {
-            // Keep the native dark iframe available if the control API fails.
-            setWidgetReady(true)
-            setStarting(false)
-          }
-        })
-    }
 
     const bindWidget = (widget: MixcloudWidget) => {
       playHandler = () => {
@@ -527,22 +484,74 @@ export function Listen() {
       const pending = pendingIntentRef.current
       pendingIntentRef.current = null
       if (pending) {
-        requestPlayback(pending.mix, pending.source)
+        requestPlayback(pending.mix)
       } else {
-        requestPlayback(mixForId(activeIdRef.current), 'autoplay')
+        void verifyInitialAutoplay(widget, mixForId(activeIdRef.current))
       }
     }
 
-    iframe.addEventListener('load', onIframeLoad)
-    onIframeLoad()
+    const revealNativePlayer = () => {
+      if (cancelled) return
+      // Keep the native dark iframe available if the control API fails.
+      setWidgetReady(true)
+      setStarting(false)
+    }
+
+    // Fetch the controller in parallel with the iframe, but never construct a
+    // PlayerWidget until React receives the iframe's real load event.
+    const apiPromise = loadWidgetApi()
+    void apiPromise.catch(revealNativePlayer)
+
+    const initializeWidget = () => {
+      const iframe = iframeRef.current
+      if (
+        cancelled ||
+        !iframe ||
+        !iframeLoadedRef.current ||
+        initializing ||
+        widgetRef.current
+      ) {
+        return
+      }
+
+      initializing = true
+      void apiPromise
+        .then(() => {
+          if (
+            cancelled ||
+            !iframeRef.current ||
+            !window.Mixcloud?.PlayerWidget ||
+            widgetRef.current
+          ) {
+            return
+          }
+
+          const widget = window.Mixcloud.PlayerWidget(iframeRef.current)
+          initializingWidget = widget
+          widgetRef.current = widget
+          return widget.ready.then(() => {
+            if (cancelled || widgetRef.current !== widget) return
+            bindWidget(widget)
+          })
+        })
+        .catch(() => {
+          if (widgetRef.current === initializingWidget) {
+            widgetRef.current = null
+          }
+          initializing = false
+          revealNativePlayer()
+        })
+    }
+
+    initializeWidgetRef.current = initializeWidget
+    initializeWidget()
 
     return () => {
       cancelled = true
       mountedRef.current = false
+      initializeWidgetRef.current = () => undefined
       playbackRunRef.current += 1
       cancelIntroSeek()
-      iframe.removeEventListener('load', onIframeLoad)
-      removeGestureListeners()
       const widget = widgetRef.current
       if (widget && playHandler && pauseHandler) {
         widget.events.play.off(playHandler)
@@ -552,18 +561,18 @@ export function Listen() {
       widgetReadyRef.current = false
       playbackInFlightRef.current = false
       playbackInFlightKeyRef.current = null
-      playbackInFlightSourceRef.current = null
       pendingIntentRef.current = null
       loadingKeyRef.current = null
       loadedKeyRef.current = genres[0].key
-      firstGestureHandledRef.current = false
+      introSeekedKeyRef.current = null
+      playingRef.current = false
       setWidgetReady(false)
     }
-  }, [cancelIntroSeek, markPlaying, requestPlayback])
+  }, [cancelIntroSeek, markPlaying, requestPlayback, verifyInitialAutoplay])
 
   const selectGenre = (id: GenreId) => {
     if (id === activeIdRef.current) {
-      if (!playingRef.current) requestPlayback(mixForId(id), 'gesture')
+      if (!playingRef.current) requestPlayback(mixForId(id))
       return
     }
     const next = mixForId(id)
@@ -572,11 +581,11 @@ export function Listen() {
     playingRef.current = false
     setPlaying(false)
     setNeedsGesture(false)
-    requestPlayback(next, 'gesture')
+    requestPlayback(next)
   }
 
   const startPlayback = () => {
-    requestPlayback(mixForId(activeIdRef.current), 'gesture')
+    requestPlayback(mixForId(activeIdRef.current))
   }
 
   return (
@@ -718,6 +727,7 @@ export function Listen() {
                   allow="autoplay; encrypted-media; fullscreen"
                   loading="eager"
                   src={widgetSrc(genres[0].feed)}
+                  onLoad={handleIframeLoad}
                 />
               </div>
             </div>
